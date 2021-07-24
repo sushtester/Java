@@ -1,8 +1,10 @@
 Install Java - Refer Java playlist for Ragav to install java in mac 
 Check java by - javac -version
 
+Add java varibale path for new mac version there need to add in shell 
+
 Install ecllipce - Refer Java playlist for Ragav to install ecllipce in mac 
 
-Install maven - 
+Create new maven project (Maven is already present for newly elcclipse so need to download maven seprate here)
 
 
