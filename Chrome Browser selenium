@@ -1,0 +1,36 @@
+WebDriver driver= new ChromeDriver();
+driver.get("https://www.google.com");
+
+For this we need to download the chrome driver from search "Downlaod chrome driver for selenium"
+
+Then create new folder to project as drivers, then create new folder to driver folder as chromedriver
+
+Go that created chromedriver project and put the downloaded file of chrome driver
+
+After that - Set System.setProperty (string, string)
+System.setProperty("webdriver.chrome.driver", "Path of the chrome driver which copy from chromedrive folder");
+
+
+As the given path is for out sytem so what if we are tring to run this on other system then we need to first find the project path of our project 
+
+System.getProperty("user.dir");
+S
+
+String projectPath= System.getProperty("user.dir");
+		System.out.println("Project Path is"+ projectPath);
+
+Syso - Control space for System.out.println ("")
+
+Then add that 
+System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver/chromedriver");
+
+
+So code is as below - 
+String projectPath= System.getProperty("user.dir");
+		System.out.println("Project Path is: " + projectPath);
+
+		
+		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver/chromedriver");
+		
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://staging.shipsticks.com/");
