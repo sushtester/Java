@@ -20,4 +20,5 @@ For text when there is no any id, name, or any attribute and attributes get chan
 
 
 
+//div[@class= 'right']/p[contains (text(), 'Latest stable version ')]/a - It will use for SSID - https://www.screencast.com/t/4ZuLzGECXMc
 
