@@ -16,3 +16,8 @@ For text when there is no any id, name, or any attribute and attributes get chan
 
 //div[text()='Click your picture or add an account.']
 
+//nav[@id= 'navbar']/a[1] - https://www.screencast.com/t/Iv0oqkC6Q
+
+
+
+
