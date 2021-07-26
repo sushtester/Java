@@ -1,0 +1,18 @@
+X path - Navtive & relative - Check advanteges and disadvateges of those
+
+PDF for the locator - https://github.com/LearnByBhanuPratap/seleniumScriptsLatest/blob/master/data/Locators%2C%20X%20Path%20and%20CSS%20Notes.pdf
+
+Xpath - //Tag name[@attributeName= ''], eg. //input[@id= 'email']
+
+Xpath - //TagName [@classname= '' and @attributeName= '']. eg //input[@class= 'inputtext _55r1 _6luy' and @id= 'email']
+
+
+
+For text when there is no any id, name, or any attribute and attributes get changed that time we need to user below 
+
+//div[contains(text(), 'Click your picture or add an account')]
+
+//div[contains(text (), 'Crate account label')]
+
+//div[text()='Click your picture or add an account.']
+
