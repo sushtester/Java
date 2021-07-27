@@ -183,7 +183,10 @@ Or we can find the length of the array and then use that in for loop -
       }
       
 
-
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+  
+  
 
 
 
