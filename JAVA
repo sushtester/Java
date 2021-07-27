@@ -114,7 +114,75 @@ nested switch - switch under switch -
      
      
      
-     
+#For loop - We can use to calcluate 1 to 10 numbers addition total same program that did using the for loop- 
+
+int sum=0;
+        for(int i=1; i<=10; i++){
+            sum= sum+i;
+        }
+        
+        System.out.println(sum);
+
+
+We can use for loop for print the array elemnts 
+
+String names[]= {"sush", "pawar", "namskar"};
+
+For(String result: names){
+  System.out.println(result);
+}
+
+
+#Break statments - Which can use in for when want to break the loop - 
+
+for (int i = 1; i<=10; i++){
+ if (i==5){
+  System.out.println ("Found 5 in above");
+  break;
+ }
+}
+
+Continue statement can use in while and for loop - 
+
+ int i=0;
+       while (i<=10){
+           if (i==4){
+               
+               System.out.println(i);
+               i++;
+               continue;
+               
+           }
+           System.out.println(i);
+           i++;
+           
+           
+           }
+
+
+#Array - 
+
+String name []= {"SUSH", "PAWAR", "QA"};
+OR
+String [] name = {"SUSH", "PAWAR", "QA"};
+
+
+To find the length of the array - 
+name.length;
+
+To display the array elements using the for loop 
+
+for (String result: name){
+System.out.println (resluts);
+}
+
+Or we can find the length of the array and then use that in for loop - 
+
+ for(int i= name.length-1; i>=0; i--){
+          System.out.println (name[i]);
+      }
+      
+
 
 
 
