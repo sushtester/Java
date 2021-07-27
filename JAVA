@@ -1,0 +1,124 @@
+public class Main{
+   public static valid main (String[], args ){                                            Final data type
+   System.out.println("Hello My First Java program");
+   
+   }
+}
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         int a= 1;
+         int b= 2;
+         int c = (a+b);
+         String usernam= "Pravin";
+        System.out.println("The addition is "+ c);
+     }
+}
+
+Data types in JAVA - 
+
+String - stores text, such as "Hello". String values are surrounded by double quotes
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+boolean - stores values with two states: true or false
+
+Arithmetic Operators
+++	Increment	Increases the value of a variable by 1
+
+--	Decrement	Decreases the value of a variable by 1	--x
+
+#Find the lenghth of the string - 
+String name= "SUSHANT";
+name.length(); 
+= 7
+
+toUpperCase() and toLowerCase()
+name.toUpperCase().  name.toLowerCase()
+
+
+The indexOf() method returns the index (the position) of the first occurrence of a specified text in a string (including whitespace):
+String name = "Sushant Sudhir Pawar"
+
+name.indexOf("Sudhir");  It will return the position of the Sudhir name like 9 
+
+#String Concatenation - Add two string toghter - The + operator can be used between strings to combine them
+String a= "Sushant";
+String b = "Pawar";
+System.out.println(a+ " " +b);
+Or we can use methos concat()
+System.out.println(a.concat (b));
+
+If statement 
+
+if (a==b){
+}
+else{
+}
+
+if(a==b){
+}
+else if (a>b){
+}
+else{
+}
+
+
+#Java Switch Statements
+int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+    break;
+    default:
+    System.out.println("No any day for 4");
+    break;
+}
+
+nested switch - switch under switch -
+
+
+#While loop - 
+        int year=3;
+        while (year<8){
+            System.out.println(year);
+            year++;
+            
+  While loops is user when e.g when want to print 1 to 10 numbers then
+  int i= 1;
+  while (i<=10){
+  System.out.println(i);
+            i++;
+  }
+  
+  Or We can use to calcluate 1 to 10 numbers addition total - 
+  
+   int num=1;
+        int sum=0;
+        while (num<=10){
+            sum= sum+num;
+            num++;
+        }
+        
+     System.out.println(sum);
+     
+     
+     
+     
+
+
+
+
+
+
+
