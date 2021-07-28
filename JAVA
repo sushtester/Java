@@ -1,5 +1,5 @@
 public class Main{
-   public static valid main (String[], args ){                                            Final data type
+   public static valid main (String[], args ){                                            Final data type, ###Java Recursion, 
    System.out.println("Hello My First Java program");
    
    }
@@ -187,6 +187,79 @@ for (int i = 0; i < cars.length; i++) {
   System.out.println(cars[i]);
   
   
+
+
+
+##JAVA- Methods - 
+#1. Method name should always start with small letter and with mix of capital letter eg. myMethod()
+
+static - means that the method belongs to the Main class and not an object of the Main class. You will learn more about objects and how to access methods through objects later in this tutorial.
+void - means that this method does not have a return value. You will learn more about return values later in this chapter
+
+Method in main class exmaple - 
+public class HelloWorld{
+    
+    static void addMethod(){
+        int a=10;
+        int b=20;
+        int c= a=b;
+        System.out.println(c);
+    }
+    
+
+     public static void main(String []args){
+         
+         addMethod();
+         
+        System.out.println("Hello World");
+        
+        
+        
+     }
+}
+
+#Return method - 
+public class HelloWorld{
+    
+    static int addMethod(int a, int b){
+        
+        int c= a+b;
+        return c;
+    }
+    
+
+     public static void main(String []args){
+         
+         int d= addMethod(20, 30);
+         
+        System.out.println(d);
+        
+        
+        
+     }
+}
+
+
+
+#Creating object of the class to access the class varibales - 
+public class HelloWorld{
+    
+     String name= "Sushant";
+
+     public static void main(String []args){
+         
+       HelloWorld obj = new HelloWorld();
+         
+        System.out.println(obj.name);
+        
+        
+        
+     }
+}
+
+###Static vs. Non-Static-
+
+
 
 
 
