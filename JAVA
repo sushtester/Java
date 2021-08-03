@@ -259,9 +259,111 @@ public class HelloWorld{
 
 ###Static vs. Non-Static-
 
+Inorder to access the static method we don't need to create an object BUT for non static method we need to create object of the class on which method is wriiten 
+
+For method name first letter is always small and second one is in upper case for eg. nameMethod(){}
+
+public class HelloWorld{
+    
+    String name= "Sushant";
+    
+    public void nonStatic(){       //non static method
+        String name1= "Pratic";
+        System.out.println(name1);
+        
+    }
+    
+    public static void staticMethod(){ //static method
+        String name2= "Soham";
+        System.out.println(name2);
+        
+    }
+
+     public static void main(String []args){
+         HelloWorld obj= new HelloWorld(); //Calling non static method
+         obj.nonStatic();
+         
+         staticMethod(); //Calling static method
+         
+
+     }
+}
 
 
+#Note for multiple class the public static vaid main (String[], args){}, always write on public class
 
+#Static method - need static method to call this same for varibale in same class
+
+
+##Java Constructors - 
+The constructor is called when an object of a class is created. It can be used to set initial values for object attributes
+
+Non paratmeter constructor- 
+
+public class Demo
+{
+     public Demo()
+     {
+         System.out.println("This is a no argument constructor");
+     }
+     public static void main(String args[]) {
+    	 Demo obj =new Demo();
+     }
+}
+
+paratmeter constructor- 
+
+public class Demo
+{
+    int a;
+    int b;
+    
+     public Demo(int c, int d)
+     {
+         this.a=c;
+         this.b=d;
+         System.out.println(a);
+         System.out.println(b);
+     }
+     public static void main(String args[]) {
+    	 Demo obj =new Demo(10, 12);
+    	 
+     }
+}
+
+Multiple calling of constructer with mentod - 
+public class Demo
+{
+    int a;
+
+    
+    public Demo(){
+        a=20;
+
+    }
+    
+     public Demo(int c)
+     {
+         this.a=c;
+
+
+     }
+     
+     
+     public int getValue(){
+
+         return a;
+     }
+
+     
+     public static void main(String args[]) {
+    	 Demo obj =new Demo(10);
+    	 Demo obj1= new Demo();
+    	 System.out.println(obj.getValue());
+    	 System.out.println(obj1.getValue());
+    	 
+     }
+}
 
 
 
