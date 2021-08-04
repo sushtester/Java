@@ -366,5 +366,147 @@ public class Demo
 }
 
 
+#Access Modifiers - 
+
+public	- The class is accessible by any other class
+
+default	- The class is only accessible by classes in the same package. This is used when you don't specify a modifier
+
+For attributes, methods and constructors, you can use the one of the following - 
+
+public	- The code is accessible for all classes, even for other packages after create an object of class 
+
+private	- The code is only accessible within the declared class
+
+default	- The code is only accessible in the same package
+
+protected	- The code is accessible in the same package and subclasses
+
+
+#Non-Access Modifiers - 
+For classes, you can use either final or abstract
+
+final	- The class cannot be inherited by other classes
+
+abstract	- The class cannot be used to create objects (To access an abstract class, it must be inherited from another class
+
+
+For attributes and methods, you can use the one of the following: - 
+final	- Attributes and methods cannot be overridden/modified 
+
+static	- Attributes and methods belongs to the class, rather than an object,only use static method 
+
+abstract	- Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();.
+
+##Java Encapsulation - 
+
+The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:
+
+declare class variables/attributes as private
+provide public get and set methods to access and update the value of a private variable
+
+ class A{
+    private int y= 20;
+    
+    //getter
+    public int getY(){
+        return y;
+    }
+    
+    //setter
+    public void setY(int z){
+        this.y=z;
+    }
+}
+
+
+public class HelloWorld{
+    
+
+
+     public static void main(String []args){
+         HelloWorld obj= new HelloWorld();
+         A obj1= new A();
+         obj1.setY(20);
+         System.out.println(obj1.getY());
+
+         
+         
+
+     }
+}
+
+
+Why Encapsulation?
+Better control of class attributes and methods
+Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)
+Flexible: the programmer can change one part of the code without affecting other parts
+Increased security of data
+
+
+
+##Java Inheritance (Subclass and Superclass) - 
+In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:
+
+subclass (child) - the class that inherits from another class
+superclass (parent) - the class being inherited from
+
+
+Why And When To Use "Inheritance"?
+- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class.
+
+If you don't want other classes to inherit from a class, use the final keyword
+
+
+class Fruits{
+    String name= "Mango";
+}
+
+public class Chav extends Fruits{.         //extends for interite the class fruits, Fruits is a parent class 
+    public static void main(String [] args){
+      Chav obj= new Chav();                     //created object for child class we can access the varibale, method of parent class
+       System.out.println(obj.name);
+        
+        
+    }
+}
+
+
+##Java Polymorphism - 
+Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+
+class Animal {
+  public void animalSound() {.  //method
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {.        //same method
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {      ////same method
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+
+
+
+
+
 
 
