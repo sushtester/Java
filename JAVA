@@ -505,6 +505,71 @@ class Main {
 }
 
 
+##Java Interface
+An interface is a completely "abstract class" that is used to group related methods with empty bodies
+
+// Interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
+}
+
+// Pig "implements" the Animal interface
+class Pig implements Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    // The body of sleep() is provided here
+    System.out.println("Zzz");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig();  // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+
+##Java ArrayList - 
+
+The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. The syntax is also slightly different:The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want. The syntax is also slightly different:
+
+ArrayList <String> cars = new ArrayList <String> ();  //create arraylist for cars with Sting as a data type
+
+ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // create arraylist for cars with Integer as a data type
+
+cars.add("SUSH");
+cars.add("Pawar");    //adding data to arraylist 
+
+As for array we user name[0] - to access the 0 index data of that array 
+
+For arraylist we need to user name.get(0) - to access the 0 index data of that array 
+
+So arrylist methods are - 
+cars.add("sush"); - To add data in arraylist 
+cars.get(0) -To access the data from arraylist 
+cars.set(0, "SUSHANT"); for replace the index 0 data with new name 
+cars.remove(0); -To remove the data from the arraylist 
+cars.clear(); - To clear the array 
+cars.size(); - To find the size of the array list
+
+
+
+#Java LinkedList - 
+
+
+#Java HashMap
+
+
+
+#Java Exceptions - Try...Catch - 
+
+
 
 
 
