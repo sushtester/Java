@@ -570,6 +570,91 @@ cars.size(); - To find the size of the array list
 
 #Java Exceptions - Try...Catch - 
 
+Exmaple for array out of index - 
+public class HelloWorld{
+
+     public static void main(String []args){
+        int [] number= {1, 2, 3, 4};
+        
+        try{
+            System.out.println(number[5]);
+            
+        }
+        catch(Exception e){
+            System.out.println("No any 5th elements present in the array");
+            
+            
+        }
+        
+        finally{
+            System.out.println(number[2]);
+            
+            
+        }
+         
+        System.out.println("Hello World");
+     }
+}
+
+
+Throw New - 
+class A{
+   public static void checkAge(int a){
+        if(a<18){
+            throw new ArithmeticException ("Access denied - You must be at least 18 years old");
+        }
+        else {
+            System.out.println("Your age is enough to see this video");
+        }
+    }
+}
+
+public class HelloWorld{
+    
+     
+    
+    public static void main(String [] args){
+        
+        A obj= new A();
+       obj.checkAge(10);
+       //checkAge(10);
+        //System.out.println("NEW");
+        
+    }
+}
+
+
+
+#Multiple Inheritance example - 
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+
 
 
 
