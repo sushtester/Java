@@ -34,3 +34,27 @@ String projectPath= System.getProperty("user.dir");
 		
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://staging.shipsticks.com/");
+		
+		
+Another method is that we have now one dependancy called - "webdrivermanager" - We can get that in maven dependancy and then it can call using - 
+
+WebDriverManager.chromedriver().setup();
+WebDriver driver = new ChromeDriver();
+driver.get("WWW.google.com");
+driver.close;
+
+
+For Firefox - 
+WebDriverManager.firefoxdriver().setup();
+WebDriver driver= new FirefoxDriver();
+
+
+
+
+
+
+
+
+
+
+
