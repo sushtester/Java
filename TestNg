@@ -1,3 +1,26 @@
 On ecclipse go to help - intalled software - to see testNG added already
 Go to marketplace in ecliipse and add testNg software from there 
 Add dependacy of test Ng from maven repository 
+
+For TestNG we don't need a main method to run the application 
+
+@BeforeTest
+
+@Test
+
+@AfterTest
+
+
+Group TestNG - (TesNG Grouping) for sanity - Regression - Inorder to decide how many test should run in group - 
+
+See below video for this - 
+Selenium Framework for Beginners 23 | TestNG Grouping | How to group tests
+
+
+For TestNG Parameter - 
+Selenium Framework for Beginners 24 | TestNG How to use Parameters | in Selenium
+
+Depandencies - 
+Selenium Framework for Beginners 25 | TestNG How to create Dependencies
+
+
