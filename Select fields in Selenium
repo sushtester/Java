@@ -1,0 +1,26 @@
+To select the element from the Select class such as date picker in FB - 
+We can use Select class such as - 
+WebElement day= driver.findElement(By.xpath("//select[@id='day']"));
+		Select select= new Select(day);
+    
+    
+#For Mouse hover on welemement we can use Action class- 
+WebElement date = driver.findElement(By.xpath("//*[@id='day']"));
+
+Actions action= new Actions(driver);
+		action.moveToElement(date);
+   
+   
+Multiple Windows - 
+Set<String> widnowId = driver.getWindowHandles();
+		Iterator<String> itr = widnowId.iterator();
+		String pranetId= itr.next();
+		String childId= itr.next();
+		driver.switchTo().window(childId);
+		Thread.sleep(10000);
+		driver.close();
+    
+    
+    
+
+    
