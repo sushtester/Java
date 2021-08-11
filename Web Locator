@@ -22,3 +22,8 @@ For text when there is no any id, name, or any attribute and attributes get chan
 
 //div[@class= 'right']/p[contains (text(), 'Latest stable version ')]/a - It will use for SSID - https://www.screencast.com/t/4ZuLzGECXMc
 
+
+
+When go directly to class name & then use//
+//div[@class= 'top-nav-items col-md-6 pull-right no-padding']/div[3]/a for Login link on staging 
+
