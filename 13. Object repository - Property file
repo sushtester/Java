@@ -1,0 +1,7 @@
+config.properties
+
+We can store generic thing in that file such as 
+url= https://www.google.com/
+browser= chrome
+name= sush
+password= name
