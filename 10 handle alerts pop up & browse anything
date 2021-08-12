@@ -1,0 +1,20 @@
+How to handle alerts pop up - 
+https://mail.rediff.com/cgi-bin/login.cgi
+
+driver.findElement(By.xpath("//body/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[2]/div[2]/input[2]")).click();
+		Alert alert= driver.switchTo().alert();
+		System.out.println(alert.getText());
+		alert.accept();
+    alert.dismis();
+    
+    
+    
+ To Browse a photo or files - 
+ Find element of browse button, don't click it, just send keys as a file name path 
+ 
+ driver.findElement(By.xpath("//input[@id='fileupload']")).sendKeys("/Users/sushant/Desktop/club image.jpeg");
+ 
+ 
+    
+    
+    
