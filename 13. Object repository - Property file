@@ -1,4 +1,4 @@
-config.properties
+config.properties - Create file on the package 
 
 We can store generic thing in that file such as 
 url= https://www.google.com/
