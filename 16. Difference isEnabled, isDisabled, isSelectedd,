@@ -1,0 +1,7 @@
+Uses for disabled buttons or not, also for checkboxes selected or not 
+
+boolean closeIconPresent= driver.findElement(closeIcon).isDisplayed(); // returns true of element is present
+
+boolean closeIconPresent= driver.findElement(closeIcon).isEnabled(); //if button is enabled then it will return true 
+
+boolean closeIconPresent= driver.findElement(closeIcon).isSelected(); //return wheather checkbox is selected OR not 
