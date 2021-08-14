@@ -1,0 +1,11 @@
+No browser using 
+Headless browsern or we can called Ghost browser
+HTML unit driver did in background, there is no browser 
+
+WebDriver driver= new HtmlUnitBrowser();
+
+We need to download the htmlunit browser.jar file and need to add that in the project 
+Project - Build path - download the jar 
+
+
+html unit brower is not suitable such as mouse movenets, or double click or drag and drop, this can't do with htm unit drowser
