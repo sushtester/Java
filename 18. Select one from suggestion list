@@ -1,0 +1,26 @@
+We need to find the UL elemnt of all list showing then go to the div where exaclt text is showing so we can capture that text
+
+then create Arraylist of weblements using - List<WebElement>list= driver.findElements(By.xpath(" "));
+list.size(); - Will give you the size of the list 
+
+list.get(i).getText(); - Will give you the text of that elemnts 
+
+
+
+
+
+driver.findElement(By.xpath("//input[@id= 'o_company_name']")).sendKeys("aloha club");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		List<WebElement> list= driver.findElements(By.xpath("//ul[@class= 'typeahead__list']/li/a/div/span"));
+		
+		System.out.println(list.size());
+		
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i).getText());
+		}
