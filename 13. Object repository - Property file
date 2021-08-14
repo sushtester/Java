@@ -5,3 +5,25 @@ url= https://www.google.com/
 browser= chrome
 name= sush
 password= name
+
+
+public void readPropertyTest() throws IOException {
+	  
+	  Properties pro= new Properties();
+	  FileInputStream io= new FileInputStream("/Users/sushant/eclipse-workspace/SeleniumQA/src/test/java/demo/config.properties");
+	  pro.load(io);
+	  
+	  String browserName= pro.getProperty("browser");
+	  if (browserName.equals("chrome")) {
+		  WebDriverManager.chromedriver().setup();
+		  WebDriver driver= new ChromeDriver();
+		  driver.manage().window().maximize();
+		  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		  driver.get(pro.getProperty("url"));
+		  WebDriverWait wait= new WebDriverWait(driver, 10);
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[3]/center[1]/input[1]")));
+	  
+	 
+	 }
+   
+   }
