@@ -1,1 +1,20 @@
-QA
+add string variable before path and after path 
+
+then create two for loop outer one is for row - and inner one is for coulumn from the xpath 
+
+
+String beforePath= "//table[@id= 'stDtFilter_table']/tbody/tr[";
+		String afterPath= "]/td[";
+		
+		for(int i=1; i<6; i++) {
+			for(int j= 1; j<7; j++) {
+				
+				String number= driver.findElement(By.xpath(beforePath+i+afterPath+j+"]")).getText();
+				System.out.println(number);
+				if(number.contains("18")) {
+					driver.findElement(By.xpath(beforePath+i+afterPath+j+"]")).click();
+				}
+				
+			}
+			
+		}
