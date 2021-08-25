@@ -1,0 +1,34 @@
+TestNG - Testng new generation framework 
+Purpose - Design test cases in a systmatic way & it's open source 
+It's availbale in jar file as well as in maven dependancy - It's only for JAVA - Junit is for java
+Advantages - Its generate beutifull HTML reports 
+Annotation - also we can add priporities, sequesnces of test cases to excute, also can add dependacies, grouping 
+Data provider feature - If test cases want to exceute multiple time, like 10 users login, like we can use multiple data for login 
+TDD- Test driven developements 
+
+@BeforeSwite - 
+We can setup browser property like - WebDriverManager.chromedriver.setup()l
+
+@BeforeTest- 
+We can lunch the browser - WebDriver driver new = ChrmeDriver();
+
+@BeforeClass - 
+We can enter the login for browser URL - if there is any authentication available  
+
+@BeforeMethod- 
+Enter the URL
+
+@Test
+Actual test case
+
+@AfterMethod - 
+For logout 
+
+@AfterClass - 
+For Delete all the cookies 
+
+@AfterTest - 
+For close the brorswe 
+
+@AfterSwite - 
+To generate the test reports 
