@@ -6,6 +6,8 @@ Annotation - also we can add priporities, sequesnces of test cases to excute, al
 Data provider feature - If test cases want to exceute multiple time, like 10 users login, like we can use multiple data for login 
 TDD- Test driven developements 
 
+Sequence - 
+
 @BeforeSwite - 
 We can setup browser property like - WebDriverManager.chromedriver.setup()l
 
@@ -32,3 +34,23 @@ For close the brorswe
 
 @AfterSwite - 
 To generate the test reports 
+
+
+Runs for each @Test method - This the pair for each @Test
+@BeforeMethod 
+@Test
+@AfterMethod 
+
+
+#Select Project - Refresh it - Open index.htm - Properties and copy paste that in browser 
+
+
+Groups - 
+
+@Test(priority=1,groups= "Site")
+
+
+dependsOnMethods = "methodname"
+
+
+
