@@ -96,7 +96,27 @@ if want to use the groups then can use the groups -
 </groups>
 
 
+if we want to user the parameters in tesng.xml - 
+<parameters name= "url" value= "www.roofing.com"/>
+<parameters name= "uname" value= "amol@gmail.com"/>
+<parameters name= "pwd" value= "password"/>
 
 
+
+Soft assertion 
+
+hard assertion 
+
+TestNg Data provider - how to take the data from the file and like different usname & passwords and use that in the login and password 
+
+Parallel run testNG 
+
+How to exclude particular methonds from the class - 
+<methods>
+<exclude name= "methodname"/>
+</methods>
+
+
+How to ignore the test case in TestNg 
 
 
