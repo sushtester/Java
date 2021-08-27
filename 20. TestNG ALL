@@ -96,6 +96,8 @@ if want to use the groups then can use the groups -
 </groups>
 
 
+Parameters - 
+
 if we want to user the parameters in tesng.xml - 
 <parameters name= "url" value= "www.roofing.com"/>
 <parameters name= "uname" value= "amol@gmail.com"/>
