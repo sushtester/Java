@@ -49,8 +49,54 @@ Groups -
 
 @Test(priority=1,groups= "Site")
 
+or for multple groups - 
+@Test(group= {"Sanity", "Smoke"})
 
-dependsOnMethods = "methodname"
+Groups can also difed on the calss level- 
+
+
+
+dependsOnMethos is use to make dependancy of any Test on another Test
+
+(dependsOnMethods = "methodname")
+
+
+If same testCase want to excute 10 times 
+
+@Test(invocationCount=10) - It can use to run same test multiple times 
+
+
+###Assert- This is used to check the validations of testNG - 
+
+Assert.assertEquals(titile, "Google", "Title is not matched with the expected")
+
+
+
+
+
+To run the all the different classes on same time we need to use the TestNg.xml file - 
+<suite name= "Roofing">
+<test name= "Roofing sanity cases">
+<classes>
+ <class name= "packagename.class1"/>
+ <class name= "packagename.class2"/>
+ <class name= "packagename.class3"/>
+</classes>
+
+</test>
+</suite>
+
+
+if want to use the groups then can use the groups - 
+<groups>
+<run>
+<include name= "Sanity">
+</run>
+
+</groups>
+
+
+
 
 
 
