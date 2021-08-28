@@ -122,3 +122,112 @@ How to exclude particular methonds from the class -
 How to ignore the test case in TestNg 
 
 
+##Parameters Syntax - 
+@Test 
+@Parameters({"name", "url", "password"}) 
+Public void method(){
+
+} 
+
+
+public class TestNGParameters {
+	
+	@Test (priority=2)
+	@Parameters({"name", "browser"})
+	public void firstMethod(String name, String browser) {
+		
+		
+		System.out.println("This is the name : " + name);
+		System.out.println("This is the browser" +browser);
+		
+	}
+
+
+TestNg.XML file - 
+Parameter -
+<parameter name="name" value= "uname"/>
+<paramter name= "email" value= "hokuuserone@gmail.com"/>
+
+eg. 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name= "Roofing Project">
+<test name= "Roofing Sanity">
+ <parameter name= "browser" value= "chrome"/>
+ <parameter name ="url" value= "https://www.roofingsw.com/"/>
+ <parameter name= "name" value= "amolk@hokuapps.com"/>
+ <parameter name= "password" value= "1111"/>
+ 
+ <classes>
+  <class name= "com.parameters.TestNGSecondClass"/>
+  <class name= "com.parameters.TestNGParameters"/>
+ </classes>
+</test>
+</suite>
+
+
+Now, parameters can be defined at 2 levels
+
+Suite level – The parameters inside the <suite> tag of TestNG XML file will be a suite level parameter.
+Test Level -- The parameters inside the <Test> tag of testing XML file will be a Test level parameter.
+
+
+###DATA DRIVEN USING TESTNG - Excel file - (multiple username and password, kind of multiple data set we want to use in the selenium)
+
+[Data provider in same class]
+
+@Test (dataProvider= "SearchDataProvider")
+public void methodName(String column1data, column2data){
+system.out.println(column1data,column2data )
+system.out.println(column1data,column2data )
+}
+
+@DataProvider (name= "SearchDataProvider")
+public Object[][] searchProviderMethod(){
+return new Object [][] {
+   {"column1data", "Column2data"}
+   {"Column1data", "Column2data"}
+ };
+}
+
+
+###[Data provider method in different class and utility]
+@Test (dataProvider= "SearchDataProvider", dataProviderClass= Classname.class)
+public void methodName(String column1data, column2data){
+system.out.println(column1data,column2data )
+system.out.println(column1data,column2data )
+}
+
+@DataProvider (name= "SearchDataProvider")
+public static Object[][] searchProviderMethod(){
+return new Object [][] {
+   {"column1data", "Column2data"}
+   {"Column1data", "Column2data"}
+ };
+}
+
+
+
+###Soft Assertion VS Hard Assertion - 
+
+When hard asseration comes then the test cases failed and other code after the assertaion not get excuated 
+
+For soft asseration also test cases get failed BUT other code after the soft assertaion will get excuted (We need to create new assert class for this)
+SoftAssert Softassert = new SoftAssert();
+
+Softassert.assertAll();
+
+Code - 
+
+
+##Asserts types just for examples - 
+
+
+
+Screenshot in selenium - 
+
+Reports in selenium - 
+
+
+
