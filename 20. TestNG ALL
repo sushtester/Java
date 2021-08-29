@@ -214,18 +214,36 @@ return new Object [][] {
 When hard asseration comes then the test cases failed and other code after the assertaion not get excuated 
 
 For soft asseration also test cases get failed BUT other code after the soft assertaion will get excuted (We need to create new assert class for this)
+
 SoftAssert Softassert = new SoftAssert();
+
+Synatx- Assert.assertEqual(Actual resut, expected results); //hard assert 
+
+Softassert.Assert.assertEqual(Actual result, expected results); //soft assert
 
 Softassert.assertAll();
 
-Code - 
+
 
 
 ##Asserts types just for examples - 
 
+1. Assert.assertEuquals(Actual result, expected results) //to compare the string results 
+2. Assert.asserTrue()// returns true so if condition under is true then only it pass otherwise get failed 
+3. Assert.assertFalse()// retruns false so condition under is false then it get pass 
 
 
 Screenshot in selenium - 
+We can do that using TestNg Listner - 
+Apache common IO dependacy need to add in maven dependacies 
+
+Three classes need - 
+Base class - (Where we can add a screenshots code)- 
+
+
+Test Class - Where we can write the actual cases 
+
+Listner Class - 
 
 Reports in selenium - 
 
