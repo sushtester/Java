@@ -1,0 +1,88 @@
+INNER JOIN - 
+
+Select * FROM table1 INNER JOIN table2 ON table.ID= table1.ID
+
+
+LEFT JOIN - 
+
+
+RIGHT JOIN - 
+
+
+Students 
+
+Name        Roll.   Address   class
+Sush.        1       Nagar.   4th 
+Ravi.        3.      gaon.    5th
+Ram.         2.      wasti    4th
+Rohan        4.      Pune     4th
+Ganesh.      5.      Mumbai.  5th
+
+
+Courses
+
+Coursname   Roll.  coursefess
+Marathi.    2.     100
+English.    3      200
+Science.    5      300
+Maths.      6.     100
+JAVA.       7.     200
+
+
+INNER JOIN - 
+Query for fetch all staundet names who dones the courses - 
+SELECT Students.Name, Courses.Coursname FROM Students INNER JOIN Courses ON Students.Roll= Courses.Roll
+
+
+LEFT JOIN - (Take all the records from Left tabale which is Students )- 
+
+Query for fetch all staundet names whose done courses and not done courses - (course name will be null for the students who not done course) 
+
+SELECT Students.Name, Courses.Coursname FROM Students LEFT JOIN Courses ON Students.Roll= Courses.Roll 
+
+RIGHT JOIN - (Take all the records from Right tabale which is Courses )- 
+Query for fetch all courses names even no any course done by staudent, it will show staudent name as null for the course for which not done by anybody
+SELECT Students.Name, Courses.Coursname FROM Students RIGHT JOIN Courses ON Students.Roll= Courses.Roll 
+
+
+Customers- 
+
+Name        Position    Country 
+Achal.      QA.         India
+Pravin.     BA.         India 
+Kishor.     Network     USA     
+Santosh.    Netwrok.    France   
+Papu.       DB.         USA 
+
+#Order By - Fetching cutomers by descinding order of the coutries 
+SELECT * FROM Customers
+ORDER BY Country DESC;
+
+#Group By - Fetching count of records by groping the multiple coutries togther if same countrie having multiple names 
+SELECT COUNT (names), Country FROM Customers GROUP BY Country
+
+
+#Like - The following SQL statement selects all customers with a CustomerName starting with "a":
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+
+
+#Min - 
+SELECT MIN(Price) AS LargestPrice
+FROM Products;
+
+#Max- 
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+#Distinct
+SELECT DISTINCT countries from country
+
+SELECT COUNT (DISTINCT countries) from country
+
+#Where 
+SELECT * FROM Customers
+WHERE Country='Mexico';
+
+
