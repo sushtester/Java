@@ -1,0 +1,8 @@
+Create new maven project 
+Add dependacy in POM.XML- 
+A. Junit 
+B. Selenium hQ
+C. TestNG
+D. Apache POI API
+E. Extent Reports
+D. WebDriver Manager
