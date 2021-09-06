@@ -17,4 +17,11 @@ driver.findElement(By.xpath("//body/div[1]/div[1]/div[1]/div[2]/form[1]/div[1]/d
  
     
     
-    
+##Handle Multiple Windows - 
+Set<String> windoHandle= driver.getWindowHandles();
+		Iterator <String> it= windoHandle.iterator();;
+		String parentID= it.next();
+		String childID= it.next();
+		driver.switchTo().window(childID);
+		driver.getTitle();
+		driver.switchTo().window(parentID);
