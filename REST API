@@ -1,0 +1,53 @@
+1. Client/server Error Codes
+
+400 Bad Request- The 400 status code, or Bad Request error, means the HTTP request that was sent to the server has invalid syntax.
+401 Unauthorized user - Need credentials to access the site
+404 Not Found - Page not found 
+500 Internal Server Error
+502 Bad Gateway - gatewayor poxy server not getting valid responce from backend server 
+504 Gateway Timeout - gatewayor poxy server not getting valid responce from backend server within timeline 
+
+200 - The request was fulfilled.
+204. - No Response 
+
+##2. Use of GET, PUT, POST, PATCH, DELETE. [We were using basic auth - username & password given by client, or we were also used API KEY]
+
+GET- Read the data (to get the data) - Data is in JSON/XML formats - Status code 200 - Only URL no body
+
+POST- Create - create a data - data sends in JSON/XML formats - Status code 201 - URL with body in JSON format - and get responce in JSON formats
+
+PUT-
+
+If I had to change my firstname then send PUT request for Update:
+
+{ "first": "Nazmul", "last": "hasan" } So, here in order to update the first name we need to send all the parameters of the data again.(It only updated data)
+
+PATCH:
+
+Patch request says that we would only send the data that we need to modify without modifying or effecting other parts of the data. (It retruns all the other data as well)
+Ex: if we need to update only the first name, we pass only the first name.
+
+DELETE- 
+just to delete the records 
+
+
+#JSON Example - 
+{"employees":[
+  { "firstName":"John", "lastName":"Doe" },
+  { "firstName":"Anna", "lastName":"Smith" },
+  { "firstName":"Peter", "lastName":"Jones" }
+]}
+
+#XML Examples - 
+<employees>
+  <employee>
+    <firstName>John</firstName> <lastName>Doe</lastName>
+  </employee>
+  <employee>
+    <firstName>Anna</firstName> <lastName>Smith</lastName>
+  </employee>
+  <employee>
+    <firstName>Peter</firstName> <lastName>Jones</lastName>
+  </employee>
+</employees>
+
