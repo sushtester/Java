@@ -51,3 +51,13 @@ just to delete the records
   </employee>
 </employees>
 
+
+#Difference Between Soap and REST API - 
+
+SOAP stands for Simple Object Access Protocol and REST stands for REpresentational State Transfer.
+
+Since SOAP is a protocol, it follows a strict standard to allow communication between the client and the server
+
+SOAP uses only XML for exchanging information in its message format whereas REST is not restricted to XML and its the choice of implementer which Media-Type to use like XML, JSON, Plain-text. Moreover, REST can use SOAP protocol but SOAP cannot use REST.
+
+
