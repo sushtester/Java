@@ -657,6 +657,40 @@ public class Main {
 
 
 
+#Type casting - DataType casting - It's user to change the data type of any other data type -
+A. Widening Casting (Use to typecast of higher data type into lower data type)
+int num= 10;
+double value= num;
+
+So value= 10.00
+
+B. Narrowing Casting - 
+double value= 9.98;
+int num= (int) value;
+
+num= 9;
+
+
+#Method overriding and overloading - 
+
+
+A. Method overloading is performed within class.	
+class OverloadingExample{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+
+B. Method overriding occurs in two classes that have IS-A (inheritance) relationship.
+
+class Animal{  
+void eat(){System.out.println("eating...");}  
+}  
+class Dog extends Animal{  
+void eat(){System.out.println("eating bread...");}  
+}  
+
+
+#
 
 
 
