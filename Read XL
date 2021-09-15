@@ -1,0 +1,81 @@
+#FilePath - 
+#Create a file using the file path - 
+FileInputStream file= new FileInputStream(FilePath)
+
+#Create workbook of that file - 
+Workbook book;
+book= WorkBookFactory.create(file);
+
+#Access the sheet we need a sheet name for this - 
+
+Sheet sheet;
+
+sheet= book.getSheetName(sheetName);
+
+#sheet.getLastRowNum() - To get the last number of row - total number of rows - start from zero 
+
+#sheet.getRow().getLastCelNum() - To get the last number of column - total number of column
+
+
+
+#Create two dimentional array of object - Create below arary
+Object [][] data = new Object [sheet.getLastRowNum()][sheet.getRow().getLastCellNum()]
+
+for(i=0; i<sheet.getLastRowNum(); i++)
+ for (j=0; j<sheet.getRow().getLastCellNum(); j++)
+   data [i][j]= sheet.getRow(i+1).getCell(j).toString();
+return data;
+
+
+
+public static String TESTDATA_SHEET_PATH = "/Users/naveenkhunteta/Documents/workspace"
+			+ "/FreeCRMTest/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
+
+	static Workbook book;
+	static Sheet sheet;
+	
+	public static Object[][] getTestData(String sheetName) {
+		FileInputStream file = null;
+		try {
+			file = new FileInputStream(TESTDATA_SHEET_PATH);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		try {
+			book = WorkbookFactory.create(file);
+		} catch (InvalidFormatException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		sheet = book.getSheet(sheetName);
+		Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+		// System.out.println(sheet.getLastRowNum() + "--------" +
+		// sheet.getRow(0).getLastCellNum());
+		for (int i = 0; i < sheet.getLastRowNum(); i++) {
+			for (int k = 0; k < sheet.getRow(0).getLastCellNum(); k++) {
+				data[i][k] = sheet.getRow(i + 1).getCell(k).toString();
+				// System.out.println(data[i][k]);
+			}
+		}
+		return data;
+	}
+	
+	
+	public static void failed() {
+		TakesScreenshot ts= (TakesScreenshot)driver;
+		File source= ts.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(source, new File("/screenshot/test.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+
+
+
+
+
