@@ -1,0 +1,94 @@
+1. Factorial program in JAVA- 
+int fact= 1;
+int number=4;
+
+for(int i=1; i<=number; i++){
+ fact= fact*i
+}
+System.out.println(fact);
+ 
+
+
+
+2. String Reverse - Char and the whole string statements - 
+
+public void stringRevers() {
+		String name= "Sushant Pawar";
+		
+		
+		StringBuilder newString= new StringBuilder();
+		
+		newString.append(name);
+		
+		newString.reverse();
+		
+		System.out.println(newString);
+}
+
+ #Using toCharArray() - Which crate array of the char 
+ 
+ char[] name= string.toCharArray(); //created name array of char 
+ 
+ public void StringCharReverse() {
+		String name= "Sushant";
+		String finalResult= "";
+		
+		char[] reverThisString= name.toCharArray();
+		System.out.println(reverThisString.length);
+		
+		for(int i=reverThisString.length-1; i>=0; i--) {
+			
+		
+			
+			finalResult=finalResult+reverThisString[i];  
+			
+		}
+		
+		System.out.println(finalResult);
+	}
+ 
+ 
+#3. Add two number - 
+int num=2;
+int tonum=3;
+int sum= num+toNum;
+SYSO(sum);
+
+
+#4. Print dublicate numbers showing in array 
+public void displaySameNUmbers() {
+		int [] number={10, 20, 10, 30, 40, 10, 50, 20, 60};
+		
+		for(int i=0; i<=number.length-1; i++) {
+			for(int j=i+1;j<=number.length-1; j++) {
+				if(number[i]==number[j]) {
+					System.out.println(number[j]);
+				}
+				
+			}
+			
+		}
+    
+    
+    
+#5. Types of exception in the automation you faced- 
+
+#6. Abstract Class - can't create object of abract class BUT it can access using inteheritance we can extends the absract class, 
+then abstract method can only written in abstract class 
+
+#7. What are the different types of string methods 
+
+#8. What is collections? what collections you have used?
+
+#9. What is interface and abstact class 
+
+#10. Method overloading and method overriding 
+
+#11. How you will type in textfied without using sendkeys
+
+#12. Access modifier
+
+#13. How many browser you can use for automation
+
+#14. Parallel testing using testNG
+
