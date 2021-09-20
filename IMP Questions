@@ -129,6 +129,57 @@ js.executeScript ("document.getElementById('gsc-i-id1').value='Selenium'");
 
 #14. Parallel testing using testNG
 
-#15. Fluent Wait - 
+#15. Fluent Wait - ??
+
+Default polling time is 500 milliseconds which is 0.5 seconds 
+
+Hard wait - Thread.sleep (20), driver get sleep until 20 milliseconds even next action element shows
+
+Implicitly wait - Tell driver to wait until post the error No such element present if present then go ahead quickly for next action element 
+
+Explicit wait - Wait until that element is clickable - or visible or alertPresent () - elementToBeClickable() or visibilityOfElementLocatedBY(locator) OR 
+
+#16. Difference between throw and throws - 
+
+A. Throw - We can explicitly adding an exception here 
+Eg, for 
+Public class CheckNUmber(){
+If (number<1){
+throw new ArithmeticException (“Number can not be negative”)
+}else{
+System.out.println(“This is the nubmber”+ number);
+}
+}
+
+B. Throws - This is used for a method on which exception can comes 
+Public class CheckDevideBy() throws ArithmeticException {
+Int div= t/n;
+Return div;
+}
+
+#17. #Difference in Final, finally
+Final- 
+(1) Once declared, final variable becomes constant and cannot be modified.
+(2) final method cannot be overridden by sub class.
+(3) final class cannot be inherited.
+
+Finally- 
+(1) finally block runs the important code even if exception occurs or not. it's uses after exception ocuured 
+
+
+#18. This and super keyword in java - 
+A. super keyword is used to access methods of the parent class - 
+If super class method is A() then we can use super.A() - mening calling super class method A
+
+
+B. while this is used to access methods of the current class - 
+public class A{
+int a=200;
+public void method(){
+this.a= 100
+}
+}
+
+#19. Type Casting in JAVA - 
 
 
