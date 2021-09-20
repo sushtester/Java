@@ -181,5 +181,18 @@ this.a= 100
 }
 
 #19. Type Casting in JAVA - 
+#double - Big Size data type that int 
+Then if any to covert the double to int then we need to add syntax (Narrowing)
+double value= 19.99;
+		int numverValue= (int) value;
+		System.out.println(numverValue); // result will be 19
 
+
+
+Widening - from lover data type to higher datatype - 
+	int num= 10;
+		double numVale= num;
+		System.out.println(numVale); //result will be 10.00
+		
+		
 
