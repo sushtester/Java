@@ -129,3 +129,6 @@ js.executeScript ("document.getElementById('gsc-i-id1').value='Selenium'");
 
 #14. Parallel testing using testNG
 
+#15. Fluent Wait - 
+
+
