@@ -72,15 +72,133 @@ public void displaySameNUmbers() {
     
     
 #5. Types of exception in the automation you faced- 
+Checked & unchecked expection - 
+
+A. Checked expection - When file not found we use this when reading file - eg- 
+We use this while loading the properties file - config.properties 
+
+public void readPropertyTest() throws IOException {
+ Properties pro= new Properties();
+ FileInputStream io= new FileInputStream("/Users/sushant/eclipse-workspace/SeleniumQA/src/test/java/demo/config.properties"); //FileNotFoundException
+ pro.load(io); //IO Exceptions - Input Output operation failed exceptions 
+ 
+}
+
+B. unchecked expection - 
+Array out of bound OR ElementNotVisibleException, EG- 
+
+driver.findElement(By.id("submit")).click();
+Exception Handling:
+ 
+try {
+driver.findElement(By.id("submit")).click();
+} catch (NoSuchElementException e)
+
+Selenium exception - 
+NoSuchElement exception 
+ElementNotVisible
+ElementNotClickable 
+ElementNotSelectableException
+TimeoutException
+NoSuchFrameExceptionc
+
+Some More Example of Expections - 
+
+try {
+driver.switchTo().frame("frame_11");
+} catch (NoSuchFrameException e)
+
+
+try {
+driver.switchTo().alert().accept();
+} catch (NoSuchAlertException e)
+
+
+
 
 #6. Abstract Class - can't create object of abract class BUT it can access using inteheritance we can extends the absract class, 
 then abstract method can only written in abstract class 
 
-#7. What are the different types of string methods 
+#7. What are the different types of string methods - 
 
-#8. What is collections? what collections you have used?
 
-#9. What is interface and abstact class 
+#8. What is collections? what collections you have used? -
+Collection of the objects using array, arraylist, hasMap, Set 
+
+Array- 
+
+ArrayList - 
+
+HashMap - 
+
+
+#9. What is interface and abstact class - (Both are used to do data abstractions)
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+
+Abstraction can be done using the absraction class and interface 
+
+Abraction Class- We can not create an object of the abstraction class, abstract method can use only in abstarct class & abstraction method dose not have a body
+the body can written in the subcalss that calling the abstarct method using inheritance 
+
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+
+Abstraction can also done using the interface - 
+
+// Interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void sleep(); // interface method (does not have a body)
+}
+
+// Pig "implements" the Animal interface
+class Pig implements Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+  public void sleep() {
+    // The body of sleep() is provided here
+    System.out.println("Zzz");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig();  // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+
+
+We using inteface class of ITlistner and implements that in our listner class where we can use that interface methods such as OnTestFailed() and write our code 
+like to print message after test case get failed or screenshot methods  
+
 
 #10. Method overloading and method overriding - 
 A. Method Overloading - Complie time polymorphism, may or may not inheritance required here 
@@ -118,18 +236,40 @@ class Bike2 extends Vehicle{
 
 
 
+
 #11. How you will type in textfied without using sendkeys - 
 JavascriptExecutor js= (JavascriptExecutor)driver;
 js.executeScript ("document.getElementById('gsc-i-id1').value='Selenium'");
 
 #12. Access modifier - 
 
+Private - Only can use within the class, not outside the class and outside the package 
+Public - Can use outside the class and outside the package 
+Protected - can access within the class as well as outside the class of same package not the outside package class, it can access outside the package only when
+it inheriate from the that class where it is declared using extends 
+Default - when no any data type is provide it set to default, it can access within the class and withing the same package can't access outside the class even
+it inheriate from the that class where it is declared using extends 
 
-#13. How many browser you can use for automation
+Inorder to use our varibale to the private varibale of other class we can use getter and settler - 
 
-#14. Parallel testing using testNG
+Private string name= "Sushant";
 
-#15. Fluent Wait - ??
+public void getter(String name)
+ this.name= name;
+ 
+ public void setter(){
+ SYSO(name);
+ }
+
+
+
+#13. How many browser you can use for automation -
+
+
+#14. Parallel testing using testNG - 
+
+
+#15. Fluent Wait - ?? - 
 
 Default polling time is 500 milliseconds which is 0.5 seconds 
 
@@ -193,6 +333,8 @@ Widening - from lover data type to higher datatype -
 	int num= 10;
 		double numVale= num;
 		System.out.println(numVale); //result will be 10.00
+		
+		
 		
 		
 
