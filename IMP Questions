@@ -132,12 +132,56 @@ SYSO (s)// javapoints;
 #8. What is collections? what collections you have used? -
 Collection of the objects using array, arraylist, hasMap, Set 
 
-Array- 
+Array - Size is defined and can’t modified 
 
+ArrayList - We can modified the size of the array 
 
-ArrayList - 
+Array List Syntax- 
+ArrayList <String> name= new  ArrayList<String>();
+
+ArrayList methods- 
+Add elements to array
+Name.add(“SUSH”);
+Name.add(“KISH”);
+Name.add(“ROH”);
+
+Access Array List elements - 
+Name.get(0) //to get the first element in arraylst
+
+Size of array list- 
+Name.size();
+
+Modifiye arraylist 
+Name.set(0, “Ketan”);
+
+Also .remove (0) or we can clear array list by name.clear();
+
+#ArrayList and LinkedList is almost same, just for array list- it stores the data in array and if array is big then it remove the old array and create new big array however for linked list it create containers, and if linked with other container it not removes the first containers 
+
+Some methods for LinkedList - addFirst(), getFirst(), getLast()
+
 
 HashMap - 
+#HashMap - Key, Value pair
+HashMap <String, String> names= new HashMap <String, String> (); //intilaize the hashmap of string
+To map the key value pair (“India”, “Mumbai”)
+
+HashMap <Integer, String> names= new HashMap <String, String> (); //intilaize the hashmap of Integer and String 
+To map the key value pair (1, “Mumbai”)
+
+Names.put(“1”, “First Number”); //to put the key and value in HashMap 
+
+Names.get(1) //Enter the key here it will give you the value as result, ie. Mumbai
+
+To print the the key only - 
+For(int I: name.keySet()){
+SYSO(i)
+}
+
+To print the the value - 
+For(String I: name.values()){
+SYSO(i)
+}
 
 
 #9. What is interface and abstact class - (Both are used to do data abstractions)
@@ -148,21 +192,22 @@ Abstraction can be done using the absraction class and interface
 Abraction Class- We can not create an object of the abstraction class, abstract method can use only in abstarct class & abstraction method dose not have a body
 the body can written in the subcalss that calling the abstarct method using inheritance 
 
-// Abstract class
+// Abstract class - 
+
 abstract class Animal {
-  // Abstract method (does not have a body)
-  public abstract void animalSound();
-  // Regular method
-  public void sleep() {
+  
+  public abstract void animalSound();  // Abstract method (does not have a body)
+
+  public void sleep() {       // Regular method
     System.out.println("Zzz");
   }
 }
 
-// Subclass (inherit from Animal)
-class Pig extends Animal {
+
+class Pig extends Animal {       // Subclass (inherit from Animal)
   public void animalSound() {
-    // The body of animalSound() is provided here
-    System.out.println("The pig says: wee wee");
+    
+    System.out.println("The pig says: wee wee");      //// The body of animalSound() is provided here
   }
 }
 
@@ -177,10 +222,10 @@ class Main {
 
 Abstraction can also done using the interface - 
 
-// Interface
-interface Animal {
-  public void animalSound(); // interface method (does not have a body)
-  public void sleep(); // interface method (does not have a body)
+
+interface Animal {     // Interface
+  public void animalSound();   // interface method (does not have a body)
+  public void sleep();    // interface method (does not have a body)
 }
 
 // Pig "implements" the Animal interface
@@ -441,4 +486,54 @@ static blocks executes before instance blocks in java
 Also, static blocks are executed before constructors
 
 		
+#25. To find the same char of the string and it's count - 
+public void checkChar() {
+		String name= "SuShanSt";
+		int count;
+		
+		char [] nameQA= name.toCharArray();
+		count=0;
+		for(int i=0; i<nameQA.length; i++) {
+			
+			for(int j=i+1; j<nameQA.length;j++) {
+				if(nameQA[i]==nameQA[j]) {
+					System.out.println(nameQA[j]);
+					count= count+1;
+				}
+			}
+		}System.out.println(count);
+		
+	}
+
+#26. prime number -  Conditon [number% (2 to number) ==0] should not satisfield 
+
+public void checkChar() {
+		
+		int num= 30;
+		boolean flag= false;
+		
+		for(int i=2; i<num; i++) {
+			
+			if(num%i==0) {
+				flag=true;
+				break;
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("This is prime number");
+		}else {
+			System.out.println("This is not a prime number");
+		}
+	
+		
+	}
+
+
+#27. Scrolling horizontally and vertically 
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+
+js.executeScript("window.scrollBy(x-pixels,y-pixels)");
+
 
