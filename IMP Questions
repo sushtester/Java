@@ -537,3 +537,32 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
 js.executeScript("window.scrollBy(x-pixels,y-pixels)");
 
 
+#28. JDK 1.8 onwards & JAVA 8 - have a new feature on which we can write body to interface methods using default and static 
+And can call them after implements and then extend the class where it implements 
+
+
+#29. Multiple inheritance - Java dose not support the multiple inheritance such as - 
+Class A
+  
+Class B 
+
+
+Class C extends A, B // not allowed multiple inheritance 
+
+
+So overcome this problem using interface & after java 8 and JDK 1.8 we can enter the methods default and static to our interface and can implements multiple time 
+
+Interface A
+
+Interface B 
+
+Interface A implements A, B 
+
+Call the methods without 
+
+
+#28. Singleton class - A Singleton class in Java allows only one instance to be created and provides global access to all other classes through this single object or instance.
+
+
+
+
