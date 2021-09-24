@@ -564,5 +564,19 @@ Call the methods without
 #28. Singleton class - A Singleton class in Java allows only one instance to be created and provides global access to all other classes through this single object or instance.
 
 
+#29. GitHub - 
 
+Go to Github - Add our GitHub repository URL -Github Repository will show in eclipse
+
+Now Copy our project to that GitHub repository from our machine, then that project will show in eclipse repo
+
+Then Write click on project - Team - Share project - Git Staging - Copy all files and paste to staged changes then commit and push - add unmet/pwd - then GitHub site will show the project 
+
+Pull the branch master if someone make commits on the master so latest master can pulled 
+
+Create different branches on GitHub and we can also pull those by Team- Switch to - Branch name
+
+Add commit using Team - Commit - Staging Commit - drag drop the unstated changed file into Staged changes then push and commit 
+
+We can merge the branch into master branch by - Team - Merge into Master 
 
