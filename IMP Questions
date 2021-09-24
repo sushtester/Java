@@ -561,6 +561,8 @@ Interface A implements A, B
 Call the methods without 
 
 
+
+
 #28. Singleton class - A Singleton class in Java allows only one instance to be created and provides global access to all other classes through this single object or instance.
 
 
@@ -583,3 +585,13 @@ We can merge the branch into master branch by - Team - Merge into Master
 #30. Which things can’t you automate 
 * Automating Captcha is not possible using Selenium WebDriver.
 * We can not read bar code using Selenium WebDriver.
+
+
+#31. Web driver Listner & testNg Listner when to used 
+
+Challenges  facing while automation - 
+Timeout page - PagetimeOut as default time is 500 milliseconds from web driver to find elements so we used the pageLoad time 
+
+Elements not clickable - Those are visible but no clickable, it take some time to click such elements, so we used the explicit time condition 
+
+Po ups handling - We users the Alert function here to handle the popups
