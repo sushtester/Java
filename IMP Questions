@@ -580,3 +580,6 @@ Add commit using Team - Commit - Staging Commit - drag drop the unstated changed
 
 We can merge the branch into master branch by - Team - Merge into Master 
 
+#30. Which things can’t you automate 
+* Automating Captcha is not possible using Selenium WebDriver.
+* We can not read bar code using Selenium WebDriver.
