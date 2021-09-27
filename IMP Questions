@@ -706,3 +706,7 @@ Resource allocations and role and responstliblity
 Estimation of the testing 
 Things can be under testing 
 
+#45. How to run java program without eclipse 
+- Create program in notepad and saved as .java
+- On command line compile that using javac filename.java - it created class file 
+-  Java “class file “
