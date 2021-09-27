@@ -595,3 +595,114 @@ Timeout page - PagetimeOut as default time is 500 milliseconds from web driver t
 Elements not clickable - Those are visible but no clickable, it take some time to click such elements, so we used the explicit time condition 
 
 Po ups handling - We users the Alert function here to handle the popups
+
+
+#32. Challenge faced while manual testing - We have third party API ambassador which basically use to provide a coupons 0r gift cards to the user, 
+
+#33. Challenges faces while automation testing - 
+
+#34. Software development life cycle 
+Software testing lifecycle 
+Agile 
+Waterfall model 
+What is smoke 
+What is regression 
+What is sanity 
+
+
+#35. Currently I am working on the ship sticks project, it’s a web application, where user can ship his own golf bags, skis bags, luggage bags from his own location to any other location or golf clubs or ski or golf resorts 
+
+Usually the golfers/golf player has it own golf bag, ski bags which contains different set golf sticks, golf bolls and those are very expensive, so if such peoples want to go play golfs somewhere in the world they need to carry the whole badges along with him, so instead of doing this they can use this site to ship here baggage from there address to another address which can be any glob club/resort address in the world 
+
+In order to do the shipping we are using carrier API’s such as DHL, FedEx, UPS carriers which ships the luggage worldwide, so basically this site is a interface between the users and the carriers 
+
+So we provide a userfreidnly GUI specially for such golfers to ships there luggage or golf bags from there address to any golf resorts/address/hotels in the world 
+
+UPS & FedEx carrier users to do domestic shipping like within the USA
+
+DHL carrier used to do an international shipping US to any other countries 
+
+So whenever user entered the origination and the destination, Ship dates, delivery dates, we send those details to carrier using the respective carrier API, and creating order to the user, we provide our own order ID, shipment tracing ID to user so user can track his bags/luggage on our site
+
+Here actually we are creating order on the carrier site using there APIS, so carrier also providing us an carrier tracking ID of the products to track those products and there status, we used there status and covert those into user friendly message and shows those to our users 
+
+Carriers basically providing us the transit time like next day, second, day, ground as per the locations user entered, we took those transit time and add our pricing to those options 
+
+We provided coupons, gift cards, insurance to our users for payment we are using Braintree as payment method 
+
+We have a CSR team where user can contact in order to solve the problems of user regarding there booked products shipment, if they want to cancel there shipping, or want to modifications in thee products
+
+We have our iOS apps as well to book shipments for user
+
+We have 7 dev, 4 QA  - 2 senior level devs from client and 5 dev in our Sid includes one iOS developer
+
+I. QA from there side, 3 QA on our side on which one for do a automation testing 
+
+
+
+#36. Software testing life cycles - 
+Requirement analysing - Read the requirements document, any case of any concern with the requirements - RTM - Requirements  traceability matrix
+
+Test planning - Which tools we are using, cost, efforts, resources, role and responsibilities- Test plan 
+
+Test case developments - Write a test cases 
+
+Test environment setup - Dev team provides the environment to test 
+
+Test Execution - Actual ruing test cases, reports bugs, create test reports done by the tester who is testing the applications 
+
+Test closure 
+
+Traceability matrix - 
+It’s a documents that maps & trace the requirements with the test cases, the main purpose to make sure all the requirements are validating using test cases 
+
+#37. Smoke testing - Testing a major functionality to make sure build is stable, when any new module intruded which interacted with the old one, signup with Apple ID, so once good go for further testing 
+
+#38. Sanity testing - Perform when new features is added or bug fixes get pushed
+
+#39. Regression testing when ruby version changes -  Full application testing 
+
+
+
+#40. Roofing Southwest - 
+This is web based application for employees of the one of the big roofing contractor and construction company of the US , the employee/worker of this company using the app when then go to the working site, so they need to create the inspections before start the work, after the end of the day, safety inspections, in progress inspections by adding the locations projects, photosets, live locations, safety equipments details 
+
+So once inspection created by those workers the team leader, or contractor or project manager can review those aded inspection from the web and provide reviews to those inspection and respective workers got the notifications as per the review on there mobile 
+
+Also in web we managers the daily projects works, inspection records, adding different workers, graphical representation of the status using cron jobs 
+
+It’s both android and iOS build using JIRA 
+
+
+#41. Defect life cycle - 
+New 
+Assigned 
+Open - Duplicate, rejected, differed 
+Fixed 
+Retest - Open 
+Verified 
+Closed 
+
+#42. Waterfall model 
+Requirement analysing 
+Design 
+Coding 
+Testing 
+Deployment 
+Maintenance 
+
+
+#43. Agile model - 
+Develop the project in few modules and release those modules so if change request comes it can be easily tackle 
+Scrum master - Take meeting - review sprint - start and end sprint 
+Project owner - adding the tickets in backlogs 
+
+
+#44. Things on the test plan - 
+Analysing the products
+Make test statergies 
+Efforst 
+Resource allocations and role and responstliblity 
+Estimation of the testing 
+Things can be under testing 
+
