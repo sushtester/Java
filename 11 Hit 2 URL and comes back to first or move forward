@@ -1,7 +1,7 @@
 driver.navigate().to("https://www.google.com"); //Moving to another URL
 		driver.navigate().back();
 		driver.navigate().forward();
-		driver.navigate().refresh();
+		driver.navigate().refresh(); //to refersh the page
     
     
     
