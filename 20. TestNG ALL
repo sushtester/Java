@@ -99,9 +99,9 @@ if want to use the groups then can use the groups -
 Parameters - 
 
 if we want to user the parameters in tesng.xml - 
-<parameters name= "url" value= "www.roofing.com"/>
-<parameters name= "uname" value= "amol@gmail.com"/>
-<parameters name= "pwd" value= "password"/>
+<parameter name= "url" value= "www.roofing.com"/>
+<parameter name= "uname" value= "amol@gmail.com"/>
+<parameter name= "pwd" value= "password"/>
 
 
 
@@ -119,7 +119,7 @@ How to exclude particular methonds from the class -
 </methods>
 
 
-How to ignore the test case in TestNg 
+How to ignore the test case in TestNg - @Test(enabled=false)
 
 
 ##Parameters Syntax - 
@@ -206,6 +206,8 @@ return new Object [][] {
    {"Column1data", "Column2data"}
  };
 }
+
+If dataprovider is in another class - then - @Test(dataProvider= “data”, dataProviderClass= classname.class)
 
 
 
