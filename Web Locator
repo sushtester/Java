@@ -27,3 +27,17 @@ For text when there is no any id, name, or any attribute and attributes get chan
 When go directly to class name & then use//
 //div[@class= 'top-nav-items col-md-6 pull-right no-padding']/div[3]/a for Login link on staging 
 
+
+/parent::*
+/child::option[1]
+/following-sibling::option[2]
+/preceding-sibling::option[2]
+
+
+Child - //option[contains(text(), 'Select')]/parent::*/child::option[contains(text(), 'MRS')]
+
+Parents - //option[contains(text(), 'Select')]/parent::*/child::option[contains(text(), 'MRS')]
+
+Following siblings - //select[@id= 'CONTROLGROUPREGISTERVIEW_PersonInputRegisterView_DropDownListTitle']/child::*/following-sibling::option[3]
+
+Preceding siblings - //select[@id= 'CONTROLGROUPREGISTERVIEW_PersonInputRegisterView_DropDownListTitle']/child::*/following-sibling::option[3]/preceding-sibling::option[2]
