@@ -9,7 +9,27 @@ WebElement date = driver.findElement(By.xpath("//*[@id='day']"));
 
 Actions action= new Actions(driver);
 action.moveToElement(date);
-   
+
+
+#Click enter button using sendkeys and using actions class - 
+
+WebElement element= driver.findElement(By.xpath= "");
+element.sendKeys(Keys.ENTER) //
+
+Using action class - Actions class used to mouse hover, drag and drop elements, press keys using KeyDown(keys.ENTER), double clicks, enter upper case by pressig shift
+Actions action = new Actions(driver);
+action.KeyDown(keys.ENTER); //To press the enter button
+
+action.moveToElemenet(element) // To move to the elements
+
+action.doubleClick(); // To double clicks 
+
+action.keyDown(Keys.SHIFT).sendKeys("new"); //To enter upper case
+
+action.clickAndHold(element).moveToElement(element).release().build.perform; //drag and drop element using action 
+
+
+
    
 Multiple Windows - 
 Set<String> widnowId = driver.getWindowHandles();
@@ -19,7 +39,16 @@ String childId= itr.next();
 driver.switchTo().window(childId);
 Thread.sleep(10000);
 driver.close();
-    
+
+While(it.hasNext()){//    it.hasNext() - Gives boolean True
+String parenerID= it.next();
+driver.switchTo().window(parenerID)
+if(driver.getTitle().equals("Facebook")){
+break;
+}
+}
+
+
     
     
 
