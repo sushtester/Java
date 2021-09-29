@@ -710,3 +710,90 @@ Things can be under testing
 - Create program in notepad and saved as .java
 - On command line compile that using javac filename.java - it created class file 
 -  Java “class file “
+
+#46. StateElementrefrerance exception - It comes when element get changed from the DOM or element get deleted from the (Document Object Module ) DOM structure of HTML structured on which element is present  
+
+To overcome the exception - 
+Refresh the page - driver.navigat().refresh()
+
+Or add element in try and catch 
+
+
+#47. Constructer chain - How we can call the default constructor using the parameterised constructor - 
+
+For same class we can user this keyword to call other constructor in same class 
+So this() - calling default constructor 
+this(“parameter”) - calling the parameterised constructor
+
+Class (){
+}
+Class(“paramer”){
+this()
+} 
+
+For class which extends from the Base class - 
+
+We can user super() keyword 
+
+Super () for default constructor 
+
+Super (“paramer”) - to call parameter constructor from the base class 
+
+Super(“”parameter)
+
+
+#48. OOPS concept - 
+Inheritance
+Encapsulation 
+Polymorphism
+Abstraction 
+
+#49. Find element using starts and contains - For dynamic WebElement with same start thing and end thing - 
+//input[starts-with(@name, ‘SU’)] - To all the elements with attribute name and name start with ’SU’
+
+//input[contains(@name, ‘ant’)] - To all the elements with attribute name and name start with ’ant’
+
+
+
+#50. How remove white spaces from the string - 
+1. Using String replaceAll(“\\s”, “”)
+2. String str = "India Is My Country";  
+3. 	 
+4. 	 char[] myname= str.toCharArray();
+5. 	 StringBuffer strBuild= new StringBuffer();
+6. 	 
+7. 	 for(int i=0; i<myname.length;i++){
+8. 	     
+9. 	     if(myname[i]!= ' '){
+10. 	         
+11. 	         strBuild.append(myname[i]);
+12. 	     }
+13. 	 }
+14. 	 
+15. 	 System.out.println(strBuild);
+
+
+
+
+
+#51. Why we use static keyword before main method - This is because complier (JVM) started his execution from main class so no need to create an object of the static main method 
+
+#StringBuffer & StringBuilder 
+String str = "India Is My Country";  
+	 
+	 char[] myname= str.toCharArray();
+	 StringBuffer strBuild= new StringBuffer();
+	 
+	 for(int i=0; i<myname.length;i++){
+	     
+	     if(myname[i]!= ' '){
+	         
+	         strBuild.append(myname[i]);
+	     }
+	 }
+	 
+	 System.out.println(strBuild);
+
+
+#56. Selenium Grid - 
+
