@@ -84,6 +84,10 @@ public void readPropertyTest() throws IOException {
  
 }
 
+if(age<18) {  
+            //throw Arithmetic exception if not eligible to vote  
+            throw new ArithmeticException("Person is not eligible to vote");   
+
 B. unchecked expection - 
 Array out of bound OR ElementNotVisibleException, EG- 
 
@@ -96,6 +100,7 @@ driver.findElement(By.id("submit")).click();
 
 Selenium exception - 
 NoSuchElement exception 
+ElementNotFound
 ElementNotVisible
 ElementNotClickable 
 ElementNotSelectableException
@@ -121,6 +126,15 @@ then abstract method can only written in abstract class
 
 #7. What are the different types of string methods - 
 compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() 
+	    String name= "Sushant Pawar";
+	    String newName= name.substring(0, 7);
+	    System.out.println(newName);// Sushant
+	    
+	    String name= "SushantPawar@name";
+	    String [] namqa= name.split("@");
+	    for(String finalName: namqa){
+	        System.out.println(finalName);
+	    }
 
 char[] ch={'j','a','v','a','t','p','o','i','n','t'};  //covert the char array to string 
 String s=new String(ch); 
@@ -281,10 +295,18 @@ class Bike2 extends Vehicle{
   void run(){System.out.println("Bike is running safely");}  
   
   public static void main(String args[]){  
-  Bike2 obj = new Bike2();//creating object  
-  obj.run();//calling method  
+  Vehicle obj = new Vehicle();//creating object  
+  obj.run();//calling paranet method 
+  Vehicle obj= new Bike2();
+  obj.run();
+  
   }  
 }  
+
+Expamle of method overding - we overide the method of interface ITlsitenr, so we used there methods such as OnTestFail() OnTestStart() and use our code such 
+as message after test case get failed or add message for testcase start 
+
+Another example of method overding is FluentWait - 
 
 
 
@@ -795,5 +817,27 @@ String str = "India Is My Country";
 	 System.out.println(strBuild);
 
 
-#56. Selenium Grid - 
+
+#56. Check URL for where we use what 
+https://www.softwaretestinghelp.com/essentials-of-java-in-selenium/
+
+#57. Difference between the 
+driver.get() - It wait until the page load completely 
+driver.navigate().to() - It’s not wait until the page load - for this we have features that navigate().back, navigate().refresh
+
+#58. Fluent Wait - 
+Wait<WebDriver> wait= new FluentWait<WebDriver>(driver)
+.withTimeout(10, TimeUnits.SECONDS)
+.pollingEvery(20, TimeUnits.SECONDS)
+.ignoring(NoSuchElementExpection.class);
+
+WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
+  Public WebElement Apply(WebDriver driver){
+     Return 
+     Driver.findEleent(By.xpath(“//”)); 
+      }       
+});
+
+
+#59. Selenium Grid - 
 
