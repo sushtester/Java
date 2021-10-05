@@ -839,5 +839,26 @@ WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
 });
 
 
-#59. Selenium Grid - 
+#59. #Difference between int and Integer - 
+Int - stores numeric value into memory as binary - Primitive data type
+Integer - Wrappper class - convert the it into the object so we can user to convert it 
+Integer num= 10;
+String name= num.toString();
+
+#60. Selenium Grid - 
+#Selenium Grid -
+Selenium Grid uses a hub-node concept where you only run the test on a single machine called a hub, but the execution will be done by different machines called nodes
+
+you will use 2 machines. The first machine will be the system that will run the hub while the other machine will run a node. For simplicity, let us call the machine where the hub runs as “Machine A” while the machine where the node runs will be “Machine B.” It is also important to note their IP addresses. Let us say that Machine A has an IP address of 192.168.1.3 while Machine B has an IP of 192.168.1.4
+
+Download Selenium server for both the machine 
+
+Using command prompt - Make one machine as a hub - it create local URL for hub
+
+For node make other machine as node using IP address of hub - it create local url for node
+
+DesiredCapabilities capability = DesiredCapabilities.firefox()
+capability.setBrowsername(“Firefox”)
+capability.setPlatform(Platform.XP);
+Driver = new RemoteWebDriver()
 
