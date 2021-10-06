@@ -862,3 +862,20 @@ capability.setBrowsername(“Firefox”)
 capability.setPlatform(Platform.XP);
 Driver = new RemoteWebDriver()
 
+
+#61. Adhoc Testing? Unstructred testing, no any plan for the testing, random take an module and do testing, no document, no test cases needed here to do ad hoc testing, error guessing 
+
+Types of Adhoc testing - 
+Buddy testing - Developer with tester
+Pair testing - Two tester with different knowledge	
+Monkey testing - random test here and there 
+
+#62. Black box and white box testing - 
+Black box - Done by Tester, where no any knoledge of internal structure of the application, coding, logic 
+Functional
+Non functional 
+
+While Box- Done by developer, which having idea about code, structure such as path testing, condition testing 
+
+#63. Concurrency testing - To find the defects when multiple user logged into the application at the same time in order to check the effects on same database records 
+
