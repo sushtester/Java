@@ -60,4 +60,290 @@ Since SOAP is a protocol, it follows a strict standard to allow communication be
 
 SOAP uses only XML for exchanging information in its message format whereas REST is not restricted to XML and its the choice of implementer which Media-Type to use like XML, JSON, Plain-text. Moreover, REST can use SOAP protocol but SOAP cannot use REST.
 
+#SOAP- Simple object access protocol - it has it’s own strict protocol - uses only XML
+
+#REST- Representational state transfer - Uses both http and XML - uses HTTP method - URL - Resource - Path 
+
+#1. Dependacies for RestAssured -  https://gorest.co.in/
+a. RestAssured 
+b. JSON PARSER/PATH
+b. JSON schema validateor
+c. hamcrest matchers in rest assured - To perfrom the validation of data 
+d. JUnit
+e. TestNg
+F. Selenium 
+
+
+#1. GetMethod - 
+ Note - Endpoint- what is in the URL is an endpoint
+
+@BeforeMethod 
+	public void setUP() {
+		
+		RestAssured.baseURI= "https://gorest.co.in"; //Base URL 
+		RestAssured.basePath= "public/v1";    - Path after the URL
+		
+	}
+  
+  @Test.    //check the status code 
+public void statusCodeCheck() {
+		
+		given()                          //uses to give the paramter which is query param or param or path param
+		.queryParam("id", "1562")
+		
+		.when()                          // to give method like post or get 
+		.get("/users")
+		
+		.then()                         //to check the status code 
+		.statusCode(208);
+				
+	}  
+  
+@Test.    //Print the responce 
+public void statusCodeCheck() {
+		
+    Response res=               //Create Responce variable res and save responce 
+    
+		given()                          //uses to give the paramter which is query param or param or path param
+		.queryParam("id", "1562")
+		
+		.when()                          // to give method like post or get 
+		.get("/users")
+		
+    SYSO(res.body()/asString or res.body().prityPrint()) // to display the responce 
+		
+}  
+
+
+@Test.    //Validate the responce
+public void statusCodeCheck() {
+		    
+		given()                          //uses to give the paramter which is query param or param or path param
+		.queryParam("id", "1562")
+		
+		.when()                          // to give method like post or get 
+		.get("/users")
+		
+   .then()
+   .statusCode(200)
+   .and()
+   .body("rows[0].elements[0].distance.text", equalTo("225 mi")) // verifying the text shows in responce is equealto "225.mi" equal to belongs to harcrest matcher
+	 .contentType(ContentType.JSON);
+		
+} 
+
+
+
+#2. Post Method - Body is a Payload - As we sends the Body here we can create separate class for body attributes that we send in request 
+
+ # Class for bodyDetails - Which is a itiliasiztion of body attibutes valriables like string, int or Map if there are Key value parameters 
+ 
+ public class BodyDetails {
+
+	private String name;
+	private String gender;
+	private String email;
+	private String status;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+}
+
+
+#Test case class - 
+
+public void checkPostMenthod() {
+		
+		BodyDetails input= new BodyDetails(); //create object of class where we store the attributes and below we can set our data there using setName methods of that class
+		input.setName("QLAName");
+		input.setGender("male");
+		input.setEmail("qaagendernew@check.com");
+		input.setStatus("active");
+		
+		Response res= 
+		
+		given()
+		.queryParam("access-token", "1ad35f2b7261de0437c93219396b25082cfd4d575d45178ed6d3935601ede590")
+		
+		
+		.body(input)                             //. So here we just need to add the object of the class wehere we stored the attributes 
+		.contentType(ContentType.JSON)
+		.when()
+		
+		.post("/users");
+    
+		System.out.println(res.body().prettyPrint());
+				
+	}
+  
+  
+#OAuth 1 - Where need to user cunsumer key, cunsumer secret, Access token, access token secret , we need to use the scribe maven depency here
+
+String consumerKey = "ubhe5nnmztzlJMzdLihtKEgsT";
+	String consumerSecret = "KjDJDSJw2o882K71cK33PqUdRbIlp5DNxCxYknDrSvQwNsb2S1";
+	String accessToken = "886092793365409792-mBtgcXzcn9IOC1WmWp5c1fXMn3HDZHr";
+	String accessSecret = "jUIEOAnEiZLlICLBlpR6UhVKZ98CMpQ7banbfcP5gW3eS";
+	
+	@BeforeClass
+	public void setup() {
+		RestAssured.baseURI = "https://api.twitter.com";
+		RestAssured.basePath = "/1.1/statuses";
+	}
+	
+	@Test
+	public void statusCodeVerification() {
+		given()
+			.auth()                                                             //after givern add .auth(). for basic auth need to put .basicauth(username, password)
+			.oauth(consumerKey, consumerSecret, accessToken, accessSecret).     //after .auth we need to put .oauth and set of keys 
+			.queryParam("status", "My First Tweet")
+		
+    .when()
+			.post("/update.json")
+		
+    .then()
+			.statusCode(200);
+	}
+  
+  
+  
+  #3. How to extract the JSON responce - extract().response() we can store the any attribure in responce as string or in intergater
+  
+  extract().response() which gives responce which we can covert to string using asString(), then that string is need to pass 
+  using JsonPath jsPath = new JsonPath(responseString)
+  String name = jsPath.get("user.name"); // get the value of user.name attribute 
+  
+  
+  @Test
+	public void extractResponse() {
+		Response response =
+			given()
+				.auth()
+				.oauth(consumerKey, consumerSecret, accessToken, accessSecret)
+				.queryParam("status", "My First Tweet")
+			.when()
+				.post("/update.json")
+			.then()
+				.statusCode(200)
+				.extract()
+				.response();
+		
+		
+		String responseString = response.asString();
+		System.out.println(responseString);
+
+		JsonPath jsPath = new JsonPath(responseString);
+		String name = jsPath.get("user.name");               //We can use this as a quesry param in another test case then if it's needed 
+		System.out.println("The username is: " + name);
+	}
+
+
+
+#4. In Order to show the Logs for request and responce we send - 
+@Test
+	public void testMethod() {
+		given()
+			.auth()
+			.oauth(consumerKey, consumerSecret, accessToken, accessSecret)
+			.queryParam("status", "My First Tweet 11")
+		.when()
+			.post("/update.json")
+		.then()                              // Responce logs .all() for all responce shows all the responce in console
+			.log()
+			//.headers()
+			//.body()
+			//.all()
+			.ifError()                          //It only shows logs when error comes in the responce 
+			.statusCode(200);
+	}
+  
+  
+#5. To validate the attribute - hamcrest matches maven we can use
+
+@Test
+	public void readTweets() {
+		given()
+			.auth()
+			.oauth(consumerKey, consumerSecret, accessToken, accessSecret)
+			.queryParam("user_id", "apiautomation")
+      
+		.when()
+			.get("/user_timeline.json")
+      
+		.then()
+			.statusCode(200)
+			.body("user.name", hasItem("RestAPI Automation"))           // .body(user.name[1].text. hasItem ("SUSHANT"))
+			.body("entities.hashtags[0].text", hasItem("multiple1"))
+			.body("entities.hashtags[0].size()", equalTo(3))
+			.body("entities.hashtags[1].size()", lessThan(2))
+      .body("text", hasItem("multiple"))
+			.body("size()", equalTo(2));                               // for the size of the heads
+	}
+  
+  
+  
+#6. Use the request specification - As we use the same given (). auth(),.ouath() .queryparam(). which is a contact for test case class so
+We can initialise that at the top using RequestSpecBuilder 
+
+RequestSpecBuilder requestBuilder;
+static RequestSpecification requestSpec;
+
+		requestBuilder = new RequestSpecBuilder();
+		requestBuilder.setBaseUri("https://api.twitter.com");
+		requestBuilder.setBasePath("/1.1/statuses");
+		requestBuilder.addQueryParam("user_id", "apiautomation");
+		requestBuilder.setAuth(authScheme);
+		requestSpec = requestBuilder.build();
+
+
+
+.given()
+.spec (requestSpec)
+
+
+#7. Use of the Response specification - As we know we nee =d to check the same things multiple time such as statusCode
+or same attribute in every response test case such as name 
+
+		responseBuilder = new ResponseSpecBuilder();
+		responseBuilder.expectStatusCode(200);
+		responseBuilder.expectBody("user.name", hasItem("RestAPI Automation"));
+		responseSpec = responseBuilder.build();
+    
+.then()
+.spec(responseSpec)
+
+
+
+
+  
+  
 
