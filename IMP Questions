@@ -905,5 +905,22 @@ WebElement element = driver.findElement(By.cssSelector(".btn"));
         File dstFile = new File("./loginbutton.png");
         FileUtils.copyFile(scrFile, dstFile);
 	
+
+#67. #Private constructer 
+
+Note that if a constructor is declared private, we are not able to create an object of the class. Instead, we can use this private constructor in Singleton Design Pattern
+
+Can not be a sub class
+Can not create an object of class 
+Can not extends 
+
+The main purpose of using a private constructor is to restrict object creation.
+
+We can create a instance of the same class for such class and use that instances on other class using get Instance method
+
+So we can create an object in same class where we set a private constructer which returns the obj of such class on which private constructer is defined then if we want to use that on other class then 
+
+Simply call that object create method which returns the objects 
+
 	
 
