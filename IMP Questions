@@ -841,15 +841,19 @@ WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
 
 #59. #Difference between int and Integer - 
 Int - stores numeric value into memory as binary - Primitive data type
+
 Integer - Wrappper class - convert the it into the object so we can user to convert it 
 Integer num= 10;
 String name= num.toString();
 
 #60. Selenium Grid - 
 #Selenium Grid -
-Selenium Grid uses a hub-node concept where you only run the test on a single machine called a hub, but the execution will be done by different machines called nodes
+Selenium Grid uses a hub-node concept where you only run the test on a single machine called a hub, 
+but the execution will be done by different machines called nodes
 
-you will use 2 machines. The first machine will be the system that will run the hub while the other machine will run a node. For simplicity, let us call the machine where the hub runs as “Machine A” while the machine where the node runs will be “Machine B.” It is also important to note their IP addresses. Let us say that Machine A has an IP address of 192.168.1.3 while Machine B has an IP of 192.168.1.4
+you will use 2 machines. The first machine will be the system that will run the hub while the other machine will run a node. 
+For simplicity, let us call the machine where the hub runs as “Machine A” while the machine where the node runs will be “Machine B.” 
+It is also important to note their IP addresses. Let us say that Machine A has an IP address of 192.168.1.3 while Machine B has an IP of 192.168.1.4
 
 Download Selenium server for both the machine 
 
@@ -863,7 +867,8 @@ capability.setPlatform(Platform.XP);
 Driver = new RemoteWebDriver()
 
 
-#61. Adhoc Testing? Unstructred testing, no any plan for the testing, random take an module and do testing, no document, no test cases needed here to do ad hoc testing, error guessing 
+#61. Adhoc Testing? Unstructred testing, no any plan for the testing, 
+random take an module and do testing, no document, no test cases needed here to do ad hoc testing, error guessing 
 
 Types of Adhoc testing - 
 Buddy testing - Developer with tester
@@ -877,5 +882,28 @@ Non functional
 
 While Box- Done by developer, which having idea about code, structure such as path testing, condition testing 
 
-#63. Concurrency testing - To find the defects when multiple user logged into the application at the same time in order to check the effects on same database records 
+#63. Concurrency testing - To find the defects when multiple user logged into 
+the application at the same time in order to check the effects on same database records 
+
+#64. Length of string without using length function - 
+Length = 0;
+Using char [] charname= str.toCharArray()
+For (char c:charname){
+length++
+}
+Return length;
+
+
+#65. Current JAVA version is 8 with JDK 1.8 
+
+
+#66. Current selenium version is 4
+
+We can take a screenshot of an element using below - 
+WebElement element = driver.findElement(By.cssSelector(".btn"));
+        File scrFile = ((TakesScreenshot)element).getScreenshotAs(OutputType.FILE);
+        File dstFile = new File("./loginbutton.png");
+        FileUtils.copyFile(scrFile, dstFile);
+	
+	
 
