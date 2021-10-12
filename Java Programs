@@ -1,0 +1,92 @@
+#1. Prime number - (if number%i==0) - 
+
+
+
+
+#2. Factorial - num=14;
+fact= 1
+
+Factorial program in JAVA- 
+int fact= 1;
+int number=4;
+
+for(int i=1; i<=number; i++){
+ fact= fact*i
+}
+System.out.println(fact);
+
+
+
+#3. String Reverse - Char and the whole string statements - 
+
+public void stringRevers() {
+		String name= "Sushant Pawar";
+		
+		
+		StringBuilder newString= new StringBuilder();
+		
+		newString.append(name);
+		
+		newString.reverse();
+		
+		System.out.println(newString);
+}
+
+ #Using toCharArray() - Which crate array of the char 
+ 
+ char[] name= string.toCharArray(); //created name array of char 
+ 
+ public void StringCharReverse() {
+		String name= "Sushant";
+		String finalResult= "";
+		
+		char[] reverThisString= name.toCharArray();
+		System.out.println(reverThisString.length);
+		
+		for(int i=reverThisString.length-1; i>=0; i--) {
+			
+		
+			
+			finalResult=finalResult+reverThisString[i];  
+			
+		}
+		
+		System.out.println(finalResult);
+	}
+ 
+ 
+#4. Add two number - 
+int num=2;
+int tonum=3;
+int sum= num+toNum;
+SYSO(sum);
+
+
+#5. Print dublicate numbers showing in array 
+public void displaySameNUmbers() {
+		int [] number={10, 20, 10, 30, 40, 10, 50, 20, 60};
+		
+		for(int i=0; i<=number.length-1; i++) {
+			for(int j=i+1;j<=number.length-1; j++) {
+				if(number[i]==number[j]) {
+					System.out.println(number[j]);
+				}
+				
+			}
+			
+		}
+    
+  
+#6.   String name= "Sushant Pawar";
+	    String newName= name.substring(0, 7);
+	    System.out.println(newName);// Sushant
+	    
+	    String name= "SushantPawar@name";
+	    String [] namqa= name.split("@");
+	    for(String finalName: namqa){
+	        System.out.println(finalName);
+	    }
+
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};  //covert the char array to string 
+String s=new String(ch); 
+SYSO (s)// javapoints;
