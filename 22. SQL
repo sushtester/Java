@@ -34,6 +34,23 @@ Query for fetch all staundet names who dones the courses -
 SELECT Students.Name, Courses.Coursname FROM Students INNER JOIN Courses ON Students.Roll= Courses.Roll
 
 
+
+#Select the product with max price 
+SELECT ProductName, Price FROM Products ORDER BY Price DESC limit 1;
+OR
+SELECT ProductName, Price FROM Products where price = (SELECT MAX(price) FROM Products );
+
+
+#Select the second highest max size product - 
+SELECT ProductName, Price FROM Products ORDER BY Price DESC limit 1, 1
+
+#Select count of products of each CategoryID
+SELECT COUNT(ProductName), CategoryID FROM Products GROUP BY CategoryID;
+
+#Find out the CategoryID from product not duplicate 
+SELECT DISTINCT CategoryID FROM Products;
+
+
 LEFT JOIN - (Take all the records from Left tabale which is Students )- 
 
 Query for fetch all staundet names whose done courses and not done courses - (course name will be null for the students who not done course) 
