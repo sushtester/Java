@@ -1,0 +1,45 @@
+#29. GitHub - 
+
+Go to Github - Add our GitHub repository URL -Github Repository will show in eclipse
+
+Now Copy our project to that GitHub repository from our machine, then that project will show in eclipse repo
+
+Then Write click on project - Team - Share project - Git Staging - Copy all files and paste to staged changes then commit and push - add unmet/pwd - 
+then GitHub site will show the project 
+
+Pull the branch master if someone make commits on the master so latest master can pulled 
+
+Create different branches on GitHub and we can also pull those by Team- Switch to - Branch name
+
+Add commit using Team - Commit - Staging Commit - drag drop the unstated changed file into Staged changes then push and commit 
+
+We can merge the branch into master branch by - Team - Merge into Master 
+
+Using the Git Staging view for the initial commit
+After make change in the code, those changed files comes in unstated changes then we need to move that to staged changes 
+Then add commit message and click on commit then add username and token provided by git 
+
+
+Command line 
+git status     //to check the status of files which file not pushed which pushed 
+
+git add _filename //
+
+git add -A.   //Add all new and changed files to the staging area
+
+git commit -m "commit message".  //to add commit with comit message 
+
+git push origin branchname  //to push the code to the branch 
+
+
+git checkout branchname - to switch the branch 
+
+git pull origin branchname ..//to pull the latest changes of the branch 
+
+
+
+git merge branch name -  to merge the branch into our branch 
+
+
+
+
