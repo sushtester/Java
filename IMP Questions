@@ -594,7 +594,8 @@ Go to Github - Add our GitHub repository URL -Github Repository will show in ecl
 
 Now Copy our project to that GitHub repository from our machine, then that project will show in eclipse repo
 
-Then Write click on project - Team - Share project - Git Staging - Copy all files and paste to staged changes then commit and push - add unmet/pwd - then GitHub site will show the project 
+Then Write click on project - Team - Share project - Git Staging - Copy all files and paste to staged changes then commit and push - add unmet/pwd - 
+then GitHub site will show the project 
 
 Pull the branch master if someone make commits on the master so latest master can pulled 
 
