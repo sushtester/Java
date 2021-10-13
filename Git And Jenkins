@@ -41,5 +41,17 @@ git pull origin branchname ..//to pull the latest changes of the branch
 git merge branch name -  to merge the branch into our branch 
 
 
+#Jenkins - Maven Plugin and TesNG plugins - Setup POM file and TestNG.XML and 
 
+Localhost8080
+
+Create users 
+
+Create project Job - With master branch 
+
+Select Git- Add repo URL in Jenkins for configuration
+
+Branch name - master
+
+Post build - Testing Reports in configuration 
 
