@@ -507,6 +507,8 @@ public final class A
 static blocks executes before instance blocks in java
 Also, static blocks are executed before constructors
 
+
+
 		
 #25. To find the same char of the string and it's count - 
 public void checkChar() {
@@ -578,7 +580,9 @@ Interface A
 
 Interface B 
 
-Interface A implements A, B 
+Class C implements A, B 
+{ 
+}
 
 Call the methods without 
 
@@ -614,6 +618,8 @@ We can merge the branch into master branch by - Team - Merge into Master
 
 Challenges  facing while automation - 
 Timeout page - PagetimeOut as default time is 500 milliseconds from web driver to find elements so we used the pageLoad time 
+driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
 
 Elements not clickable - Those are visible but no clickable, it take some time to click such elements, so we used the explicit time condition 
 
