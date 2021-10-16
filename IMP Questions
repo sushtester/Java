@@ -146,7 +146,24 @@ SYSO (s)// javapoints;
 #8. What is collections? what collections you have used? -
 Collection of the objects using array, arraylist, hasMap, Set 
 
-Array - Size is defined and can’t modified 
+Array - Size is defined and can’t modified - 
+
+#Two types of array-
+
+A. Array Declaration - 
+
+String [] name= {“Sush”, “Pawar”};
+
+B. Array Initialisation - 
+
+String nameQA []= new String [2];      //Array initialisation where datatype name of array square branccket= new datatype [size of array]
+
+namesQA[0]= “Sush”;
+
+namesQA[1]= “pawer”
+
+C. Array Size = nameQA.length.      //To find the length of the array 
+
 
 ArrayList - We can modified the size of the array 
 
