@@ -12,3 +12,83 @@
 #Count of same char 
 #prime number
 #Factorial 
+
+
+
+#1. How remove white spaces from the string - 
+1. Using String replaceAll(“\\s”, “”)
+2. String str = "India Is My Country";  
+3. 	 
+4. 	 char[] myname= str.toCharArray();
+5. 	 StringBuffer strBuild= new StringBuffer();
+6. 	 
+7. 	 for(int i=0; i<myname.length;i++){
+8. 	     
+9. 	     if(myname[i]!= ' '){
+10. 	         
+11. 	         strBuild.append(myname[i]);
+12. 	     }
+13. 	 }
+14. 	 
+15. 	 System.out.println(strBuild);
+
+
+#2. Fluent Wait - 
+Wait<WebDriver> wait= new FluentWait<WebDriver>(driver)
+.withTimeout(10, TimeUnits.SECONDS)
+.pollingEvery(20, TimeUnits.SECONDS)
+.ignoring(NoSuchElementExpection.class);
+
+WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
+  Public WebElement Apply(WebDriver driver){
+     Return 
+     Driver.findEleent(By.xpath(“//”)); 
+      }       
+});
+
+
+#3. prime number -  Conditon [number% (2 to number) ==0] should not satisfield 
+
+public void checkChar() {
+		
+		int num= 30;
+		boolean flag= false;
+		
+		for(int i=2; i<num; i++) {
+			
+			if(num%i==0) {
+				flag=true;
+				break;
+			}
+		}
+		
+		if(!flag) {
+			System.out.println("This is prime number");
+		}else {
+			System.out.println("This is not a prime number");
+		}
+	
+		
+	}
+  
+  
+  
+ #4. To find the same char of the string and it's count - 
+public void checkChar() {
+		String name= "SuShanSt";
+		int count;
+		
+		char [] nameQA= name.toCharArray();
+		count=0;
+		for(int i=0; i<nameQA.length; i++) {
+			
+			for(int j=i+1; j<nameQA.length;j++) {
+				if(nameQA[i]==nameQA[j]) {
+					System.out.println(nameQA[j]);
+					count= count+1;
+				}
+			}
+		}System.out.println(count);
+		
+	}
+
