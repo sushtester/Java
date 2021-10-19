@@ -41,3 +41,50 @@ Parents - //option[contains(text(), 'Select')]/parent::*/child::option[contains(
 Following siblings - //select[@id= 'CONTROLGROUPREGISTERVIEW_PersonInputRegisterView_DropDownListTitle']/child::*/following-sibling::option[3]
 
 Preceding siblings - //select[@id= 'CONTROLGROUPREGISTERVIEW_PersonInputRegisterView_DropDownListTitle']/child::*/following-sibling::option[3]/preceding-sibling::option[2]
+
+
+
+CSS and Xpath - 
+
+1. CSS by ID = tagname#ID_value. Or a[id=email]
+
+input#email
+
+2. By name - tagname[name= email]
+
+input[name=email]
+
+With multiple attributes 
+
+a[id=ship-today][data-segment-type=button]
+
+For text - 
+a[text= ‘Demo check’]. //for text in the HTML
+
+
+
+Xpath- 
+1. By id - 
+
+//a[@id= 'ship-today']
+
+//input[@name= ‘email’]
+
+
+With multiple attribute - 
+//a[@id= 'ship-today' and @data-segment-type= 'button'] 
+OR
+//a[@id= 'ship-today’] [@data-segment-type= 'button']
+
+
+For text - 
+//a[Contains(text(), ‘Demo check’)]
+
+
+
+
+3. CSS advantages over Xpath- 
+It’s faster than Xpath 
+It has high chance to find the elements than the Xpath
+It’s compatible to the most of the browser
+
