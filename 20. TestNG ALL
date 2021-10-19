@@ -251,3 +251,42 @@ Reports in selenium -
 
 
 
+#14. Parallel testing using testNG - 
+Method level Parallel- 
+<suite name = "Parallel Testing Suite">
+   <test name = "Parallel Tests" parallel = "classes" thread-count = "2">
+      <classes>
+         <class name = "ChromeTest" />
+         <class name = "FirefoxTest" />
+      </classes>
+   </test>
+</suite>
+
+Class level - 
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Parallel Testing Suite">
+   <test name = "Parallel Tests" parallel = "classes" thread-count = "2">
+      <classes>
+         <class name = "ChromeTest" />
+         <class name = "FirefoxTest" />
+      </classes>
+   </test>
+</suite>
+
+
+Suit level - 
+<suite name = "Parallel Testing Suite" parallel = "tests" thread-count = "2">
+   <test name = "Parallel Tests1">
+      <classes>
+         <class name = "ChromeTest" /> - take one method from here
+      </classes>
+   </test>
+   <test name = "Parallel Tests2">
+      <classes>
+         <class name = "ChromeTest" /> //take one method from here 
+      </classes>
+   </test>
+</suite>
+
+#Defalt thread-count =“5” for testngNG
+
