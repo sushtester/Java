@@ -90,3 +90,20 @@ public void displaySameNUmbers() {
 char[] ch={'j','a','v','a','t','p','o','i','n','t'};  //covert the char array to string 
 String s=new String(ch); 
 SYSO (s)// javapoints;
+
+
+
+#7. What are the different types of string methods - 
+compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() 
+	    String name= "Sushant Pawar";
+	    String newName= name.substring(0, 7);
+	    System.out.println(newName);// Sushant
+	    
+	    String name= "SushantPawar@name";
+	    String [] namqa= name.split("@");
+	    for(String finalName: namqa){
+	        System.out.println(finalName);
+		
+
+#8. If conditions such as Equals , Equaluslignorecase, not equalto 
+
