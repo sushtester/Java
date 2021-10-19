@@ -946,5 +946,22 @@ So we can create an object in same class where we set a private constructer whic
 
 Simply call that object create method which returns the objects 
 
-	
+
+
+#68. Stress Testing - Stress testing is to test the system behaviour under extremely heavy load conditions and ensuring that software doesn’t crash under crunch situations - Endurance Testing. - 
+
+Online shopping on the festivals seasons - When lots of users come to site, so this might king of abnormal situation 
+
+* To check whether the system works under abnormal conditions.
+* Displaying appropriate error message when the system is under stress.
+
+
+#69. Load Testing - Load Testing is a non-functional software testing process in which the performance of software application is tested under a specific expected load.
+
+
+
+#70. Java platform indépendant 
+
+Complies the code convert into byte code and byte code is platform independent so can run on any system , it just need a JRE - java run time environment	which provided by JDK
+
 
