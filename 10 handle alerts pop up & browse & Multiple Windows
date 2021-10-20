@@ -28,6 +28,16 @@ Set<String> windoHandle= driver.getWindowHandles();
 
 
 
+While(it.hasNext()){//    it.hasNext() - Gives boolean True
+String parenerID= it.next();
+driver.switchTo().window(parenerID)
+if(driver.getTitle().equals("Facebook")){
+break;
+}
+}
+
+
+
 #Switch to frame - 
 
 driver.findElemnts(By.tagName("iframe"));
