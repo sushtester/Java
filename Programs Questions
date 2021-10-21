@@ -91,4 +91,91 @@ public void checkChar() {
 		}System.out.println(count);
 		
 	}
+	
+
+#5. Print dublicate numbers showing in array 
+public void displaySameNUmbers() {
+		int [] number={10, 20, 10, 30, 40, 10, 50, 20, 60};
+		
+		for(int i=0; i<=number.length-1; i++) {
+			for(int j=i+1;j<=number.length-1; j++) {
+				if(number[i]==number[j]) {
+					System.out.println(number[j]);
+				}
+				
+			}
+			
+		}
+    
+  
+#6.   String name= "Sushant Pawar";
+	    String newName= name.substring(0, 7);
+	    System.out.println(newName);// Sushant
+	    
+	    String name= "SushantPawar@name";
+	    String [] namqa= name.split("@");
+	    for(String finalName: namqa){
+	        System.out.println(finalName);
+	    }
+
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};  //covert the char array to string 
+String s=new String(ch); 
+SYSO (s)// javapoints;
+
+
+
+#7. What are the different types of string methods - 
+compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() 
+	    String name= "Sushant Pawar";
+	    String newName= name.substring(0, 7);
+	    System.out.println(newName);// Sushant
+	    
+	    String name= "SushantPawar@name";
+	    String [] namqa= name.split("@");
+	    for(String finalName: namqa){
+	        System.out.println(finalName);
+		
+
+#8. If conditions such as Equals , Equaluslignorecase, not equalto 
+
+
+#9. Reverse the stings - 
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+         String name= "My Name is Sushant";
+         
+         StringBuilder input1 = new StringBuilder();
+         
+         input1.append(name);
+         input1.reverse();
+         System.out.println(input1);
+     }
+}
+
+#Reverse the char - 
+public static void main(String []args){
+         
+         String input = "SUSHANT";
+ 
+        // convert String to character array
+        // by using toCharArray
+        char[] try1 = input.toCharArray();
+ 
+        for (int i = try1.length - 1; i >= 0; i--)
+            System.out.print(try1[i]);
+
+         
+     }
+     
+#String Append - 
++ operator 
+
+String name + Staring sirname
+
+OR using concat 
+String fullname = name.concat(sirname)
+	
 
