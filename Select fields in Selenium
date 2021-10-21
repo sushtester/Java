@@ -2,6 +2,8 @@ To select the element from the Select class such as date picker in FB -
 We can use Select class such as - 
 WebElement day= driver.findElement(By.xpath("//select[@id='day']"));
 Select select= new Select(day);
+select.selectByVisibleText("name")
+select.selectedByIndex(2)
     
     
 #For Mouse hover on welemement we can use Action class- 
