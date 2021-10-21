@@ -16,3 +16,17 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[1]
 
 There is also a fluent wait which means once element find move forward don't wait 
 
+
+#Fluent Wait - 
+
+Wait<WebDriver> wait= new FluentWait<WebDriver>(driver)
+.withTimeout(10, TimeUnits.SECONDS)
+.pollingEvery(20, TimeUnits.SECONDS)
+.ignoring(NoSuchElementExpection.class);
+
+WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
+  Public WebElement Apply(WebDriver driver){
+     Return 
+     Driver.findEleent(By.xpath(“//”)); 
+      }       
+});
