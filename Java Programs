@@ -96,7 +96,7 @@ SYSO (s)// javapoints;
 #7. What are the different types of string methods - 
 compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() 
 	    String name= "Sushant Pawar";
-	    String newName= name.substring(0, 7);
+	    String newName= name.substring(0, 7);    //(first value, secondvalue) - first started count as 0, 1, 2... for second value statred count from 1, 2, 3... to string
 	    System.out.println(newName);// Sushant
 	    
 	    String name= "SushantPawar@name";
