@@ -965,3 +965,12 @@ Online shopping on the festivals seasons - When lots of users come to site, so t
 Complies the code convert into byte code and byte code is platform independent so can run on any system , it just need a JRE - java run time environment	which provided by JDK
 
 
+#71. 
+#Example of functional and non functional testing - 
+A. Functional testing - Check the functionality of the application as per the customer requirements, gives proper input and check output, the actual result should be as per the expected results 
+
+Smoke 
+Sanity 
+Regression 
+
+B. Non Functional Testing - such as performance testing, stress testing, load testing which is not a customiser requirements but just to make sure application works on such high critical conditions 
