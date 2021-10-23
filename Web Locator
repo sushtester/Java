@@ -88,3 +88,20 @@ It’s faster than Xpath
 It has high chance to find the elements than the Xpath
 It’s compatible to the most of the browser
 
+
+#Dynamic Web Locator - 
+
+For grid - we have td and tr 
+td- row
+tr- column 
+
+<tr>
+  <td>
+  <td>
+ <tr/>
+ 
+user for loop for both row and column 
+
+
+ 
+
