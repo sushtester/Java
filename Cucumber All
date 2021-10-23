@@ -1,0 +1,22 @@
+BDD- 
+
+#1. Feature files - create differebt scenarios using Gherkins keyworks such as given when then and 
+
+#2. Step defination - Write methods to map the keywords wriiten in features file, for every annotaion there will be a method, each feature there will different 
+step defunation 
+
+#3. Utility - for common generic functions 
+
+#4. Test Runner 
+
+
+#Create maven project - Then download cucumber for ecclipse plugin - Help - cucumber for ecclipse plugin
+
+#Pox.xml - From cucumber java skeleton - add properties, dependencies and build 
+
+#Create appfeatured package in which add a feature file, Search.Feature 
+
+
+
+
+
