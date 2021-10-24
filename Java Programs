@@ -148,3 +148,27 @@ OR using concat
 String fullname = name.concat(sirname)
 
 
+#8. Find dulicate value and count of the string using the HashMap- 
+
+String name= "sushants"
+char[] nameQA= name.tocharArray();
+Map<Character, Integer> bmap= new HashMap<Character, Integer> ();
+
+for(char names:nameQA ){
+  if(bmap.containsKey(names)){
+     bmap.put(names, bmap.get(names)+1)
+  }
+  else{
+   bmap.put(names,1)
+  }
+}
+
+
+for(char nameQAre: bmap.keySet()){
+if(bmap.get(nameQAre)>1){
+SYSO "The char nameQAre is shwoing bmap.get(nameQAre) times"
+}
+}
+
+
+
