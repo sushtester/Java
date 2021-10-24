@@ -168,7 +168,67 @@ for(char nameQAre: bmap.keySet()){
 if(bmap.get(nameQAre)>1){
 SYSO "The char nameQAre is shwoing bmap.get(nameQAre) times"
 }
+
+#10. String lowercase and upper case 
+String name= Sushant;
+string nameLower= name.toLowerCase();
+String nameUpper = name.toUpperCase();
+
+toUpperCase()
+toLowerCase()
+
 }
+
+#11. Difference between the String class and String variable 
+
+When declare te string as String = "name"; //it stores into the string contant poll // Memory less
+When declare string as String name = new String (String) // It store the object in heap memory and 
+String in constant pool 
+
+So when 
+String S1= "name";
+String S2 = "name"
+
+This time in string constant pool it obly store one "name" so both S1 and S2 has only one memory in constant string pool 
+
+BUT when 
+String S1= new String ("name")
+String S2= new String ("name")
+
+This time create two objects S1 and S2 in heap memory and two "name" in constant string pool, this causing garbage collection ih heap memory
+
+#12. Difference in = and == 
+- = is for assign the value 
+String name= "sushant";
+String nameQA= name;
+
+Difference between == and .equals ()
+
+So in == we check the object shares the same memory location 
+and in .equals() we check the values of the object 
+
+String S1= "name";
+String S2= "name"
+
+here both the objects shares the same memory location in string constant pull 
+so S1==S2
+
+BUT for String S3= new String ("name") 
+here one object is created in heap which refere the memory in string constant 
+
+so memory location of S1 and S3 not the same
+so S1==S3 will fail
+
+
+#13. compareTo() - returns zero when string are same 
+Or retuns positive or negative number as per compare the string with character
+if first char is of left string is greater than the second then returns positve else negative
+
+
+
+
+
+
 
 
 
