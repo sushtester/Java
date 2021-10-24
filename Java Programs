@@ -226,6 +226,29 @@ if first char is of left string is greater than the second then returns positve 
 
 
 
+#14.  Sorting using Arrays sort java.utils.Arrays
+
+int [] number = {50, 80, 10, 20};
+int size= number.length;
+Arrays.sort(number)
+SYSO(size-1) //Hightest 
+SYSO(size-2) //Second Hightest 
+SYSO(size-3) //Thired Hightest 
+
+Second way is using two for loops 
+int temp; 
+for(int i= 0; i<size; i++)
+  for (int j= i+1; j<size; j++)
+    if(number[i]>number[j])
+      temp= number[i];
+      number[i]= number[j];
+      number[j]= temp;
+      
+   
+SYSO(size-1) //Hightest 
+SYSO(size-2) //Second Hightest 
+SYSO(size-3) //Thired Hightest 
+
 
 
 
