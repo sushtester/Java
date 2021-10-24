@@ -290,3 +290,5 @@ Suit level -
 
 #Defalt thread-count =“5” for testngNG
 
+when no thread count then default 5 methods or classes or test called
+
