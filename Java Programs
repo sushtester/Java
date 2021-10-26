@@ -1,5 +1,14 @@
 #1. Prime number - (if number%i==0) - 
 
+number= 4; 
+
+for(int i=1; i<number; i++){
+ if(number%1==0){
+ SYSO(number is a prime number)
+ }
+ else 
+  Not a prime number 
+}
 
 
 
@@ -250,6 +259,24 @@ SYSO(size-2) //Second Hightest
 SYSO(size-3) //Thired Hightest 
 
 
+
+#13. Find the current time with a timezone in java
+import uses - Date, SimpleDateFormat, Timezone
+
+SimpleDateFormat formater= new SimpleDateFormat("dd/MM/yyyy" HH:MM:SS)
+formater.getTimeZone(Timezone.setTimeZone("Asia/Kolkata"))
+Date date = new Date()
+String currenttime= formater.format(date)
+
+#14. Get Screenshot for element - 
+
+File file=element.getScreenshotAs(OutputType.FILE)
+FileUtils.copyfile(file, new File("./Screenshot/"+name.png"));
+
+And for whole driver screenshot we need to cast the driver into TakseScreenhot 
+TakesScreenshot ts = (TakesScreenshot)driver;
+ts.getScreenshotAs(OutputType.FILE)
+FileUtils.copyfile(file, new File("./Screenshot/"+name.png"));
 
 
 
