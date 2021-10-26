@@ -292,3 +292,26 @@ Suit level -
 
 when no thread count then default 5 methods or classes or test called
 
+
+#ITestLister interface 
+
+Create Listener pacakage and create class TestListner - implements ITestLisner - Add TestNg librabary 
+
+Implement there methods such as 
+onTestStart
+onTestSuccess
+onTestFailure 
+all above methods returns the result of ItestResult type 
+
+result.getMethod().getMethodname - gives the method that fail or statred or Success 
+
+Then in testNG.XML file we need to add the listner 
+<listeners>
+<listener class-name= package.classname/>
+</listeners>
+<test name= "QA">
+  <classes>
+   <class name= ""/>
+   <class name = ""'>
+</test>
+
