@@ -1,0 +1,12 @@
+#1. How many types of browsers available in webdriver
+IE, Safari, chrome, FireFox
+
+#2. Can we run the parallel testing without TestNG
+Yes I guess using Junit we can do parallel testing as Junit has it's own annotations 
+
+What is serialisation and Deserialization in Rest assured
+
+What is spec builders
+What are the packages you have used in Rest assured
+Some basic questions of framework and oops implementation in it 
+
