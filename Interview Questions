@@ -10,3 +10,74 @@ What is spec builders
 What are the packages you have used in Rest assured
 Some basic questions of framework and oops implementation in it 
 
+
+- Abstraction & where it is used in your project ?
+- Diff between Abstract class & interface ?
+
+
+###How many times you can write catch block ?- 
+Every try block should have a atlease one catch block 
+
+We can add multiple catch block to single try block if more that one type of expection need to handle
+
+becasue there will be more expection such as TimeOut expection, IO expection, File Not found expection, array Out of bound expection
+
+So we can handle those using different catch 
+
+Every try catch block not have a finally - if we want to excuete something after exception comes then need to write finally block
+Finally block always excutes even exception comes
+
+
+Can we declare many interfaces object class inside the interface class 
+
+
+What is difference between assert and verify.
+
+
+SQL where clause, aggregation, group.
+
+###Difference between break and continue statement.
+Break - break the loop stop the excutions 
+Continue - Continue the loop even some condition check
+
+
+
+###What will you do if after release of software the particular thing working fine but in one day after release it is not working what action will you take on this?
+Reproduce the problem.
+Analyze the problem
+How old is it?
+What is the impact?
+Prioritize the problem
+Fix and deploy 
+Analysing the root cause 
+
+
+
+5. Request method In Postman - 
+
+6. How you cover end to end API Testing 
+
+8. Why Selenium?
+
+How to customize the complexity in testing
+
+How to prioritise testcase
+
+Difference between list and set
+
+Difference between static and non static methods
+
+How to write xpath of column 'b' value using column 'a' text
+
+About Maven - clean build
+3) write a program for getting sample word which is in this order
+Sample
+Sampl
+Samp
+Sam
+Sa
+S
+
+6) what is the difference between data abstraction and encapsulation where you have implemented in your project.
+
+
