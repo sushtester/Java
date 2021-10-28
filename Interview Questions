@@ -4,18 +4,48 @@ IE, Safari, chrome, FireFox
 #2. Can we run the parallel testing without TestNG
 Yes I guess using Junit we can do parallel testing as Junit has it's own annotations 
 
-What is serialisation and Deserialization in Rest assured
+#3. What is serialisation and Deserialization in Rest assured- 
+Send body to post method using java object serialisation
+.extract()
+.responce()
 
-What is spec builders
-What are the packages you have used in Rest assured
-Some basic questions of framework and oops implementation in it 
+String name= res.asTring()
+JsonPath jsPath= new JsonPath(name)
+String atculaName= jspath.get(name.username)
+atculaName.equalTo("Sushant")
+
+Read more in the Rest API documents
 
 
-- Abstraction & where it is used in your project ?
-- Diff between Abstract class & interface ?
+#4. What is spec builders - RequestspectBuilder, ResponceSpecBuilder 
+RequestspectBuilder.setBaseURI("");
+RequestspectBuilder.setBasePath("");
+RequestspectBuilder.queryparam();
+
+ResponceSpecBuilder.expectedStatusCode()
 
 
-###How many times you can write catch block ?- 
+given()
+.spec(rspect)
+
+when()
+.get()
+
+then()
+.spec(resSpec)
+
+#5. What are the packages you have used in Rest assured - RestAssured, Json parser, JSon scema validator, TestNG, hamcrest matchers, Junit, Selenium
+
+#6. Some basic questions of framework and oops implementation in it 
+
+
+#7. Abstraction & where it is used in your project?
+
+
+#8. Diff between Abstract class & interface ?
+
+
+#9. How many times you can write catch block ?- 
 Every try block should have a atlease one catch block 
 
 We can add multiple catch block to single try block if more that one type of expection need to handle
@@ -28,21 +58,21 @@ Every try catch block not have a finally - if we want to excuete something after
 Finally block always excutes even exception comes
 
 
-Can we declare many interfaces object class inside the interface class 
+#10. Can we declare many interfaces object class inside the interface class (abstract class classname), (interface nameOfinterface)
 
 
-What is difference between assert and verify.
+#11. What is difference between assert and verify. assert comes executions get stop when verify comes(soft assertaion)
 
 
-SQL where clause, aggregation, group.
+#12. SQL where clause, aggregation, group.
 
-###Difference between break and continue statement.
+#13. Difference between break and continue statement.
 Break - break the loop stop the excutions 
 Continue - Continue the loop even some condition check
 
 
 
-###What will you do if after release of software the particular thing working fine but in one day after release it is not working what action will you take on this?
+#14. What will you do if after release of software the particular thing working fine but in one day after release it is not working what action will you take on this?
 Reproduce the problem.
 Analyze the problem
 How old is it?
@@ -53,24 +83,51 @@ Analysing the root cause
 
 
 
-5. Request method In Postman - 
+#15. Request method In Postman - 
+GET, POST, PUT, PATCH, DELETE
 
-6. How you cover end to end API Testing 
+#16. How you cover end to end API Testing 
 
-8. Why Selenium?
+#17. Why Selenium? - Open source, Perform on different browser, multiple time same action performed, flexible with languages
 
-How to customize the complexity in testing
 
-How to prioritise testcase
+#18. How to customize the complexity in testing - 
 
-Difference between list and set
 
-Difference between static and non static methods
+#19. How to prioritise testcase -
 
-How to write xpath of column 'b' value using column 'a' text
+#20. Code Coverage in Testing - Number of line code those are successufully validate under the testing procedure 
 
-About Maven - clean build
-3) write a program for getting sample word which is in this order
+Devloper writes the Test for a key feautes and validate that under the code to make sure those are working 
+
+
+#21. Difference between list and set- 
+Set - unordered , contains different/non duplicate (distinct) elements
+Not allowed to add same elements or duplicate
+Not having any get method - can’t get a particular element using .get or anything
+EG. HashSet
+
+
+List - ordered, can contain the null as well as same or duplicate elements
+Allow you to add same elements
+We get element by using .get(indexing)
+EG. LinkedList and ArrayList.
+
+
+
+#22. Difference between static and non static methods- 
+
+
+#23. How to write xpath of column 'b' value using column 'a' text - 
+using the following-sibling
+
+
+#23. About Maven - clean build - 
+Clean all the complile java code 
+
+
+
+#24. write a program for getting sample word which is in this order
 Sample
 Sampl
 Samp
