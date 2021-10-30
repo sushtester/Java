@@ -428,6 +428,17 @@ Widening - from lover data type to higher datatype -
 		
 		
 		
+For convert the String number into the integer 
+String number= "10";
+int num= Integer.parseInt(number)
+
+When covert the number into string 
+Integer num= 10;
+
+String number = num.toString()
+
+		
+		
 #20. Types of Polymorphism - 
 	 Many forms - we can user our super class methods for another user,
 	 we can user superclass methods and write our code in it, 
