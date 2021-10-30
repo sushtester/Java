@@ -269,7 +269,8 @@ Class level -
       <classes>
          <class name = "ChromeTest" />
          <class name = "FirefoxTest" />
-      </classes>
+		 
+    </classes>
    </test>
 </suite>
 
@@ -314,4 +315,89 @@ Then in testNG.XML file we need to add the listner
    <class name= ""/>
    <class name = ""'>
 </test>
+
+
+
+Suit level parameters apply to the all suit tests
+
+@Test(priority=1)
+@Parameters({“name”, “id”})
+Public void (String name, int number)
+
+
+After suite declaration will apply for all the suit 
+<parameter name= “name” value= “Sushant”>
+<parameter name= “id” value= “2”>
+<test name = “QA Test”>
+<classes>
+<class name = “”/>
+<classes>
+</test>
+
+Class level parameter for on to the class mentioned under the classes
+<test>
+<parameter name= “” value= “”>
+<classes>
+<class name= “”/>
+</classes>
+</test>
+
+#Optional parameters - If parameters not declare into the XML file then we can use @Options in method 
+
+@Test
+@Parameters({“name”})
+Public void method(@Optional String name)
+SYSO (name) //will display null 
+
+
+@Test
+@Parameters({“name”})
+Public void method(@Optional (“Sushant”) String name)
+SYSO (name) //will display Sushant 
+
+
+
+
+#Run one method at same time 4 time - threadPullSize= 4, innvocationCount= 4
+
+@Test(threadPullSize= 4, innvocationCount= 4)
+Public void methodName()
+
+
+# Data Provider paraller testing - 
+@DataProvider(name= “getData”, parallel= true)
+
+
+@DataProvider (name= "getData")
+
+public Object [][] readData(Method m){
+
+if(m.getMethodName.equalsIgnoreCase("readData"))
+return new Object []{
+{"Sushamt", "Pawar", 20},
+{"Pravin", "Shinde", 30}
+
+};
+
+else 
+{
+return new Obhect [][]{
+
+{"Sushamt", "Pawar"},
+{"Pravin", "Shinde"}
+
+};
+
+}
+
+}
+
+
+@Test(dataProvider= "getData")
+public voide getMyData(String name, String sirname, int id){
+SYSO(name)
+SYSO(sirname)
+SYSO(id)
+}
+
 
