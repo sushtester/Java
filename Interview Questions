@@ -137,4 +137,15 @@ S
 
 6) what is the difference between data abstraction and encapsulation where you have implemented in your project.
 
+#7. How To sort elements in list 
+
+Collections.sort(list) //
+
+Collections.sort(list, Collections.reverseOrder());
+
+
+For array - 
+
+Arrays.sort(arraname)
+Arrays.sort( arrayOfItems, Collections.reverseOrder() );  
 
