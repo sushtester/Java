@@ -1,4 +1,4 @@
-BDD- 
+BDD- Behaivor Data Driven
 
 #1. Feature files - create differebt scenarios using Gherkins keyworks such as given when then and 
 
@@ -15,6 +15,17 @@ step defunation
 #Pox.xml - From cucumber java skeleton - add properties, dependencies and build 
 
 #Create appfeatured package in which add a feature file, Search.Feature 
+
+
+#1. We need to download the Cucumber plugin for ecllipse
+#2. Dependancies - Junit, IO Cucumber 
+
+
+
+Note - We can add multiple scenarios in the same feature file - 
+
+
+
 
 
 
