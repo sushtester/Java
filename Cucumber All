@@ -26,6 +26,176 @@ Note - We can add multiple scenarios in the same feature file -
 
 
 
+Gherkins Keywords such as Given, And, When, And, Then 
+
+Create a Feature package add different features files - 
+
+
+Features: name of features
+  
+ Scenarios: name of scenario
+   Given
+   And 
+   When
+   And
+   Then
+ 
+#Create stepdefination package
+For each features file there will be a step definition/glue code/backend code -  where we can make coding for methods 
+
+#Runner class - 
+@RunWith(Cucumber.class)
+@CucumberOptions(features= "src/test/resources/Features", glue= {"stepsdefinations"}, monochrome = true,
+plugin= {"pretty", "html:target/Htmlreports.html"})
+
+
+public class GoogleRunner {
+	
+	
+
+}
+
+
+
+
+Parameter for Cucumber -  
+
+
+Feature: To check the Login flow
+
+  Scenario Outline: Check the valid login with the credentails
+    Given Browser of Site is open
+    And User is on the Site URL
+    When User enter the <username> and <password>
+    And Click on the Login button
+    Then User should be logging to the application
+
+    Examples: 
+      | username | password |
+      | aloha    |    12345 |
+
+
+A. When called parameter from features files, which we called as data table 
+So in Example we write the data table 
+
+
+Here is step definition - We need to change the When name to regular expression for any value and then pass the params in the method 
+
+@When("^User enter the (.*) and (.*)$")
+	public void user_enter_the_aloha_test_com_and_mypassword(String username, String password) {
+		}
+
+
+When send parameter we can also add params in double code like 
+Feature: To check the Login flow
+
+  Scenario Outline: Check the valid login with the credentails
+    Given Browser of Site is open
+    And User is on the Site URL
+    When User enter the “” and “”
+    And Click on the Login button
+    Then User should be logging to the application
+
+
+
+#Tags- 
+Features: name of features
+  
+@smoke
+ Scenarios: name of scenario
+   Given
+   And 
+   When
+   And
+   Then
+
+
+So runner file will bel like below - 
+@RunWith(Cucumber.class)
+@CucumberOptions(features= "src/test/resources/Features", glue= {"stepsdefinations"}, monochrome = true, tags= {“@smoke”}
+plugin= {"pretty", "html:target/Htmlreports.html"})
+
+@smoke @regression
+Scenario:
+
+Runner- 
+tags= {“smoke” And “regression”}
+tags= {“smoke” Or “regression”}
+
+tags= “not @Skip”
+
+
+We can also put tag name to 
+@mustRun
+Feature
+
+
+
+Hooks - 
+To run the block of code before and after each scenario 
+
+Scenario Hooks- to run before and after scenario
+Step Hooks -  to run before and after steps like when then and
+Conditional Hooks - conditional as per the tags 
+
+
+
+
+Create different runner class one is for smoke tags other will be for Sanity testing 
+
+
+So in the steps definition we can write @Beore and @After methods which called as hook for scenario
+
+Conditional hooks - We can write multiple hooks such as 
+@Before (order= 1)
+@Before (order =2)
+
+So before each scenarios the hooks before and after will run 
+
+@Before (“@smoke”)
+
+Hooks are invisible to the readers as we defined those in the step definition 
+
+
+#Background - 
+For logins as each scenarios need a login so this common steps so it can put in the background section 
+
+So common steps should be in background 
+
+
+Backgrounds are visible to the user 
+
+
+Background: user is logged into the application 
+  Given User is on the login page
+  When user enter the username and password 
+ Then user navigate to the homepage 
+
+Scenario: Check the logout functionality of the application
+ When user clicks on logout button
+ Then user should loggein out 
+
+
+Cucumber Reports - 
+How to generate HTML reports in the cucumber 
+Maven Cucumber Reporting dependancy 
+
+Apache maven plugin build need to add in POM.XML as well
+
+Then add the plugin as json 
+
+
+Questions - 
+Cucumber Keywords - 
+Annotations in cucumber - 
+Cucumber Tags - smoke, sanity, regression, skip
+Keywords uses under the cucumber options - feature, glue, monochrome=true, plugins, tags
+Can user perform multiple examples for one scenario outline? - yes 
+dryRun= which write in runner class, in the cucumberOpyions when dryRun is true then it checks all the features steps having the implemented methods in step definition or not 
+
+
+CucumberOptions(feature={}, glue{}, tags= {“smoke” and “santity” and “not @Skip”}, plugin= {}, dryRun= true, )
+
 
 
 
