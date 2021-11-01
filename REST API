@@ -343,7 +343,8 @@ or same attribute in every response test case such as name
 
 
 
-
+What are the headers in API, and what are the common headers used - 
+#Content Type, Accept header (Which type of response you need either Json or XML), cookie
   
   
 
