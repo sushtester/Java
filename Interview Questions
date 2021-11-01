@@ -135,9 +135,9 @@ Sam
 Sa
 S
 
-6) what is the difference between data abstraction and encapsulation where you have implemented in your project.
+#25. what is the difference between data abstraction and encapsulation where you have implemented in your project.
 
-#7. How To sort elements in list 
+#26. How To sort elements in list 
 
 Collections.sort(list) //
 
@@ -148,4 +148,40 @@ For array -
 
 Arrays.sort(arraname)
 Arrays.sort( arrayOfItems, Collections.reverseOrder() );  
+
+
+#27. #WebDriver driver= new ChromeDriver() - Explain 
+
+WebDriver is an interface which implemented in RemoteWebDriver Class which is extends by classes such as ChromeDriver, FireFoxDriver, IEDriver
+ 
+So actually ChromeDriver implements methods of WebDriver interface 
+
+And if we write only 
+ 
+ChromeDriver driver= new ChromeDriver()
+
+Then it will only usable for chrome drive
+
+
+#28. #Long or int - 
+
+Byte - 1byte
+Short- 2 bytes
+Int - 4bytes
+Long - 8 bytes
+
+Float- 4 bytes
+
+Double - 8 bytes
+
+
+#29. #String buffer and String builder difference - 
+StringBuffer - synchronized, two threads not called in one time, so takes more time 
+
+SttringBuilder - unsynchronized, two threads cal called in one time, not takes to time 
+
+So StringBuilder performance is good than the StringBuffer
+
+#30. Pattern Code - 
+
 
