@@ -280,5 +280,21 @@ FileUtils.copyfile(file, new File("./Screenshot/"+name.png"));
 
 
 
+#Program for finding even number using the ternory opertaor
+
+public class Main
+{
+	public static void main(String[] args) {
+	    //code for number is even or odd using ternory opertaor
+	    int number= 10;
+	   String result= (number%2==0)? "Number is even": "Number is odd";
+	    
+		System.out.println(result);
+		
+		//or write in one Line-
+		
+		System.out.println((number%2==0)? "Number is even": "Number is odd");
+	}
+}
 
 
