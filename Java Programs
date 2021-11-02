@@ -3,7 +3,7 @@
 number= 4; 
 
 for(int i=1; i<number; i++){
- if(number%1==0){
+ if(number%i==0){
  SYSO(number is a prime number)
  }
  else 
