@@ -201,3 +201,8 @@ Load Testing - check the expected load when multiple user comes to the applicati
 time where the application get crashed or application works smoothly 
 
 Risk Analytic - 
+
+
+#Things under the Test plan 
+
+#Test Cases sequence when adding like add, edit, delete
