@@ -185,3 +185,19 @@ So StringBuilder performance is good than the StringBuffer
 #30. Pattern Code - 
 
 
+
+#31.
+Use Case - How to use the feature 
+
+Test Case - Test the Feature with actual and expected results and input and output
+
+Verification - Check the documents of structure, coding, designing to make sure all requirements are captured in documents 
+
+Validation - To validate the all requirements meets in the application, testing part of application 
+
+Volume testing - Testing the software under the huge amount of data, so king of add multiple data into the application and check data loss (flood testing)
+
+Load Testing - check the expected load when multiple user comes to the application at the same 
+time where the application get crashed or application works smoothly 
+
+Risk Analytic - 
