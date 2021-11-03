@@ -206,3 +206,9 @@ Risk Analytic -
 #Things under the Test plan 
 
 #Test Cases sequence when adding like add, edit, delete
+
+
+#32. JavaScriptExecutor js= (JavaScriptExecutor)driver;
+
+Js.excuteScript(“document.getElementByName (‘name’)”) to find the element using JS 
+js.excuteScript(“document.getElementByID (‘username’).value= ‘google’;”)  to send the value using JS 
