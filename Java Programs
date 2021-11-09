@@ -245,6 +245,11 @@ SYSO(size-2) //Second Hightest
 SYSO(size-3) //Thired Hightest 
 
 
+Collections.sort(list) //
+
+Collections.sort(list, Collections.reverseOrder());
+
+
 
 #13. Find the current time with a timezone in java
 import uses - Date, SimpleDateFormat, Timezone
@@ -406,3 +411,31 @@ public class Main
 
 	}
 }
+
+
+#Java Pattern pyramid- 
+for(int i=0; i<7; i++)
+ for(int j=6; j>=i; J--)
+  SYSO(" ")
+ for(int k=0; k<=i; k++)
+  SYSO (" *")
+  
+ SYSO ();
+ 
+ #Java Ulta Pyramid - 
+ for(int i=0; i<7; i++)
+ for(int j=0; j<=i; J++)
+  SYSO(" ")
+ for(int k=6; k>=i; k--)
+  SYSO (" *")
+  
+ SYSO ();
+ 
+ 
+ #Print sushant in descending - 
+ 
+ #Print sushant in ascending - 
+ 
+ 
+ 
+
