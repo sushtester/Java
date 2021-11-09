@@ -365,3 +365,44 @@ public class Main
 	}
 }
 
+
+
+//import java.util.Iterator
+
+Iterator<String> nameIt= setName.iterator()
+
+*******************************************************************************/
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    HashSet<String> names= new HashSet<String>();
+	    names.add("Sushant");
+	    names.add("Pawar");
+	    names.add("Tambave");
+	    
+	    for(String nameQA: names){
+	        System.out.println(nameQA);
+	        
+	    }
+	    
+	   /* Iterator <String> nameIte= names.iterator();
+
+	    while(nameIte.hasNext()){
+	        String nameQA= nameIte.next();
+	        System.out.println(nameQA);
+	        
+
+	      
+	        
+	    }*/
+	    
+
+	    
+	    
+
+	}
+}
