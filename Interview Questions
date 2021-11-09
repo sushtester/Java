@@ -212,3 +212,12 @@ Risk Analytic -
 
 Js.excuteScript(“document.getElementByName (‘name’)”) to find the element using JS 
 js.excuteScript(“document.getElementByID (‘username’).value= ‘google’;”)  to send the value using JS 
+
+
+#33. Why WebDriver driver = new ChromeDriver();
+
+#34. SQL where clause, aggregation, group.
+
+#35. Can we declare many interfaces object class inside the interface class 
+
+
