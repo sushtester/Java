@@ -50,7 +50,7 @@ Groups -
 @Test(priority=1,groups= "Site")
 
 or for multple groups - 
-@Test(group= {"Sanity", "Smoke"})
+@Test(groups= {"Sanity", "Smoke"})
 
 Groups can also difed on the calss level- 
 
