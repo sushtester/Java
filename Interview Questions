@@ -43,6 +43,11 @@ then()
 
 
 #8. Diff between Abstract class & interface ?
+abstarct class - Can write abrstact methods which dont have body as well as public void methods as well
+
+interface Animal - Can write abstact methods only, from java 8 we can write the default and static methods as well
+
+Default - same class and package cant outside even those inherit 
 
 
 #9. How many times you can write catch block ?- 
