@@ -10,6 +10,8 @@
 200 - The request was fulfilled.
 204. - No Response 
 
+201 - Created 
+
 ##2. Use of GET, PUT, POST, PATCH, DELETE. [We were using basic auth - username & password given by client, or we were also used API KEY]
 
 GET- Read the data (to get the data) - Data is in JSON/XML formats - Status code 200 - Only URL no body
@@ -347,4 +349,7 @@ What are the headers in API, and what are the common headers used -
 #Content Type, Accept header (Which type of response you need either Json or XML), cookie
   
   
+//Get API - Get the pricing from FedEX API where we add a origination and destination 
+//Zips as a quesry params using API access token 
 
+//POST - Add user API, Add a Traveler API, ADD CART API
