@@ -1,12 +1,12 @@
-INNER JOIN - 
+INNER JOIN - Only commpon things from both the table will display 
 
 Select * FROM table1 INNER JOIN table2 ON table.ID= table1.ID
 
 
-LEFT JOIN - 
+LEFT JOIN - All the records from LEFT table will display even they are not common with the another table records 
 
 
-RIGHT JOIN - 
+RIGHT JOIN - All the records from RIGHT table will display even they are not common with the another table records 
 
 
 Students 
@@ -49,6 +49,10 @@ SELECT COUNT(ProductName), CategoryID FROM Products GROUP BY CategoryID;
 
 #Find out the CategoryID from product not duplicate 
 SELECT DISTINCT CategoryID FROM Products;
+
+SELECT COUNT (DISTINCT Country) FROM Customers;  we can user DISTINCT column name in COUNT(DISTINCT Country)
+
+
 
 
 LEFT JOIN - (Take all the records from Left tabale which is Students )- 
@@ -101,5 +105,33 @@ SELECT COUNT (DISTINCT countries) from country
 #Where 
 SELECT * FROM Customers
 WHERE Country='Mexico';
+
+
+
+#OR, AND 
+SELECT * FROM Customers where Country= 'Mexico' OR Country= 'Germany'
+
+
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Berlin' OR City='München');
+
+SELECT * FROM Customers
+WHERE NOT Country='Germany';
+
+
+#Mongo DB is a collections - 
+//User.find_by(tracking_id: '')
+
+//User.where(email: 'alohaqa1105@gmail.com').first 
+
+Shipment.find_by(tracking_id: '')
+
+User.where(emaild: '').first
+user.delete
+
+
+
+
 
 
