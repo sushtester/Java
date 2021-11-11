@@ -121,7 +121,11 @@ EG. LinkedList and ArrayList.
 
 
 #22. Difference between static and non static methods- 
+Static method can not be override, also static methods need less memory 
 
+Static valibale can access only on static methods 
+
+static vaibale also can not be overide 
 
 #23. How to write xpath of column 'b' value using column 'a' text - 
 using the following-sibling
