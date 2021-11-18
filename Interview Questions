@@ -230,3 +230,11 @@ js.excuteScript(“document.getElementByID (‘username’).value= ‘google’;
 #35. Can we declare many interfaces object class inside the interface class 
 
 
+#36. How to prevent the class to be inherit?
+Use final class - final class can not be inherit 
+
+#37. Abstract class - Can not create object of abstract class it’s only can extends 
+
+#38. How to excuse only failed test cases in the TestNg- 
+For failed test cases - in test-output folder - testing.xml failed file get created which need to run again ignorer to excuse failed test cases in TestNg
+
