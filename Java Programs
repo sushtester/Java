@@ -432,10 +432,81 @@ for(int i=0; i<7; i++)
  SYSO ();
  
  
- #Print sushant in descending - 
- 
- #Print sushant in ascending - 
+
  
  
+##//Swap the numbers without using the thired variable
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int x= 50;
+	    int y= 20; 
+	    
+	    x=x+y;
+	    y=x-y;
+	    x=x-y;
+	    
+	    System.out.println(x+ " " + y);
+	    
+	    
+	    
+		System.out.println("Hello World");
+	}
+}
  
 
+ #Print sushant in descending sushant, sushan, susha, sush, suh - 
+ //Descending 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String name= "sushant";
+	    
+	    StringBuilder str= new StringBuilder();
+	    
+	    char [] nameArray= name.toCharArray();
+	    
+	    for (int i=0; i<nameArray.length; i++){
+	        
+	        for(int j=0; j<nameArray.length-i; j++){
+	            
+	            System.out.print(nameArray[j]);
+	        }
+	        
+	        System.out.println();
+	    }
+	    
+	}
+}
+ 
+ 
+ 
+ #Print sushant in ascending - s, su, sush, susha- 
+ //Ascending 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String name= "sushant";
+	    
+	    StringBuilder str= new StringBuilder();
+	    
+	    char [] nameArray= name.toCharArray();
+	    
+	    for (int i=0; i<nameArray.length; i++){
+	        
+	        for(int j=0; j<=i; j++){
+	            
+	            System.out.print(nameArray[j]);
+	        }
+	        
+	        System.out.println();
+	    }
+	    
+	}
+}
