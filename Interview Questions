@@ -238,3 +238,69 @@ Use final class - final class can not be inherit
 #38. How to excuse only failed test cases in the TestNg- 
 For failed test cases - in test-output folder - testing.xml failed file get created which need to run again ignorer to excuse failed test cases in TestNg
 
+
+#39. #State element Exception - Ajax call - refresh a particular component, so xpath is found BUT the Xpath ID which internally created by
+WebDriver is changed (WebDriver always create an ID for element internally) and 
+that is the reason the state element exception comes so we need to fix that using refresh the page of using try catch 
+
+
+#40. CSS Selctor IMP - [https://www.youtube.com/watch?v=VYIDZ57mMy4]
+a. Using class name - 
+  Class - Using the . Classname or HTMLtag.classname
+
+  The class name should not have a space in it so we can use .classname
+  https://www.screencast.com/t/y8Ul8dlL
+
+  Sometime classes are separated with spaces <class= “namehtnam pram-text”>
+
+  So we can use . In between those classes like 
+
+  .namehtnam.pram-text
+  
+b. ID - 
+   ID - we use the # - HTML tag and #ID
+   Eg. input#1240
+   
+C. Combine ID and class (some elemnets having ID and class name that time we can use below)
+   .classname#ID
+   #ID.classname 
+   
+D. Using two seprate attributes using CSS - 
+   input[name= 'firstName'][placeholder= 'First name']
+   
+E. For the Dynamic elements where some elements can change at the start of end 
+   textmatch of any attribute - input[name*= 'sushant']
+   
+   starts with - ^ - input[name^= 'sush']
+   
+   end with - $ - input[name$= 'ant']
+   
+F. Next element under element can use > (forward slash)
+
+G. Sibling - only use forward siblings for the CSS selector using +
+   ul.typeahead__list>li+li
+   
+H. Indexing of siblings using nth-of-type() - :nth-of-type(2)
+   ul.typeahead__list>li:nth-of-type(2).  - CSS
+   ul.typeahead__list>li:nth-of-type(2)
+   
+
+
+
+
+
+
+   
+
+
+
+
+   
+   
+
+
+
+
+
+
+
