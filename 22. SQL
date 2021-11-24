@@ -40,6 +40,7 @@ SELECT ProductName, Price FROM Products ORDER BY Price DESC limit 1;
 OR
 SELECT ProductName, Price FROM Products where price = (SELECT MAX(price) FROM Products );
 
+SELECT ProductName, price from Products order by price DESC limit n-1, 1
 
 #Select the second highest max size product - 
 SELECT ProductName, Price FROM Products ORDER BY Price DESC limit 1, 1
@@ -118,6 +119,11 @@ WHERE Country='Germany' AND (City='Berlin' OR City='München');
 
 SELECT * FROM Customers
 WHERE NOT Country='Germany';
+
+
+
+#Having - 
+
 
 
 #Mongo DB is a collections - 
