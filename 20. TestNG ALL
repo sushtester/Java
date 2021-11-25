@@ -401,3 +401,8 @@ SYSO(id)
 }
 
 
+TestNG priorieties = 
+when no priorites set it runs albhabetically as per the methon names
+
+
+
