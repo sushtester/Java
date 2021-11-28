@@ -338,13 +338,43 @@ Using addAll() method we can add list into set or set into list
 Also can add one list into another list using .addAll() method 
 
 
-
    
-   
+#45. Main method overload or not?
+Main method can be overload
+Main method can not be override as it’s static method 
+
+Public static void main(String [] args)
+
+JVM start program execution from the main method always so it’s static no need to create an object for the main method 
 
 
+#46. Java Errors - (We can called this unchecked exception as well)
+A. Assertion error 
+B. NoSuchMethod error 
+C. Out of memory error 
+
+The main difference between exception and error is exception can be handled (using try catch or throws) BUT the error can not handle
+
+#47. Why frameworks is needed in automation - 
+Standard automation process 
+Lower the maintenance cost 
+Reuse the code  
+
+#48. We can add variable into interface? - Yes only static and final which need declared not the initialise
+
+We can declare the static and final variable into interface so those can not override,
+
+So the static variable can not be override and final can not be change, so if try to override it will give you compile error 
 
 
+#49. CSS selector of nth element in the grid 
+tbody[role= 'rowgroup']>tr:nth-of-type(1)>td:nth-of-type(8)
+
+So we know in order to get the column data we need to pass column number in nth-of-type(8)
+
+ Tr<> (row1)
+     <td> (column 1)
+     <td> (column 2)
 
 
 
