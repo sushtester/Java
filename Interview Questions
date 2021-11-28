@@ -286,7 +286,24 @@ H. Indexing of siblings using nth-of-type() - :nth-of-type(2)
    
 
 
+#41. Tooltip automation - 
+Move over or click on the tooltip - using Actions.moveToElement(element), then the tooltip text is described in content or title attribute and we can get that using getAtribute ()
+Tooltip element - driver.findElement(By.xpath(“”))
+Element.getAttribute(“title”) or element.getAttribute(“content”)
+Assert.assertEquals(Actual, expected);
 
+
+#42.Color code of text validation in selenium - 
+
+getCssValue(“color”);
+
+So we can get the color of the element by using element.getCssValue(“color”)
+Which gives color in rgba (12, 30, 34, 60) so we can covert that into hex code - 
+
+Color.fromString(color).asHex();
+
+
+Same for background color we can use getCssValue(“background - color”);
 
 
 
