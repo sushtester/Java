@@ -332,7 +332,10 @@ driver= new RemoteWebDriver(new URL(“URL of nodet”), capability);
 
 
    
+#44. How to covert list into set - 
+Using addAll() method we can add list into set or set into list
 
+Also can add one list into another list using .addAll() method 
 
 
 
