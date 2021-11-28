@@ -306,6 +306,30 @@ Color.fromString(color).asHex();
 Same for background color we can use getCssValue(“background - color”);
 
 
+#43.Selenium Grid - 
+
+Selenium Grid is a feature in Selenium that allows you to run test cases in different machines across different platforms.
+
+The control of triggering the test cases is on the local machine, and when the test cases are triggered, they are automatically executed by the remote machine.
+
+The machine which actually triggers the test case known as Hub
+
+A. Download the selenium server on local machine, make local machin as Hub using CMD prompt, so it create the URL of hub, the URL contains the IP address and the port 
+
+B. Download the selenium server on another machine that we want to make as Node, then using the IP of the hub we can make this machine as node of that hub using the 
+CMD promt, it also gives the URL of the node wich conatin IP of node and port number
+
+C. We need user DesiredCapabilites (for browser and OS) and the RemoteWebDriver (set the node)
+
+Then on hub we need to initialise the Desiredcapability and RemoteWebDriver 
+
+DesiredCapabilites cappability= DesiredCapabilites.Chrome()
+cappability.setBrowserName(“chrome”);
+cappability.setPlatform(Platform.XP);
+
+WebDriver driver;
+driver= new RemoteWebDriver(new URL(“URL of nodet”), capability);
+
 
    
 
