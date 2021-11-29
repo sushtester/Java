@@ -34,6 +34,7 @@ action.contextClick().perform()// for right click
 action.clickAndHold(element).moveToElement(element).release().build.perform; //drag and drop element using action 
 
 
+action.dragAndDrop(SourceElement, TargetElement).build().perform(); //to dragdrop element directly 
 
    
 Multiple Windows - 
