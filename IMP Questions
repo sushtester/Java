@@ -890,16 +890,27 @@ you will use 2 machines. The first machine will be the system that will run the 
 For simplicity, let us call the machine where the hub runs as “Machine A” while the machine where the node runs will be “Machine B.” 
 It is also important to note their IP addresses. Let us say that Machine A has an IP address of 192.168.1.3 while Machine B has an IP of 192.168.1.4
 
-Download Selenium server for both the machine 
+Selenium Grid is a feature in Selenium that allows you to run test cases in different machines across different platforms.
 
-Using command prompt - Make one machine as a hub - it create local URL for hub
+The control of triggering the test cases is on the local machine, and when the test cases are triggered, they are automatically executed by the remote machine.
 
-For node make other machine as node using IP address of hub - it create local url for node
+The machine which actually triggers the test case known as Hub
 
-DesiredCapabilities capability = DesiredCapabilities.firefox()
-capability.setBrowsername(“Firefox”)
-capability.setPlatform(Platform.XP);
-Driver = new RemoteWebDriver()
+A. Download the selenium server on local machine, make local machin as Hub using CMD prompt, so it create the URL of hub, the URL contains the IP address and the port 
+
+B. Download the selenium server on another machine that we want to make as Node, then using the IP of the hub we can make this machine as node of that hub using the 
+CMD promt, it also gives the URL of the node wich conatin IP of node and port number
+
+C. We need user DesiredCapabilites (for browser and OS) and the RemoteWebDriver (set the node)
+
+Then on hub we need to initialise the Desiredcapability and RemoteWebDriver 
+
+DesiredCapabilites cappability= DesiredCapabilites.Chrome()
+cappability.setBrowserName(“chrome”);
+cappability.setPlatform(Platform.XP);
+
+WebDriver driver;
+driver= new RemoteWebDriver(new URL(“URL of nodet”), capability);
 
 
 #61. Adhoc Testing? Unstructred testing, no any plan for the testing, 
