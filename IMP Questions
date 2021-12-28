@@ -995,4 +995,38 @@ Smoke
 Sanity 
 Regression 
 
-B. Non Functional Testing - such as performance testing, stress testing, load testing which is not a customiser requirements but just to make sure application works on such high critical conditions 
+B. Non Functional Testing - such as performance testing, stress testing, load testing which is not a customiser 
+requirements but just to make sure application works on such high critical conditions 
+
+
+#72. Exceptions example of java - 
+
+	    int number []= new int [2];
+	    
+	    try{
+	        
+	        number[0]= 10;
+	        number[1]= 20;
+	        number[2]= 30;
+	        number[3]= 40;
+	    }
+	    
+        catch(Exception e){
+	        
+	       e.printStackTrace(); // for using e.printStackTrace(); we can print the expection with line number where the expection happne in try block
+	    }
+	    
+	    
+	    OR 
+	    catch(Exception e){
+	        
+	       SYSO(e) // print the expection name
+	    }
+	    
+	    OR 
+	    catch(Exception e){
+	        
+	       SYSO("Our message what we put the message as Expection") // print the expection name
+	    }
+
+
