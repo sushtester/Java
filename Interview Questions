@@ -63,8 +63,67 @@ Every try catch block not have a finally - if we want to excuete something after
 Finally block always excutes even exception comes
 
 
+#10A. Difference between the class varibale and instance variable, what is local variable - 
+
+Just to note - instance varibale can call when we create an object of the class so inorder to acccess the instance varibale we need to create an 
+object of the class and we can access that instance variable using obj.variableName
+
+for class variable i.e static variable for which we don't need to create an object , we can access that using classname.variableName
+
+Local variable is an varibale that are written in the method of the class ie. declared in the method of the class
+A variable declared inside the body of the method is called local variable. 
+You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists
+
+
+public class VariableExample{
+   int myVariable;   // instance variable 
+   static int data = 30;  //class varibale 
+   
+   public static void main(String args[]){
+      VariableExample obj = new VariableExample();
+      
+      System.out.println("Value of instance variable: "+obj.myVariable);
+      System.out.println("Value of static variable: "+VariableExample.data);
+   }
+}
+
+
+#10B. Reference variable - 
+The varibale is refered to the abother varibale 
+
+Best example of this is getter setter (Encapsulation)
+
+Class A{
+private string name; 
+
+public void setName(String name){
+this.name= name; 
+
+}
+
+public void getName(){
+return name; 
+}
+
+}
+
+Class B {
+
+A obja= new A();
+
+obja.setName("sushant");
+String myNamne= obja.getName();
+
+}
+
+so in above example myName is refer to the name variable so it's reference varible 
+
+
+
 #10. Can we declare many interfaces object class inside the interface class (abstract class classname), (interface nameOfinterface)
 
+We can only write the methods in intefrace class we can not initialize the variables inside the interface, we need to decare the varibale for interface
+Like int num= 10; 
 
 #11. What is difference between assert and verify. assert comes executions get stop when verify comes(soft assertaion)
 
