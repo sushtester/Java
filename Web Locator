@@ -1,5 +1,11 @@
 X path - Absulate & relative - Check advanteges and disadvateges of those
 
+Absulate - Starts from the root elements of HTML code - Body div 
+
+Relative - Find the excact path of that particular element 
+
+So releative is always better for finding the Xpath 
+
 PDF for the locator - https://github.com/LearnByBhanuPratap/seleniumScriptsLatest/blob/master/data/Locators%2C%20X%20Path%20and%20CSS%20Notes.pdf
 
 Xpath - //Tag name[@attributeName= ''], eg. //input[@id= 'email']
