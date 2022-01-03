@@ -2,9 +2,12 @@ To select the element from the Select class such as date picker in FB -
 We can use Select class such as - 
 WebElement day= driver.findElement(By.xpath("//select[@id='day']"));
 Select select= new Select(day);
-day.selectByVisibleText("name")
-day.selectedByIndex(2)
-day.deselectByVisibleText()
+select.selectByVisibleText("name")
+select.selectdByIndex(2)
+select.selectByValue('3')
+
+select.deselectByVisibleText() //When want to deSelect the dropdown opetion then select.deSelectByVisibleText("asd");
+
     
     
 #For Mouse hover on welemement we can use Action class- 
@@ -31,7 +34,7 @@ action.keyDown(Keys.SHIFT).sendKeys("new"); //To enter upper case
 
 action.contextClick().perform()// for right click
 
-action.clickAndHold(element).moveToElement(element).release().build.perform; //drag and drop element using action 
+action.clickAndHold(element).moveToElement(element).release().build().perform(); //drag and drop element using action 
 
 
 action.dragAndDrop(SourceElement, TargetElement).build().perform(); //to dragdrop element directly 
