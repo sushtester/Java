@@ -179,3 +179,146 @@ OR using concat
 String fullname = name.concat(sirname)
 	
 
+
+##Finding the number is odd or even using for loop and ternary operator - 
+
+//Ternary operator - To Check number is odd or even
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int number= 10; 
+	    
+	    if(number%2==0){
+	        System.out.println("Number is Even");
+	    }else{
+	        
+	        System.out.println("Number is Odd");
+	    }
+	    
+	    System.out.println((number%2==0)? "Number is even": "Number is Odd"); //This is ternary
+	    
+	}
+}
+
+
+
+##//Java Patern Trangle
+ * * * * * * *
+ * * * * * *
+ * * * * *
+ * * * *
+ * * *
+ * *
+ *
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    for(int i= 0; i<7; i++){
+	        
+	        for(int j=0; j<7-i; j++){
+	            
+	            System.out.print(" *");
+	        }
+	        
+	        System.out.println();
+	    }
+
+	}
+}
+
+
+##//Java Patern Trangle
+ *
+ * *
+ * * *
+ * * * *
+ * * * * *
+ * * * * * *
+ * * * * * * * 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    for(int i=0; i<7; i++){
+	        
+	        for(int j=0; j<=i; j++){
+	            
+	            System.out.print(" *");
+	        }
+	        
+	        System.out.println();
+	    }
+
+	}
+}
+
+
+##//Java patern for Pyramid
+        *
+       * *
+      * * *
+     * * * *
+    * * * * *
+   * * * * * *
+  * * * * * * *
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    for(int i=0; i<7; i++){
+	        
+	        for(int j=6; j>=i; j--){
+	            
+	            System.out.print(" ");
+	        }
+	        
+	        for(int k=0; k<=i; k++){
+	            
+	            System.out.print(" *");
+	        }
+	        
+	        System.out.println();
+	    }
+	    
+	}
+}
+
+##//Java patern for Pyramid
+  * * * * * * *
+   * * * * * *
+    * * * * *
+     * * * *
+      * * *
+       * *
+        *
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    for(int i=0; i<7; i++){
+	        
+	        for(int j=0; j<=i; j++){
+	            
+	            System.out.print(" ");
+	        }
+	        
+	        for(int k=6; k>=i; k--){
+	            
+	            System.out.print(" *");
+	        }
+	        
+	        System.out.println();
+	    }
+	    
+	}
+}
+
+
+##
