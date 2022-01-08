@@ -437,3 +437,9 @@ So we know in order to get the column data we need to pass column number in nth-
 
 
 
+#50. 
+A. Local variable & global variable -  Local variable is method variable (Method level variable) that can use to that method only 
+& global variable is viable is declared at the class level 
+
+B. Global variable can be - class variable and instance variable - Class variable is static variable which can access using class name directly 
+so no need to create object & instance variable can access by creating object of the class 
