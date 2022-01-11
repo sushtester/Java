@@ -343,3 +343,20 @@ public class Main
 }
 
 
+##// Swap the numbers without using the 3rd variable 
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int x= 50; 
+	    int y= 20; 
+        x= x+y;
+        y=x-y;
+        x=x-y;
+	    
+		System.out.println(x);
+		System.out.println(y);
+	}
+}
+
+##
