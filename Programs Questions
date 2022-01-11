@@ -321,4 +321,25 @@ public class Main
 }
 
 
-##
+## JAVA recusrsion ie. print numbers from 1 to 10
+
+we need to call the function with ina the functiontion by increament the number 
+
+// Display the numbers from 0 to 20 without using the loops
+public class Main
+{
+    public static void displayMethod(int n){
+        if(n<=20){
+            System.out.println(n);
+            displayMethod(n+1);
+        }
+    }
+    
+	public static void main(String[] args) {
+	    
+	    displayMethod(0);
+		System.out.println("Hello World");
+	}
+}
+
+
