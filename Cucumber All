@@ -297,9 +297,9 @@ String parameter is pass using "<>"
 
 #Runner 
 
+https://github.com/cucumber/cucumber-jvm/tree/main/testng
 
-
-
+Create Runner class in same class
 
 
 
