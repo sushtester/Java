@@ -219,7 +219,85 @@ infact Dev can read the gherkins scenarios/Feature and do there code as per the 
 https://www.screencast.com/t/9SsLUHvp
 
 
-Create Maven project and add cucumber plugin to ecliipse 
+#Create Maven project and add cucumber plugin to ecliipse 
+
+#Cucumber iO- Cucumbaer java maven depandacy add 
+
+#Then create Feature package - and add one .feature file and write Gherkins feature & run with cucumber you will see step defiation error
+
+#Then add Step defination feataure and add those steps also turn the project to as cucumber projects so on write click steps it navigate to steps defination
+
+#Structure - 
+Feature:
+ Rule: Rule name
+  Background:
+   Scenario:
+     Given 
+     When
+     Then
+     
+   Scenario:
+     Given 
+     When
+     Then
+     
+#Statemnets or we can say Ghenrikis Keywords - Given, when, Then, And , But
+
+Given 
+And 
+When 
+And 
+Then 
+And 
+
+Given 
+But
+When 
+But 
+Then 
+But
+
+So instead of using multiple given when then we can user And But statments 
+
+#Scenario Outline 
+
+#Rule - Rule is for business rule like bascially from things, like form which page we test above feature 
+Rule: Add cart from home page 
+Background: // Common steps 
+   Scenario:   //we can write a multiple scenari
+     Given 
+     When
+     Then
+
+Rule : Add cart from product page 
+Background: //Common steps 
+   Scenario:  //we can write a multiple scenario
+     Given 
+     When
+     Then
+
+
+##Import - Convert to cucumber project in order to see right click on steps to find the steps definations 
+so Right click on project - Configure - Convert to cucumber project 
+
+Feature: add to cart
+
+  Scenario Outline: Check the add cart from store with quanity
+    Given User is on store page
+    When user select the product "<product_name>" and <quanity>
+    Then user should see selected product with quantity <quanity>
+
+    Examples: 
+      | product_name | quanity |
+      | Blue Shoes   |       1 |
+      | Yellow Shoes |       2 |
+     
+     
+String parameter is pass using "<>"
+
+#Runner 
+
+
 
 
 
