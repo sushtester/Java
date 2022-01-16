@@ -198,6 +198,30 @@ CucumberOptions(feature={}, glue{}, tags= {“smoke” and “santity” and “
 
 
 
+#Cucumber with the Frameworks - 
+
+TDD - Test data driven - Part of agile - so here user first write test cases for unit testing and then write code to pass
+that test cases then refarctor the code again and again test 
+
+BDD - Behvour data driver, as in TDD dev write unit test cases but those are not descriptive not able to understand by anybody so 
+BDD is introduced to write test cases in simple language so test method names are understable 
+
+So As soon as user story comes before Dev team start working we can analys and write the scenarios/features using gherkins 
+and get it reviwed from the product owner so we can complete the features writing and steps code/glue code of that 
+intially offcouse the code not completed that will done when dev completed the task 
+
+Any one like Dev/QA/ productuct owner can write Gherkins features 
+
+In BDD automatest test should drive the developemne, so no need to complete the task by Dev, we can write Gherkins before development done
+infact Dev can read the gherkins scenarios/Feature and do there code as per the scenarios 
+
+#Example Mapping - This is needed for to write the scenarios once user stroy comes so we can write different scenarios for the user story 
+https://www.screencast.com/t/9SsLUHvp
+
+
+Create Maven project and add cucumber plugin to ecliipse 
+
+
 
 
 
