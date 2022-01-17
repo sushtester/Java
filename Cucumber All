@@ -301,5 +301,51 @@ https://github.com/cucumber/cucumber-jvm/tree/main/testng
 
 Create Runner class in same class
 
+#Snippet - For proper test methods name - 
+@CucumberOptions(plugin= {"pretty","html:target/cucumber.html", "summary"}, monochrome= true, dryRun=true, snippets= SnippetType.CAMELCASE)
+
+#For Junit Runner class - We need a Cucumber Junit dependacy 
+
+#For TestNg Runner class - We need a Cucumber TestNg Dependacy and select the SnippetType as per the runner class 
+
+#Tags - 
+
+A. Scenario Level - 
+@CucumberOptions(plugin = {"pretty","html:target/cucumber.html", "summary"}, glue= {"awesomecuccumber"}, monochrome= true, dryRun=true,
+snippets= SnippetType.CAMELCASE, tags= "@Smoke")
+
+@Smoke
+Scenario
+
+
+@CucumberOptions(plugin = {"pretty","html:target/cucumber.html", "summary"}, glue= {"awesomecuccumber"}, monochrome= true, dryRun=true,
+snippets= SnippetType.CAMELCASE, tags= "@Smoke or @Sanity")
+
+@CucumberOptions(plugin = {"pretty","html:target/cucumber.html", "summary"}, glue= {"awesomecuccumber"}, monochrome= true, dryRun=true,
+snippets= SnippetType.CAMELCASE, tags= "@Smoke and @Sanity")
+
+@CucumberOptions(plugin = {"pretty","html:target/cucumber.html", "summary"}, glue= {"awesomecuccumber"}, monochrome= true, dryRun=true,
+snippets= SnippetType.CAMELCASE, tags= "@Smoke and not @Sanity")
+
+
+##Providing the paths of the feature file and glue code in the runner - 
+Firstly src/test/java - All packages such as runner, Steps defination package, Hooks pakage
+
+src/test/resource - Feature file package 
+
+@CucumberOptions(plugin = {"pretty","html:target/cucumber.html", "summary"}, glue= {"steps", "hooks"}, monochrome= true,
+snippets= SnippetType.CAMELCASE, tags= "@Smoke or @Sanity", 
+features= "src/test/resources/awesomecuccumber")
+
+Link - https://www.screencast.com/t/ivs7IwSd
+
+
+#Cucumber Expression - Regular expressions are quite hard so better we can use the Cucumber expressions 
+
+https://github.com/cucumber/cucumber-expressions#readme
+
+
+
+
 
 
