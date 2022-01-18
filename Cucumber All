@@ -345,7 +345,32 @@ Link - https://www.screencast.com/t/ivs7IwSd
 https://github.com/cucumber/cucumber-expressions#readme
 
 
+#Optional Text - So we can user common step defiantion for two multiple steps if some particular text is change for another steps
 
+#Alernative Text - Using /
+
+#Custome parameters 
+
+#DataTable datatable - 
+
+Feature: Data Table
+
+  Scenario: To check the credenatials
+    Given User Name and Password
+      | sushant | 1105 |
+
+
+public class DataTableSteps {
+	
+	@Given("User Name and Password")
+	public void user_name_and_password(DataTable datatable) {
+		
+		List <String> list= datatable.row(0);
+		
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+
+	}
 
 
 
