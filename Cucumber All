@@ -374,3 +374,26 @@ public class DataTableSteps {
 
 
 
+#DataTable - 
+Feature: my working
+
+  Scenario: My working scenarios to check
+    Given I am on the page of the main
+      | Sushant | Pawar |
+      
+Steps - 
+List we can use - so our method with parameter as DataTable 
+	@Given("I am on the page of the main")
+	public void i_am_on_the_page_of_the_main(DataTable dataTable) {
+		
+		List<String> list= dataTable.row(0);
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
+		
+Notes - When multiple rows - then user List of List
+
+#When multiple rows 
+
+
+
+
