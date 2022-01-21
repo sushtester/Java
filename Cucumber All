@@ -390,9 +390,118 @@ List we can use - so our method with parameter as DataTable
 		System.out.println(list.get(0));
 		System.out.println(list.get(1));
 		
-Notes - When multiple rows - then user List of List
+Notes - For single row use List and for  multiple rows - then user List of List
 
-#When multiple rows 
+#Using @DataTableType
+@DataTableType
+    public Customer getData(List<String> listqa) {
+		return new Customer(listqa);
+		
+		
+	}
+	
+	
+#Single Row with Header 
+We can use the List of Map - As it's key value pair, we can also user list of list BUT List of map is better
+
+|Username|PWD|
+|Sushant|sush@123|
+
+
+@DataTableType
+    public Customer getData(List<String> listqa) {
+		return new Customer(listqa.get(0), listqa.get(1));
+		
+		
+	}
+	
+	@Given("I am on the page of the main")
+	public void i_am_on_the_page_of_the_main(List<Map<String, String>> cutomers) {
+		
+	System.out.println(cutomers.get(0).get("UserName"));
+	System.out.println(cutomers.get(0).get("Passaword"));
+	
+	
+List <Map<String, String>> 
+
+
+#######Important For dataTable - For data table Always use maps - with java objects - 
+
+Feature: my working
+
+  Scenario: My working scenarios to check
+    Given I am on the page of the main
+      | UserName | Passaword |
+      | Sushant  | Pawar     |
+      | Nalini   | Mulik     |
+    When I am enter details
+    Then See output
+    
+ 
+ @DataTableType
+    public Customer getData(Map<String, String> mapname) {
+		return new Customer(mapname.get("UserName"), mapname.get("Passaword"));
+		
+		
+	}
+	
+	@Given("I am on the page of the main")
+	public void i_am_on_the_page_of_the_main(List<Customer> customer) {
+		
+	System.out.println(customer.get(1).getUserName());
+	System.out.println(customer.get(1).getPassword());
+	
+Customer class- 
+ublic class Customer {
+	
+	public String getUserName() {
+		return userName;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public Customer(String userName, String password) {
+		super();
+		this.userName = userName;
+		this.password = password;
+	}
+
+	private String userName;
+	
+	private String password;
+		
+
+}
+
+
+### Single Column only with no heder then no need to use map - 
+We can directly user DataTable dataTable as arguments 
+
+
+##Single column with header 
+
+##Use Transpose @Transpose the coloum of list into row list 
+|sushamt|
+|Pawar|
+
+will convert into 
+|sushant|Pawar|
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
 
 
 
