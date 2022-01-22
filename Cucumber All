@@ -493,12 +493,128 @@ will convert into
 
 
 
+##Parameter Type for Scenario Outline feature - Custome Parameter Type 
 
 
 
+
+#Hookus - Before and After 
+	@Before
+	public static void beforecheck(Scenario scenario) {
+	System.out.println("Before of each scenarios");
+	System.out.println(scenario.getName());
+		
+	}
+so we can use this before each scenario and after scenario also using Scenario class we can get screenshots, then can get name of scenario 
+so such before and after method we can user 
+
+Order hooks - 
+We can add multiple hooks and order those 
+
+	@Before (order =1)
+	public static void beforecheck(Scenario scenario) {
+	System.out.println("Before of each scenarios");
+	System.out.println(scenario.getName());
+		
+	}
+	
+Tags Hooks - 
+We can tag the hooks - @Sanity so it will only run for before sanity scenario 
+
+	@Before ("@Sanity")
+	public static void beforecheck(Scenario scenario) {
+	System.out.println("Before of each scenarios");
+	System.out.println(scenario.getName());
+	scenario.attcha() //is for the screenshots 
+		
+	}
+
+	
+Before Steps and After Steps hooks - 
+So this for for to run the hooks for each and every steps of the scenario for each and every steps 
+
+@BeforeStep
+	public static void beforestep(Scenario scenario) {
+	System.out.println("Before of each steps");
+
+		
+	}
+	
+
+##Tags - We can use the tag for feature level, scenario level, examples 
+Note - Always Paranet tag will execute 
+
+@Sanity and @Smoke
+
+@Sanity or @Smoke
+	
+@Sanity and not @Smoke	
+
+not @Sanity
+
+
+
+##Selenium WebDriver - 
+
+Add selenium java dependacies 
+
+Then add webdrivermanager 
+
+
+## While web driver initialisations 
+##Do not user static variables on the step defination class becasue it will cause the issues 
+##Scenarios should be totally independant from each other 
+
+##Frameworks - Selenium, TestNg, Cucumber, RestAssured [https://www.screencast.com/t/KkIkzDC26ysV]
+
+##Dependacy Injection Framework
+
+Factory package - 
+public class DriverFactory {
+	
+	private static WebDriver driver;   // We use static becasue no need to create the class also same instance can use on other class 
 	
 	
+	public static WebDriver initialise() {
+		WebDriverManager.chromedriver().setup();
+		driver= new ChromeDriver();
+		return driver;
+				
+	} 
 	
+	
+	public static WebDriver getDriver() {
+		
+		return driver;
+	}
+Hooks Package - 
+public class Hooks {
+	
+	private WebDriver driver;
+	
+	@Before
+	public void before() {
+		driver=DriverFactory.initialise();
+
+		
+	}
+	
+	@After
+	public void after() {
+		driver.quit();
+		
+	}
+
+}
+
+
+Pages Pckage - 
+ A. Base Page
+ B. Store Page
+ 
+ 
+ Base page Class - 
+   just for 
 	
 	
 	
