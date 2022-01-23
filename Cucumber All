@@ -614,7 +614,7 @@ Pages Pckage -
  
  
  Base page Class - 
-   just for 
+   just for PageFactory initilisation in construction and load URL method w
 	
 	
 	
