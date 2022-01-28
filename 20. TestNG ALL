@@ -405,4 +405,12 @@ TestNG priorieties =
 when no priorites set it runs albhabetically as per the methon names
 
 
+TDD - Test Driven Developement - Write test cases first for the features which get failed intiaaly then 
+write code to pass those test cases, Rspect where dev team first write test and then code to pass those test
+
+BDD - Behaivour drivern development - We write the features files using Gherkins keywords and then code to pass those 
+in the simple languages 
+
+Data Driven Testing - Test Data stored into XLX, sheet and then we can use that using data provider 
+
 
