@@ -353,3 +353,45 @@ What are the headers in API, and what are the common headers used -
 //Zips as a quesry params using API access token 
 
 //POST - Add user API, Add a Traveler API, ADD CART API
+
+
+
+
+Base Class - 
+RequestSpectBuilder requestBuilder;
+ResponceSpecBuilder responseBuilder;
+authscenme - Authentication 
+
+
+API SET UP PACKAGE - 
+Traveler API setUp class extends Base 
+
+public void method(){
+requestBuilder.setBaseURI("asd");
+requestBuilder.setBasePath("");
+requestBuilder.addQueyParam("", "asd");
+requestBuilder.setAuth();
+requestSpectForGetTraveler= requestBuilder.build();
+}
+
+@beforeMethod
+method();
+
+
+So we have created base class where we intialise the requestSpecBuilder and responceSpecBuilder clasees 
+and the authentication that we used
+
+Created different setup classses for API that we test such as traveler, user, FedExPricing, carts
+
+on above classes we have setup the requestSpec and responseSpec objects as per the requirements 
+
+and we also have a java object classes as per the APIS like traveler, user, carts, FedEx and we have created getter setter on those in order to
+pass the objects of those as a body 
+
+
+
+
+
+
+
+
