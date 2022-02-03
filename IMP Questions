@@ -135,6 +135,44 @@ compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern
 	    for(String finalName: namqa){
 	        System.out.println(finalName);
 	    }
+	    
+//To compare the numbers we can user Integer.compare() which returns zero if numbers are same
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int S1= 10;
+	    int S2= 10;
+	    
+        int result=Integer.compare(S1, S2);
+        
+	    System.out.println(result);
+		System.out.println("Hello World");
+	}
+}
+
+
+
+//S1.compareTo(S2) - We use this to comare the String and it returns 
+//Zero if string are same 
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String num= "sushant";
+	    String num2= "sushant"; 
+	    
+	    if(num.compareTo(num2)==0){
+	        
+	        System.out.println("OK");
+	    }
+
+	}
+}
+	    
 
 char[] ch={'j','a','v','a','t','p','o','i','n','t'};  //covert the char array to string 
 String s=new String(ch); 
