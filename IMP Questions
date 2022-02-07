@@ -1084,3 +1084,20 @@ The user can add the details so the dependancies get downloaded for the proxy se
 
 
 Maven Clean Build - it’s cleans the complied java code 
+
+#Maven - All repository such as Junit, Selenium, TestNg are downloaded in .m2/repository folder 
+Cont+Shift+G - for Mac 
+
+So folder will be users/Sushant/.m2
+Repository 
+  Group id
+    Affilate ID
+      Version 
+         Jars 
+
+
+Setting.XML -  it’s basically use for to add repository folder the proxy server, credential details it’s kind of pom.xml on where 
+The user can add the details so the dependancies get downloaded for the proxy server as we need to configure that in the setting.xml file
+
+
+Maven Clean Build - it’s cleans the complied java code 
