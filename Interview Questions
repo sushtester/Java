@@ -443,3 +443,10 @@ A. Local variable & global variable -  Local variable is method variable (Method
 
 B. Global variable can be - class variable and instance variable - Class variable is static variable which can access using class name directly 
 so no need to create object & instance variable can access by creating object of the class 
+
+
+#Set and HashMap both are unordered and non duplicate key like a set 
+
+#List<String> list= new ArrayList<String>(3);  it dose’t matter even there is size defined by user
+
+#Final class - yes we can create an object of the final class just we are stopping that class to get inherited 
