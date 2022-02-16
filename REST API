@@ -2,15 +2,20 @@
 
 400 Bad Request- The 400 status code, or Bad Request error, means the HTTP request that was sent to the server has invalid syntax.
 401 Unauthorized user - Need credentials to access the site
+402 - Payment required 
+403 - Forbidden
 404 Not Found - Page not found 
 500 Internal Server Error
 502 Bad Gateway - gatewayor poxy server not getting valid responce from backend server 
 504 Gateway Timeout - gatewayor poxy server not getting valid responce from backend server within timeline 
 
 200 - The request was fulfilled.
-204. - No Response 
-
+204. - No Response [Empty responce]
 201 - Created 
+
+
+
+
 
 ##2. Use of GET, PUT, POST, PATCH, DELETE. [We were using basic auth - username & password given by client, or we were also used API KEY]
 
