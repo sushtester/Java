@@ -446,3 +446,37 @@ public class Main
 	}
 }
 
+
+#LinkedHashSet - Used to remove duplicate character or duplicate string from the string 
+
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String name= "sushants";
+	    char [] nameArry = name.toCharArray();
+	    Set<Character>set= new LinkedHashSet<Character>();
+	    
+	    for(char ch: nameArry){
+	        
+	        set.add(ch);
+	    }
+	    
+	   String finalString="";
+	   
+	    for(char chNew: set){
+	        
+	        //System.out.print(chNew);
+	        
+	        finalString= finalString+chNew;
+	    }
+	    
+	    System.out.println(finalString);
+
+	}
+}
+
