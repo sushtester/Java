@@ -450,3 +450,26 @@ so no need to create object & instance variable can access by creating object of
 #List<String> list= new ArrayList<String>(3);  it dose’t matter even there is size defined by user
 
 #Final class - yes we can create an object of the final class just we are stopping that class to get inherited 
+
+#Convert the int into string - 
+
+String result= Integer.toString(int)
+
+#Convert the String to int 
+
+Int num= Integer.parseInt(string);
+
+#Wrapper class primitive data types for array and list - 
+
+#Array supports both the primitive data types and wrapper class, so wrapper class we used to convert the primitive data type into the objects 
+Eg.
+Integer 
+Double 
+Character 
+
+Collections such as ArrayList, LinkedList, HashSet, HashMap, LinkedHashSet only allows wrapper classes
+
+
+Int [] noArr= new int[2];
+OR
+Integer [] noArr= new Integer[2];
