@@ -44,6 +44,9 @@ driver.findElemnts(By.tagName("iframe"));
 driver.switchTo().frame(1) //switch to frame by index
 driver.switchTo().frame("name") //name of the frame 
 
+#Back to default page from frame, 
+driver.switchTo().defaultContent();
+
 
 
 
