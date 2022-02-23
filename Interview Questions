@@ -473,3 +473,18 @@ Collections such as ArrayList, LinkedList, HashSet, HashMap, LinkedHashSet only 
 Int [] noArr= new int[2];
 OR
 Integer [] noArr= new Integer[2];
+
+
+#Default value 0f boolean is false;
+
+#Default value of int is 0;
+
+#compare - compare is used for the int value comparison - Integer.compare(10, 10)
+always return int value of 0 then int matches
+Int result= Integer.compare(10, 10);
+
+
+#compareTo() - For String comparisons always return int value of 0 then string matches
+Int result = s1.compareTo(s2)
+
+if(result ==0) - Then S1 is matching with S2
