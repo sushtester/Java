@@ -1085,3 +1085,15 @@ The user can add the details so the dependancies get downloaded for the proxy se
 
 Maven Clean Build - it’s cleans the complied java code 
 
+
+
+
+#Web Services & API key difference - 
+
+All the web services are API
+
+BUT all the API are not a web services 
+
+Web Service can use HTTP protocol, and supports XML to data exchange 
+
+API can use both HTTP and HTTPS protocol - XML and JSON format 
