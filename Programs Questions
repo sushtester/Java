@@ -522,4 +522,46 @@ public class Main
 }
 
 
+#Replace the elements in array with new element like to append something on each element in arraylist 
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    ArrayList<String>bstr= new ArrayList<String>();
+	    bstr.add("sushant");
+	    bstr.add("rohan");
+	    bstr.add("kishor");
+	    bstr.add("Amit");
+	    
+	    for(int i=0; i<bstr.size(); i++){
+	        
+	        StringBuilder str= new StringBuilder(bstr.get(i));
+	        str.append("@gmail.com");
+	        bstr.set(i, str.toString());
+	        
+	    }
+	    
+		System.out.println(bstr);
+		bstr.remove(1);
+		System.out.println(bstr);
+		bstr.clear();
+		System.out.println(bstr);
+		
+	}
+}
+
+#//Replace the word using replaceAll method of the string 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String name= "sushant pawar pawar";
+	    
+	    String fName= name.replaceAll("pawar", "");
+	    
+		System.out.println(fName);
+	}
+}
 
