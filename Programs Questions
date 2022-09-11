@@ -480,3 +480,46 @@ public class Main
 	}
 }
 
+#Remove white spaces using replaceAll method of string 
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    //Replace the pawar with the Patil
+	    
+	    String name= "sushant pawar";
+	    
+	    String finalString = name.replaceAll("\\s", "");
+	    
+		System.out.println(finalString);
+	}
+}
+
+#Remove white spaces using the for loop along with String Buffer 
+//Remove white spaces using for loop
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    String name= "sushant pawar";
+	    
+	    char [] names= name.toCharArray();
+	    String finalStr = "";
+	    StringBuilder str= new StringBuilder();
+	    
+	    for(int i=0; i<names.length; i++){
+	        
+	        if(names[i]!=' '){
+	            finalStr=finalStr+ names[i]; //using another string variable 
+	            str.append(names[i]);//using string buffer 
+	        }
+	    }
+	    
+		System.out.println(str);
+		System.out.println("Final String: "+finalStr);
+	}
+}
+
+
+
