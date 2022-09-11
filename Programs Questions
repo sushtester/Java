@@ -565,3 +565,26 @@ public class Main
 	}
 }
 
+
+//Replace/Remove the word of the String using Array and For loop
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String name= "sushant the pawar the";
+	    
+	    String [] str= name.split(" ");
+	    
+	    String finalString= "";
+	    
+	    for(String strNew: str){
+	        
+	        if(!strNew.equals("the")){
+	            
+	            finalString=finalString+strNew+" ";
+	        }
+	    }
+	    
+	    System.out.println(finalString.trim());
+	}
+}
