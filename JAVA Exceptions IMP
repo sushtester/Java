@@ -1,0 +1,155 @@
+JAVA Exception - 
+#Parent class of all class in JAVA is Oject class
+#Throable class has two child class- Exception Class & Error Class
+#Excpetion class has two main child class - Compile time exception & RunTimeexception 
+
+#Difference between exception and the errors- 
+Exception is comes becasue of a mistakes in a programing lang 
+Error comes becasue of a lack of system resources (lack of memory)
+
+We can handle the exceptions BUT we can not handle the errors
+
+Exception Class - 
+A. Compile time exception (Checked exception)
+B. Run time exception (UnChecked exception)
+
+Error (Lack of system resources, eg. out of memory, statck overflow) only comes run time so it's unchecked exception 
+
+Below Classes inheriate Exception classes -
+ClassNotFoundException, NoSuchMethodException, IOExcpetion (EOF exception, FileNotFoundException), sqlExceptions, RuntimeException(Arthmetic, indexOutOfBoundException(arrayOutOfBound, StringOutOfBond,))
+
+Errors - 
+stactOverflow, outofmemory errors, Assertation error
+
+A. Compile time exception (Checked exception) - ClassNotFoundException, NoSuchMethodException, IOExcpetion (EOF exception, FileNotFoundException), sqlExceptions
+B. Run time exception (UnChecked exception) - RuntimeException(Arthmetic, indexOutOfBoundException(arrayOutOfBound, StringOutOfBond,NullPointException))
+
+The Exception occures for run time only even for complile time exceptions after compile it only suggest to handle the such exception so it's comiple time exceptions,
+so the exceptions which predict by the compiler and provide us to handle called as a compile exception 
+
+So checked expection are the exception which checked by the compiler while compile the code and tell us to handle those 
+& 
+Unchecked expection are those which can not checked by the exception and which might come at run time due to 
+
+Run time exception eg. String name= null;
+                       System.out.println(name.length()); // shows null point exception 
+
+
+#Methods to print the exceptions - 
+try{
+}catch(Exception e){
+  SYSO(e); // gives exception name and description
+  e.printStackTrace(); // Gives all the details such as exception name, exception description, exception stack trace
+  e.getMessage(); // exception description
+  
+}
+
+#Finally - 
+Finally always executes even there is a exception or not, so lets consider if the exception occures and we want to execute something that we can write on the catch block 
+BUT what if exception not comes then that code need to write in finally block 
+try{
+ }
+catch(){
+ }
+finally{
+ }
+ 
+Finally block executes even there is no any catch block, so try can work with finally
+
+try{
+ }
+
+finally{
+ }
+
+Try - Risky code (Open db connection)
+Catch - Handling code for the exception (Exception occures due to db read operation)
+Finally - for clean up code (Need of finally block - Closing the file, closing the DB connection which we open in the try block if exception comes or not)
+
+
+#Exception Handling - if we not handle run time exception then default exception handler get called and it print the exception and terminate the program so we need to handle it properly
+try catch - after try the catch is must 
+throw
+throws
+finally 					   
+
+#Difference between final, finally and fianalize					   
+ A. Final - Keyword - Variable(fixed value varibale, can not chnage the value of this, error comes if try to change), method (dose not overide this method)& class (Can not inheriate final class)
+ B. Finnaly - block - is used which either try or try catch block 
+ 
+
+#Throw - (Custmize Exception/user defind exception)
+throw new ExpectionClassName("Messages");
+it is used when we want to create excpetion for any condition (forecefully created exception, user difined exception/custom exception )
+int age=10;
+if (age<10){
+ throw new ArthmeticException("Age can not be less than 10");
+ }
+
+
+Class AgeNotDoneException extends RunTimeException {
+
+  AgeNotDoneException(String msg){    //Constructer of that class
+   super(msg);
+   
+  }     
+}
+
+class Voting{
+
+public static void main(String [] args){
+int a=10;
+
+if(a<15){
+throw new AgeNotDoneException("Age can not less than 10") //to create exception manually in program, if we want to handle this then need to put try catch 
+  }
+ }
+}
+
+
+#Throws - Method level exception, we can write that infront of method (Only used for checked excpetion/Compile time exception)
+Normally used for the common method, so when caller calls that method he need to handle that method himself, same for other caller as well
+Eg. For reading properties file we written common method
+
+void readFile() thorws FileNotFoundException{
+   FileInputStream file = new FileInputStream(path of file)
+   file.load(io);
+ }
+
+this will suggested the exception compile time (checked exception) so we need to add thorows exception so compiler complies successfully and 
+the caller then need to handle that exception using try catch, so method just indicating that the method might produce exception and caller can handle that by his way using try catch
+
+
+#Difference between throw and throws - 
+throw - Run time exception/un checked exception, used to create custom/user defind exception, written under method and only one exception class we can mentioned after new keyword
+throws - checked/compile time exception, used for method level exception, for thorws we can can write multiple exception comma seprated, used for a common method 
+
+#Create your own exception (user difiend exception) using throw - 
+We can use the constructer overloading in user defind exception class 
+
+Class UnderAgeException extends Exception  // when creating user difined checked excpetion if want to create unchecked then extends with runtimeexception 
+  UnderAgeException(){ 
+    Super("Age should not less than 18");
+  }
+   
+  UnderAgeException(String message){ 
+    Super(message);
+  } 
+
+
+Class Main {
+  public static void main (String [] args){
+    int age = 15;
+    try{
+	if(age<18){
+	  throw new UnderAgeException() //default constructer called 
+	 } 		 
+   }
+   catch(UnderAgeException e){
+     e.printStackTrace();
+   }
+   
+ }
+
+
+Note - We can create both checked and unchecked exception customize exception classes, for handling exception we always need to use try catch so program not abnormally terminate
