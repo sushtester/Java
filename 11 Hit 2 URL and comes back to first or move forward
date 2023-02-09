@@ -5,3 +5,9 @@ driver.navigate().to("https://www.google.com"); //Moving to another URL
     
     
     
+Difference between driver.get(url) and driver.navigate().to(url) - 
+driver. get() is used to navigate particular URL(website) and wait till page load. 
+driver. navigate() is used to navigate to particular URL and does not wait to page load.
+
+How to refresh the page - 
+driver.navigate().refresh()
