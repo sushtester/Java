@@ -1,5 +1,4 @@
-Selenium 4 - New features 
-
+For full page screenshot - 
 import org.openqa.selenium.TakesScreenshot;
 
 TakesScreenshot ts= (TakesScreenshot)driver;
@@ -12,3 +11,6 @@ File source= ts.getScreenshotAs(OutputType.FILE);
 		}
     
     
+For element screenshot one feature is avaliable from the selenium version 4.0 
+File screenshotfile = element.getScreenshotAs(OutputType.FILE)
+FileUtils.copyFile(screenshotfile, new File("/screenshot/myscreenshot.png"));
