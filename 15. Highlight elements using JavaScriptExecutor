@@ -3,3 +3,9 @@ It is use to highligt the elements
 
 It's class javascriptexcutoer class 
 
+JavaScriptExecuter js = (JavaScriptExecuter) driver;
+js.executescript("argument[0].setAttribute('style', 'background-color:red; border:2px solid red')", element)
+
+JavaScriptExecuter js = (JavaScriptExecuter) driver; 
+js.executeScript("argument[0].setAttribute('style', 'background-color:red; border:2px solid red')", element)
+
