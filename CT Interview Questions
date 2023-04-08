@@ -1,0 +1,25 @@
+#JAVA - 
+#1. How to find the position of the text under the string 
+-> indexOf()
+String name= "sushant sudhir pawar sudhir";
+name.indexOf("Sudhir"); // which also includes the white spaces 
+name.indexOf("Sudhir", 9); // which also includes the white spaces 
+
+#2. How to set a default condition in the switch statment 
+
+#3. print the arrays elements using for each loop 
+
+#4.public class HelloWorld {   //What is the output of the code 
+    
+       void addMethod(){
+        int a=10;
+        int b=20;
+        int c= a=b;
+        System.out.println(c);
+    }
+     public static void main(String []args){         
+         addMethod();         
+        System.out.println("Hello World");       
+     }
+}
+
