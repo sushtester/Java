@@ -6,6 +6,20 @@ name.indexOf("Sudhir"); // which also includes the white spaces
 name.indexOf("Sudhir", 9); // which also includes the white spaces 
 
 #2. How to set a default condition in the switch statment 
+switch(day){
+case 1: 
+ System.out.println(c);
+ break;
+ 
+case 1: 
+ System.out.println(c);
+ break;
+ 
+default:
+ System.out.println(c);
+ break;
+ 
+}
 
 #3. print the arrays elements using for each loop 
 
@@ -22,4 +36,23 @@ name.indexOf("Sudhir", 9); // which also includes the white spaces
         System.out.println("Hello World");       
      }
 }
+
+#4. Conact() is better than + because + operator always creates a new string BUT contact method creates new object only when string length is greater than zero
+
+#5. How to restrict the class to be inheriate?
+
+#6. How to retsrict create object of the class?
+
+#7. this. is a instance of the class & we can not use that in static method 
+
+#8. What happn if you try to accees the private varibale in other class - // It will throw the complile time error 
+
+#8. What happnes if you try to modified the final varibale/attribute - // It will throw the complile time error  annot assign a value to final variable
+
+#9. Why inheritance - Code Reusablity, Why Encapsulation - secure the data (read only for get method & write only for set method)
+
+
+
+
+
 
