@@ -369,9 +369,9 @@ public class Demo
 
 #Access Modifiers - 
 
-public	- The class is accessible by any other class
+Public	- Everyone - Public methods, attributes (variables) can access withing the class, outside the class, withing the package & outside the pacakage
 
-default	- The class is only accessible by classes in the same package. This is used when you don't specify a modifier
+default	- Default variable/attributes, methods can access withing the class, outside the class on same package BUT not the different pakages 
 
 For attributes, methods and constructors, you can use the one of the following - 
 
@@ -381,7 +381,7 @@ private	- The code is only accessible within the declared class
 
 default	- The code is only accessible in the same package
 
-protected	- The code is accessible in the same package and subclasses
+protected	- The code is accessible in the same package and it can accessible outside the package only when the outisde class extends that class 
 
 
 #Non-Access Modifiers - 
@@ -393,11 +393,14 @@ abstract	- The class cannot be used to create objects (To access an abstract cla
 
 
 For attributes and methods, you can use the one of the following: - 
-final	- Attributes and methods cannot be overridden/modified 
+final	- final attribute/varibale can not be modified 
+final method can not be overide 
 
-static	- Attributes and methods belongs to the class, rather than an object,only use static method 
+static	- Attributes and methods belongs to the class, rather than an object,only use static method, we can access directly using class name
 
 abstract	- Can only be used in an abstract class, and can only be used on methods. The method does not have a body, for example abstract void run();.
+abrstact class contains the abstract method and abstarct method dosen't have a body 
+
 
 ##Java Encapsulation - 
 
@@ -450,7 +453,7 @@ Increased security of data
 In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:
 
 subclass (child) - the class that inherits from another class
-superclass (parent) - the class being inherited from
+superclass (parent) - the class being inherited from child class
 
 
 Why And When To Use "Inheritance"?
