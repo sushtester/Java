@@ -1,6 +1,6 @@
 BDD- Behaivor Data Driven
 
-#1. Feature files - create differebt scenarios using Gherkins keyworks such as given when then and 
+#1. Feature files - create differebt scenarios using Gherkins keywords such as given when then and 
 
 #2. Step defination - Write methods to map the keywords wriiten in features file, for every annotaion there will be a method, each feature there will different 
 step defunation 
@@ -63,7 +63,7 @@ Parameter for Cucumber -
 
 Feature: To check the Login flow
 
-  Scenario Outline: Check the valid login with the credentails
+  Scenario Outline: Check the valid login with the credentails  // We write the scenario outline when we need to check the same scenario with multiple set of data
     Given Browser of Site is open
     And User is on the Site URL
     When User enter the <username> and <password>
@@ -124,6 +124,23 @@ tags= {“smoke” Or “regression”}
 
 tags= “not @Skip”
 
+We can add a tag to the feature as well before feature keyword we can add tags 
+
+We can provide the tags to examples as well, so for smoke suite execution it will only picku the data from smoke tag example not the regression tag example
+
+
+@regression
+Examples:
+|data|
+|regression1|
+|regression2|
+|regression3|
+
+@regression @smoke
+Examples:
+|data|
+|smoke1|
+
 
 We can also put tag name to 
 @mustRun
@@ -144,26 +161,49 @@ Conditional Hooks - conditional as per the tags
 Create different runner class one is for smoke tags other will be for Sanity testing 
 
 
-So in the steps definition we can write @Beore and @After methods which called as hook for scenario
+So in the steps definition we can write @Beore and @After methods which called as hook for scenario, or we can write that hook sperately as well 
 
 Conditional hooks - We can write multiple hooks such as 
+
 @Before (order= 1)
-@Before (order =2)
+ public void menthodBeforeScenario{
+}
+@After (order =1)
+public void menthodAfterScenario{
+}
 
 So before each scenarios the hooks before and after will run 
 
 @Before (“@smoke”)
 
-Hooks are invisible to the readers as we defined those in the step definition 
+Hooks are invisible to the readers as we defined those in the step definition or anywhere but not in feature file 
 
+Why cucumber hooks - 
+@Before 
+Starting a webdriver
+Setting up DB connections
+Setting up test data
+Setting up browser cookies
+Navigating to certain page
+or anything before the test
+
+@After 
+Killing the webdriver
+Closing DB connections
+Clearing the test data
+Clearing browser cookies
+Logging out from the application
+Printing reports or logs
+Taking screenshots on error
+or anything after the test
 
 #Background - 
 For logins as each scenarios need a login so this common steps so it can put in the background section 
 
-So common steps should be in background 
+So common steps should be in background, background is a set of steps like scenarios BUT it will execute before each and every scenarios 
 
 
-Backgrounds are visible to the user 
+Backgrounds are visible to the user as we need to write that under the feature file
 
 
 Background: user is logged into the application 
@@ -186,7 +226,7 @@ Then add the plugin as json
 
 
 Questions - 
-Cucumber Keywords - 
+Cucumber Keywords (Gherkins Keywords) - 
 Annotations in cucumber - 
 Cucumber Tags - smoke, sanity, regression, skip
 Keywords uses under the cucumber options - feature, glue, monochrome=true, plugins, tags
