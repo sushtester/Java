@@ -656,7 +656,11 @@ Pages Pckage -
  Base page Class - 
    just for PageFactory initilisation in construction and load URL method w
 	
-	
+ Dry Run - 
+ The default value of dry run is false and it is a part of the Test Runner Class file
+ If dryRun is true then it will check the glue code is avalibale for each steps in the feature if 
+ not avalibale then it will show the compile error 
+ 
 	
 
 
