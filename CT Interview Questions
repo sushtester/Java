@@ -75,6 +75,20 @@ abstract methods which dosen't have a body
 static methods with body which can call directly using interface class name 
 defaut method with body - This also called by class obj where the interface is implements 
 
+#15. Double is a number with a decimal, eg - 1212.23
+int no= 234; //Covert this to double 
+double number = (int) no;  // casting the int to double 
+SYSO(number) //234.00
+
+#16. Method Overloading - Where it use (concept of a java polymorphism)
+same method with different param is called as a method overloading 
+
+#17. Method overiding - Where it is use (concept of a java polymorphism)
+Parent class method get overide into chlid class 
+
+
+
+
 
 
 
