@@ -40,16 +40,35 @@ default:
 #4. Conact() is better than + because + operator always creates a new string BUT contact method creates new object only when string length is greater than zero
 
 #5. How to restrict the class to be inheriate?
+-> final class
 
-#6. How to retsrict create object of the class?
+#6. How to retsrict create object of the class?->
+abract class/ interface class we can not create an object 
 
 #7. this. is a instance of the class & we can not use that in static method 
 
 #8. What happn if you try to accees the private varibale in other class - // It will throw the complile time error 
 
-#8. What happnes if you try to modified the final varibale/attribute - // It will throw the complile time error  annot assign a value to final variable
+#8. What happnes if you try to modified the final varibale/attribute - // It will throw the complile time error, can not assign value to the final variable
 
 #9. Why inheritance - Code Reusablity, Why Encapsulation - secure the data (read only for get method & write only for set method)
+
+#10. can we acess static methods using obj of the class in java?
+-> No, we can not call the static methods of the class using object of the class, those only called using the class name 
+
+#11. Can we write the static methods in the abtract class?
+-> We can write the static methods in the abstract class BUT we can not write the static method as a abtstact method(method with no body) as we can't overide the static methods
+
+#12. Which methods in the class we can't overide?
+-> static methods
+-> Private method 
+-> final method 
+
+#13. OOPS in shots 
+Java Encapsulation - Getter setter - to hidden the sesitive information we can use this 
+Java Inheritance - To reuse the methods, varibales in the super class we use this, code reusability 
+Java Interface - We use to write the abtsract methods (methods witout body), also to restric the user to create the object of the class
+Java Polymorphism - To overide the methods written in the super class 
 
 
 
