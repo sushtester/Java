@@ -70,6 +70,10 @@ Java Inheritance - To reuse the methods, varibales in the super class we use thi
 Java Interface - We use to write the abtsract methods (methods witout body), also to restric the user to create the object of the class
 Java Polymorphism - To overide the methods written in the super class 
 
+#14. Which methods we can write under the interface?
+abstract methods which dosen't have a body 
+static methods with body which can call directly using interface class name 
+defaut method with body - This also called by class obj where the interface is implements 
 
 
 
