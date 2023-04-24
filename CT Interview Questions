@@ -86,7 +86,12 @@ same method with different param is called as a method overloading
 #17. Method overiding - Where it is use (concept of a java polymorphism)
 Parent class method get overide into chlid class 
 
+#18. StringBuilder str= new StringBuilder("pavan");
+String name= str;
+SYSO(name)
+-> Compile error as StringBuilder obj need to covert to toString()
 
+#19. 
 
 
 
