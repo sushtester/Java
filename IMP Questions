@@ -100,11 +100,12 @@ driver.findElement(By.id("submit")).click();
 
 Selenium exception - 
 NoSuchElement exception 
-ElementNotFound
-ElementNotVisible
+ElementNotFound - When element is not found under DOM (Document object module)
+ElementNotVisible - an element is present on the DOM (Document object module), it is not visible, and so is not able to be interacted with
 ElementNotClickable 
 ElementNotSelectableException
-TimeoutException
+TimeoutException - when using the WebDriver. get method to load a page, the default timeout is set to 30 seconds. If the page takes longer than 30 seconds to load, 
+a TimeoutException will be raised
 NoSuchFrameExceptionc
 
 Some More Example of Expections - 
