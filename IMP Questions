@@ -393,6 +393,39 @@ public void getter(String name)
  }
 
 
+#12. Remove the character from the String
+Using for loop - 
+public class Main
+{
+	public static void main(String[] args) {
+	    String name = "susaahant paaawar";
+	    String finalString="";
+	    char [] nameQa= name.toCharArray();
+	    
+	    for(int i=0; i<nameQa.length; i++){
+	        if (nameQa[i]!='a'){
+	            finalString=finalString+nameQa[i];
+	        }
+	    }
+		System.out.println(finalString);
+	}
+}
+
+
+
+Using replace ALL - 
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String name= "suaashant pawawar";
+	    String finalString= name.replaceAll("a", "");
+		System.out.println(finalString);
+	}
+}
+
+
+
 
 #13. How many browser you can use for automation -
 
