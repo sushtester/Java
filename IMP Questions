@@ -968,9 +968,11 @@ The control of triggering the test cases is on the local machine, and when the t
 
 The machine which actually triggers the test case known as Hub
 
-A. Download the selenium server on local machine, make local machin as Hub using CMD prompt, so it create the URL of hub, the URL contains the IP address and the port 
+A. Download the selenium server on local machine, make local machin as Hub using CMD prompt, so it create the URL of hub, the URL contains the IP address and 
+the port 
 
-B. Download the selenium server on another machine that we want to make as Node, then using the IP of the hub we can make this machine as node of that hub using the 
+B. Download the selenium server on another machine that we want to make as Node, then using the IP of the hub we can make this machine as node of 
+that hub using the 
 CMD promt, it also gives the URL of the node wich conatin IP of node and port number
 
 C. We need user DesiredCapabilites (for browser and OS) and the RemoteWebDriver (set the node)
@@ -1012,7 +1014,7 @@ length++
 Return length;
 
 
-#65. Current JAVA version is 8 with JDK 1.8 
+#65. Current JAVA version is 20 
 
 
 #66. Current selenium version is 4
@@ -1026,7 +1028,8 @@ WebElement element = driver.findElement(By.cssSelector(".btn"));
 
 #67. #Private constructer 
 
-Note that if a constructor is declared private, we are not able to create an object of the class. Instead, we can use this private constructor in Singleton Design Pattern
+Note that if a constructor is declared private, we are not able to create an object of the class. Instead, 
+we can use this private constructor in Singleton Design Pattern
 
 Can not be a sub class
 Can not create an object of class 
@@ -1034,15 +1037,49 @@ Can not extends
 
 The main purpose of using a private constructor is to restrict object creation.
 
-We can create a instance of the same class for such class and use that instances on other class using get Instance method
+We can create object of that class in same singlton class 
 
-So we can create an object in same class where we set a private constructer which returns the obj of such class on which private constructer is defined then if we want to use that on other class then 
+so for that we need to create static instance of that class which will be null 
 
-Simply call that object create method which returns the objects 
+then create static getInstance method which return that instance of the class 
+
+in driver class call that method using class name and store into singlton class object 
+
+class MySingleton
+{
+    static MySingleton instance = null;
+    public int x = 10;
+    
+    // private constructor can't be accessed outside the class
+    private MySingleton() {  }
+   
+    // Factory method to provide the users with instances
+    static public MySingleton getInstance()
+    {
+        if (instance == null)        
+             instance = new MySingleton();
+   
+        return instance;
+    } 
+}
+  
+// Driver Class
+class Main
+{
+   public static void main(String args[])    
+   {
+       MySingleton a = MySingleton.getInstance();
+       MySingleton b = MySingleton.getInstance();
+       a.x = a.x + 10;
+       System.out.println("Value of a.x = " + a.x);
+       System.out.println("Value of b.x = " + b.x);
+   }    
+}
 
 
 
-#68. Stress Testing - Stress testing is to test the system behaviour under extremely heavy load conditions and ensuring that software doesn’t crash under crunch situations - Endurance Testing. - 
+#68. Stress Testing - Stress testing is to test the system behaviour under extremely heavy load conditions and ensuring that software doesn’t crash under 
+crunch situations - Endurance Testing. - 
 
 Online shopping on the festivals seasons - When lots of users come to site, so this might king of abnormal situation 
 
@@ -1050,13 +1087,15 @@ Online shopping on the festivals seasons - When lots of users come to site, so t
 * Displaying appropriate error message when the system is under stress.
 
 
-#69. Load Testing - Load Testing is a non-functional software testing process in which the performance of software application is tested under a specific expected load.
+#69. Load Testing - Load Testing is a non-functional software testing process in which the performance of software application is tested under a 
+specific expected load.
 
 
 
 #70. Java platform indépendant 
 
-Complies the code convert into byte code and byte code is platform independent so can run on any system , it just need a JRE - java run time environment	which provided by JDK
+Complies the code convert into byte code and byte code is platform independent so can run on any system , it just need a JRE - java run time environment	
+which provided by JDK
 
 
 #71. 
@@ -1122,12 +1161,29 @@ Maven Clean Build - it’s cleans the complied java code
 
 
 
-#Web Services & API key difference - 
+#Web Services & API difference - 
 
-All the web services are API
+All the web services are API, web services used to comunicate with the other machine in the network using http protocol & supports XML to data exchange 
 
 BUT all the API are not a web services 
 
 Web Service can use HTTP protocol, and supports XML to data exchange 
 
 API can use both HTTP and HTTPS protocol - XML and JSON format 
+
+#Microservices - 
+Application created with a bunch of a small componant/services which cummunicate with each other using well developed API's
+Eg. Uber - Uber is a microservices, it has bunch of componenet such as passenger management, driver management, driver webUI, passagnger web UI 
+payment, billing
+
+so each component has their own database obsrations 
+
+Advantages of the microservices - 
+#1. Easy to deploy one componenet rather deploying whole the application & perform regression only for that component 
+#2. Easy to find out the root cause of issue if any 
+#3. Reusablity - We can use same componant anywhere in other application as well and we can provide the services as well 
+
+
+
+
+
