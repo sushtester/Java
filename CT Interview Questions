@@ -97,6 +97,17 @@ Using this keyword
 #20. How to call  constructer under base class - 
 using super keyword 
 
+#21. What is StateElementrefrerance exception - It comes when element get changed from the DOM or element get deleted from the (Document Object Module ) 
+DOM structure of HTML structured on which element is present  
+
+EG. Once element is found so in selenium the elememnt reference it get saved as a referenceID in the memory, now in some application if we scroll down the page
+or perfrom any action on the same page then that element get removed from the dom, so if we try to access that element it gives stale element refrenece exception 
+
+To overcome the exception - 
+Refresh the page - driver.navigat().refresh()
+
+Or add element in try and catch or add explicit wait
+
 
 
 
