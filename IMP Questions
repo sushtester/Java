@@ -785,7 +785,8 @@ Test closure
 Traceability matrix - 
 It’s a documents that maps & trace the requirements with the test cases, the main purpose to make sure all the requirements are validating using test cases 
 
-#37. Smoke testing - Testing a major functionality to make sure build is stable, when any new module intruded which interacted with the old one, signup with Apple ID, so once good go for further testing 
+#37. Smoke testing - Testing a major functionality to make sure build is stable, when any new module intruded which interacted with the old one, 
+signup with Apple ID, so once good go for further testing 
 
 #38. Sanity testing - Perform when new features is added or bug fixes get pushed
 
@@ -840,12 +841,17 @@ Things can be under testing
 - On command line compile that using javac filename.java - it created class file 
 -  Java “class file “
 
-#46. StateElementrefrerance exception - It comes when element get changed from the DOM or element get deleted from the (Document Object Module ) DOM structure of HTML structured on which element is present  
+#46. StateElementrefrerance exception - It comes when element get changed from the DOM or element get deleted from the (Document Object Module ) 
+DOM structure of HTML structured on which element is present  
+
+EG. Once element is found so in selenium the elememnt reference it get saved as a referenceID in the memory, now in some application if we scroll down the page
+or perfrom any action on the same page then that element get removed from the dom, so if we try to access that element it gives stale element refrenece exception 
+
 
 To overcome the exception - 
 Refresh the page - driver.navigat().refresh()
 
-Or add element in try and catch 
+Or add element in try and catch or add explicit wait 
 
 
 #47. Constructer chain - How we can call the default constructor using the parameterised constructor - 
