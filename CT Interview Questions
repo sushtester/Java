@@ -91,7 +91,11 @@ String name= str;
 SYSO(name)
 -> Compile error as StringBuilder obj need to covert to toString()
 
-#19. 
+#19. How to call defaut constructer under parameterized cunstructer - 
+Using this keyword 
+
+#20. How to call  constructer under base class - 
+using super keyword 
 
 
 
