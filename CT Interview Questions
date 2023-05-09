@@ -108,6 +108,9 @@ Refresh the page - driver.navigat().refresh()
 
 Or add element in try and catch or add explicit wait
 
+#22. What is the difference between URL & URI  - 
+URL - to get the location or address of the resource 
+URI - to find the resource 
 
 
 
