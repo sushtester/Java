@@ -1190,6 +1190,61 @@ Advantages of the microservices -
 #3. Reusablity - We can use same componant anywhere in other application as well and we can provide the services as well 
 
 
+#The Enum in Java is a data type which contains a fixed set of constants.
+enum is extended by Enum class so it won't extended by any other class 
+we can declare enum inside a class or even outside the class as well
 
+class A{
+
+public enum Days{
+Monday, 
+Tuesday,
+Wendsday,
+Thursday
+}
+
+OR 
+
+enum Days{Monday, Firaday, Sunday}
+public class A{
+
+Days obj= Days.Monday;
+SYSO (obj) = it will return Monday
+}
+
+
+We can us enum in switch statement easily - 
+
+enum Level {
+  LOW,
+  MEDIUM,
+  HIGH
+}
+
+public class Main {
+  public static void main(String[] args) {
+    Level myVar = Level.MEDIUM;
+
+    switch(myVar) {
+      case LOW:
+        System.out.println("Low level");
+        break;
+      case MEDIUM:
+         System.out.println("Medium level");
+        break;
+      case HIGH:
+        System.out.println("High level");
+        break;
+    }
+  }
+}
+
+
+
+Can we create the instance of Enum by new keyword?
+No, because it contains private constructors only.
+
+Can we have an abstract method in the Enum?
+Yes, Of course! we can have abstract methods and can provide the implementation of these methods
 
 
