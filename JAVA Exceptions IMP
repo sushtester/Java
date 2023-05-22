@@ -1,5 +1,5 @@
 JAVA Exception - 
-#Parent class of all class in JAVA is Oject class
+#Parent class of all class in JAVA is Oject class, object lass is a parent class of all the classes in JAVA
 #Throable class has two child class- Exception Class & Error Class
 #Excpetion class has two main child class - Compile time exception & RunTimeexception 
 
@@ -16,7 +16,8 @@ B. Run time exception (UnChecked exception)
 Error (Lack of system resources, eg. out of memory, statck overflow) only comes run time so it's unchecked exception 
 
 Below Classes inheriate Exception classes -
-ClassNotFoundException, NoSuchMethodException, IOExcpetion (EOF exception, FileNotFoundException), sqlExceptions, RuntimeException(Arthmetic, indexOutOfBoundException(arrayOutOfBound, StringOutOfBond,))
+ClassNotFoundException, NoSuchMethodException, IOExcpetion (EOF exception, FileNotFoundException), sqlExceptions, 
+RuntimeException(Arthmetic, indexOutOfBoundException(arrayOutOfBound, StringOutOfBond,))
 
 Errors - 
 stactOverflow, outofmemory errors, Assertation error
