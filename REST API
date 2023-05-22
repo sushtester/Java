@@ -396,6 +396,46 @@ pass the objects of those as a body
 
 
 
+#####RestAssured IMP- 
+
+#Oauth token - POST method with two header 
+Response response = given().header("Accept", "application/json").header("Content-Type", "application/json").auth().oAuth2(token).body(dtoobject).when().post().then().extract().response();
+
+#API Key - POST method with two header 
+Response response = given().header("Accept", "application/json").header("Content-Type", "application/json").header("Athorization", apiKey).body(dtoobject).when().post().then().extract().response()
+
+#Oauth - Get method 
+Response response = given().header("Accept", "application/json").auth().Oauth2().when().get().then().extract().response();
+
+#API Key - Get method
+Response response = given().header("Accept", "application/json").header("Authorization", apiKey)when().get().then().extract().response();
+
+
+
+
+#Content-Type - On which format data to be sent - Only for post method & for patch as well 
+e.g. application/json, plain text, application/xml
+
+#Accept - on which format we accept the data - Both for get & post method
+e.g. application/json, plain text, application/xml
+
+#to print the request log - 
+given().header("Accept", "application/json").auth().oAuth2(token).log().all().when().get().then().extract().response()
+
+#To print the response log - 
+given().header("Accept", "application/json").auth().oAuth2(token).when().get().then().log().all().extract().response()
+
+
+#URL - address of the resource 
+#URI - find the resource (where to find that in the address)
+
+#RestAssured.baseURI - 
+#RestAssured.basePath - 
+
+#Query param - ?param1=value&param2=value2
+-> after when we can add the such query parameter 
+given().header("Accepet", application/json).header("Authorization", apiKey).when().param("param1", value).get().then().extract().response()
+
 
 
 
