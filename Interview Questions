@@ -488,3 +488,15 @@ Int result= Integer.compare(10, 10);
 Int result = s1.compareTo(s2)
 
 if(result ==0) - Then S1 is matching with S2
+
+##App Deployment details - 
+#Azure Devops - 
+Created pipeline for the executions of the builds (deployments) so it deploy the application on respective pods one by one 
+
+#Docker software platform that allows you to build, test, and deploy applications quickly- Build the application, share & run in the form of containers 
+(Docker file contains all the pre requesites softwares which are required to run the application)
+
+#Kubernet services 
+Cluster (Set of nodes that run the application using PODS) - Dev (multiple pods) Stage (multiple pods) & Production (multiple pods)
+Node - A node may be a virtual or physical machine
+Pods (Pods contains the one or more application and responsible for execution for those application) - nodes contain the collection of pods 
