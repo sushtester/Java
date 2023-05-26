@@ -112,6 +112,7 @@ Or add element in try and catch or add explicit wait
 URL - to get the location or address of the resource 
 URI - to find the resource 
 
+#23. Java 8 introduces a new concept of default method & static methods in interfaces
 
 
 
