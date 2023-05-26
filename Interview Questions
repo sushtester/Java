@@ -409,8 +409,8 @@ JVM start program execution from the main method always so it’s static no need
 
 #46. Java Errors - (We can called this unchecked exception as well)
 A. Assertion error 
-B. NoSuchMethod error 
-C. Out of memory error 
+B. Out of memory error 
+C. Stack overflow error
 
 The main difference between exception and error is exception can be handled (using try catch or throws) BUT the error can not handle
 
@@ -419,7 +419,8 @@ Standard automation process
 Lower the maintenance cost 
 Reuse the code  
 
-#48. We can add variable into interface? - Yes only static and final which need declared not the initialise
+#48. We can add variable into interface? - Yes only static and final & public which need declared there itself 
+We can not add the private varibale into interface
 
 We can declare the static and final variable into interface so those can not override,
 
@@ -462,7 +463,18 @@ Int num= Integer.parseInt(string);
 #Wrapper class primitive data types for array and list - 
 
 #Array supports both the primitive data types and wrapper class, so wrapper class we used to convert the primitive data type into the objects 
-Eg.
+
+String number = Integer.toString(10);
+int no = Integer.parseInt(100);
+
+Premitive data Types - 
+int 
+float
+double
+
+String is not a premitive data type in JAVA, it's not premitive data type 
+
+Wrapper class Eg.
 Integer 
 Double 
 Character 
