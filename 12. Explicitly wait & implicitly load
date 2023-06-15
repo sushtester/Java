@@ -26,7 +26,7 @@ wait.until(ExpectedConditions.alertIsPresent())
 Lets consider we provide max timeout of 30 seconds, then if we provide frequency time or we can say pollingevery time as 5 seconds
 then after 5 seconds interval it will check the visibility of the element till max time 30 seconds 
 
-Wait<WebDriver> wait= new FluentWait<WebDriver>(driver)
+FluentWait <WebDriver> wait= new FluentWait<WebDriver>(driver)
 .withTimeout(30, TimeUnits.SECONDS)
 .pollingEvery(5, TimeUnits.SECONDS)
 .ignoring(NoSuchElementExpection.class);
@@ -37,6 +37,11 @@ WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
      Driver.findEleent(By.xpath(“//”)); 
       }       
 });
+
+Or 
+we can use the expectedConditions as well 
+
+wait.until(ExpectedConditions.visibilityOfElementLocatedBy(Xpath));
 
 # pageLoadTimeout()
 driver.manage().timeout().pageLoadTimeout(30, TimeUnit.SECONDS)
