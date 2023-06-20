@@ -1248,3 +1248,14 @@ Can we have an abstract method in the Enum?
 Yes, Of course! we can have abstract methods and can provide the implementation of these methods
 
 
+#String Constant Pool - 
+nothing but a storage area in Java heap where the string get stored String name = "sushant";
+String s1= "sushant"  // stored into string constant pool 
+String s2 = "sushant" // stored in same memory 
+String s3 = new String ("sushant") // stored into java heap as a object 
+
+so s1==s2 // true   (== checked the memory location)
+
+s1==s3 // false 
+
+Notes - all the objects are created under java heap memory
