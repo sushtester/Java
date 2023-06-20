@@ -282,7 +282,11 @@ Js.excuteScript(“document.getElementByName (‘name’)”) to find the elemen
 js.excuteScript(“document.getElementByID (‘username’).value= ‘google’;”)  to send the value using JS 
 
 
-#33. Why WebDriver driver = new ChromeDriver();
+#33. Why WebDriver driver = new ChromeDriver(); - WebDriver is a interface 
+We can also do ChromeDriver driver = new ChromeDriver(); but by initialising WebDriver driver will be used for all the browser so we can use the same driver as other
+browser instance as well
+also every browser class such as ChromeBrowser(), FireFoxBrowser() extends RemoteWebDriver and RemoteWebDriver implements WebDriver interface
+
 
 #34. SQL where clause, aggregation, group.
 
