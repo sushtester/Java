@@ -610,3 +610,56 @@ public class Main
 	    System.out.println(finalString.trim());
 	}
 }
+
+//Remove the numbers from the sting using ReplaceAll()
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String name= "123sushant";
+	    
+	    String finalString= name.replaceAll("\\d", "");
+	    
+		System.out.println(finalString);
+	}
+}
+
+
+//Remove the numbers from the sting using Character.isDigit method()
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String name= "123sushant";
+	    String finalString="";
+	    char [] nameArray= name.toCharArray();
+	    for(int i=0; i<nameArray.length; i++){
+	        
+	        if(!Character.isDigit(nameArray[i])){
+	           finalString= finalString+ nameArray[i];
+	        }
+	    }
+	    		System.out.println(finalString);
+	}
+}
+
+//Replace all digits from string using charAt() & Character.isdigit() method 
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String name = "1su2sha3nt";
+	    String finalString= "";
+	    for(int i=0; i<name.length(); i++){
+	        if(!Character.isDigit(name.charAt(i))){
+	            finalString=finalString + name.charAt(i);
+	        }
+	    }
+		System.out.println(finalString);
+	}
+}
