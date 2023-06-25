@@ -1,0 +1,157 @@
+
+Web Automation Framework - 
+As our project is microservice based so we written our framework in that way that we can test our product componenet wise, 
+product is collection of different componenet 
+For each componenet we have a three high level package 
+#1. Page package for particular component:
+created different java classes as per pages involved for that componenet where we are storing web elements of the respective page and some actions 
+(verification methods)methods which performed on that pages
+#2. Test package for particular component:
+We created java classes as per the page involved for that componenet where we are writning actual test cases using testNG annotation @before class @Test @After class
+also we have wrtitten one Suite setup class where we are initialising env conf such as browser name, URL & test data property files which 
+required using @before test method which required to test the particular component
+#3. Suite package for particular component:
+We created testNG.xml file env basic like dev, stage & prod which contains test classes to run for a particular componenet along with suite level param & test level parameter
+also we have test data property file as per the env dev, stage, prod which contaions the test data required to execute test cases of that componenet
+
+Then we have other packages such as 
+Base package - 
+in base package we created base class which conation @before suite and after suite method where we are initialsing the env name & extent report variables such as
+report name, report dir location on which extent report get saved for the respective componenet
+
+Common utiliy package - 
+Contain some common utility such as emailread function, checkbox select, radio button select, dropdown select, screenshot
+
+Selenium utility package - 
+browser class where we are intialising the browser, created method as per the browsers using constructers 
+also wedriver initalistion in browser class also some method such as find element, fluentwaits method such as wait for element till presense, till clickable
+till selecteble
+
+Page utility package -  
+Written some common method of the page such as clicking on sign out link which is common for all the page 
+footer link click methods 
+navigate from one page to another page 
+and written some abstarct methods confim() // whether the page is succesffuly opened 
+waitForLoad() // wait to load that page as different page take different time to load 
+
+#Listner pkg - Which contains listner class which implememts ITestListner interface which has methods such as OnTestStart(ITestContext context)
+OnTestSuccess(ITestResult result) OnTestFail(ITestResult result)  OnTestFinish(ITestContext context)
+In testNg.xml file - 
+<listners>
+<listner class-name= “package name.classname”>
+
+#How execution happens - 
+so high level we have 3 env conf property file dev, stage, prod where we stored env conf such as broswr name, url
+and we have seprate test data properties for each componenet which we are passing as test parameter from testNg.xml file 
+We are doing our execution using the testNg.xml for the respective component, so as I mentioned 
+we are passing env name, report name, report dir as a suite level param to before suite method wrtitten in base class & those test data property file location to 
+@before test method which written in suite setup class 
+
+first test base class get execute where we written @before suite method which set the env (dev stage or prod) and loads the env configuration as per the env name passing 
+so if we are passing env name as dev then it will inialise the dev env conf property file which contains dev url, broswer
+
+then @before test class get executed from the suite set up class which set the test data property files as per the location of property file that we passing from 
+the testNG,xml as test level parameter 
+
+then @before class method will call from actual test case class where in will read those test data and store into class valribale 
+and then @test method get executes where we are testing the functionality after that it will execute @after class clearing the test data
+@after test closing the browser @after suite closing & generate the extent report 
+
+we are using multilevel inheritance 
+Test class extends suite set up class (@beforetest) & suitesetup class extends base class (@before suite method)
+
+Questions - 
+#1. How you storing the web elements in the page class - 
+We are storing web elements in the page class using By class in selenium so By webelementname = by.xpath(); 
+#2. How you execute the test cases on different browser - we are passing browser name from env cong property file
+#3. How you are executing test cases on different test enviroment - we are passing the env name from the testNG.xml file itself & created invidulal
+testNG.xml as per the env 
+#4. How to navigate from one page to another page - as soon as we login to the application we land on home page where in homepage page class we have written
+navigation method to each page in the application which returns the object of the page class for respective page and then we can perform further action using
+that object of the page class 
+#5. Waits methods - We are doing that in browser class which under the selenium utility
+#6. Driver initialisation - We are doing that in browser class which under the selenium utility
+#7. How you passing reading the test data 
+#8. How you used inheritance in your project - 
+We are using multilevel inheritance in our project so our testclass inheritate suitsetup class (@beforeTest), suitsetup class inheritate the Base class (@before suite)
+also our page classes inheritate pageUtility class which contain some abstarct method confirm (), waitforLoad(element) and common page methods and
+pageUtility class inheritate browser class which having broswer initialisation and waits methods 
+#9. How you use the interface in your project - 
+ITestListner - Created listner package with Listner class which implememts ITestListner interface which has methods such as OnTestStart(ITestContext context)
+OnTestSuccess(ITestResult result) OnTestFail(ITestResult result)  OnTestFinish(ITestContext context) which it overide
+For ITestResult = result.getName() - It gives the method name, result.getTestClass() - Gives class name 
+For ITestContext = context.getName() - name of the test
+#10. How you use the abstraction in your project - We have wrtiien some abtract method in our pageutility abstarct class such as confirm () waitForLoad()
+to confirming the page is open successfully and to wait till the particualr element on the page appears and those abstract methods we are overiding in 
+page class and sending the details as per the page to check confirm and waitforload method 
+#11. How you use the polymorphism in your project - 
+How you use method overiding and method overloading in your project - 
+1. Method Overiding - 
+a. We have pageutil class where we wriiten the two abstrac public menthods, abstract public Boolean confirm(), abstract public WebElement waitForLoad()
+abstract public WebElement waitForLoad() this method use to provide wait for page load which return the webElements to which we need to wait, use in page class 
+abstract public Boolean confirm() method which used for all the pages to check the desired page is landed or not, use when want to navigate to page 
+above methods we used in our page class using extends pageutil class and overided those as per the page requirements 
+
+b. Public WebElement Apply method in FluentWait class, which we overide and add our element to find 
+
+2. Method overloading - 
+a. Select dropdown by id by text - To select the drop down value we have two method with same name but diffrent params selectBy()
+selectBy(String) - select.selectByVisibletext(string)
+selectBy(int) - select.selectByValue(int)
+Select select= new Select(WebElement);
+select.selectByVisibleText("name")
+select.selectByValue('3')
+
+#12. How you use the custructor in your project - 
+a. in browser class we have created two custructor of the browser class with different set of params
+browser(brosername, url)
+need to pass url of static pages so it will take that instead of url from property file
+broswer(browsername) 
+which will take default URL from property file
+
+b. used the conustcuter overloading in user difined exception class as well
+where we are calling the excpetion class contructer by passing user defined execption msg or without message so it will take default execption class msg
+Class UnderAgeException extends Exception  // when creating user difined checked excpetion if want to create unchecked then extends with runtimexception 
+  UnderAgeException(){ 
+    Super("Age should not less than 18");
+  }
+   
+  UnderAgeException(String message){ 
+    Super(message);
+  } 
+
+#13. How you attached the scrrenshot of failed test cases - 
+under listner class OnTestFail method we are calling screenshot method which capture the screenshot 
+
+ADO Execution - 
+We are using azure devops pipeline for execute our test suites, so in azure devops we have created pipelines using YAML file
+so in ADO they provides us the microsoft hosted VM's and we can trigger our test cases on those VM's 
+we need to add some task in YAML file configutaion regarding the VM details meaning need to provide OS name where we want to execute our test cases 
+
+then also need to write the scripts for maven clean install maven build, authetication details if required 
+also the task to publish the report in directory, eg. there is task to show the extent report of execution so we need to configure that as a task 
+and finall the script where we need to send the path of the xml file that we want to trigger for that pipeline
+also we have added the paratmertes into YAML file such as dev, stage, prod so while running the particular pipeline we need to select the env 
+
+
+Smoke pipeline 
+Regression pipeline
+Component wise pipeline if we want to execute the suite for respective componenet
+
+
+Questions - 
+#1. How you trigger the smoke - 
+Using smoke pipeline so we have created seprate test cases java classes and testNG.xml which covered the smoke functionality of the application 
+and we created pipeline to execute that testNg.xml which we called somke pipeline
+so as soon as any deployement happns we trigger the smoke suite and it will trigger in 15 minutes which check only the mojor/importnat functionality 
+also we have added some scheduler in smoke pipeline YAML file so smoke get trigged after 3 hours interval automatically and sends us rpeort 
+
+#2. How you execute the regression - 
+so in ADO for regression pipeline we have added almost all testNG.xml path which resposible to perform full regression of the application 
+we have added those testng.xml in steps so all the testNG.xml will execute one after one 
+we cant executed those paraller because there is a account dependacy between the test cases as we are using some common accounts 
+
+
+
+
+
