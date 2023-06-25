@@ -151,7 +151,21 @@ so in ADO for regression pipeline we have added almost all testNG.xml path which
 we have added those testng.xml in steps so all the testNG.xml will execute one after one 
 we cant executed those paraller because there is a account dependacy between the test cases as we are using some common accounts 
 
-
-
+ADO YAML file contaions:
+parameters: env parameters
+name: name of the suite
+jobs: 
+  job - name of the job
+  steps:
+    script - maven install build maven 
+    task - screens resolution 
+    script - testNG.xml path 
+    task - publish report html or extent 
+ job
+  steps:
+    script
+    task
+    task
+    script
 
 
