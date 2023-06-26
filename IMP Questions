@@ -1259,3 +1259,50 @@ so s1==s2 // true   (== checked the memory location)
 s1==s3 // false 
 
 Notes - all the objects are created under java heap memory
+
+#Auth0 - Thired party 
+It generates the secured token for us, which we can use with the request inorder to get the response
+We need to pass the auidence, grant type, client id and client secrets as a body to generates the Auth0 token which we can use as a bearer toekn for our API's
+
+#Diffrence between authentication and authorization - 
+Authentication verifies the identity of a user or service, and authorization determines their access rights
+
+Authentication - Verify the user is authrized to enter in your system 
+authorization - Determines the user access rights after enter into the system, what he can access and what not
+
+So we are using Oauth toekn which need Client ID and Client secrect audince & grant type in body so autho creates that Oauth token for us 
+
+
+
+
+#Azure Services Used - 
+VM
+Kubernets clusters
+SQL Data base - Microsoft SQL server
+Valuts 
+ADO 
+Storage Account - Blob servers 
+
+
+#App Deployment details - 
+#Azure Devops - 
+Created pipeline for the executions of the builds (deployments) so it deploy the application on respective pods one by one 
+
+#Docker software platform that allows you to build, test, and deploy applications quickly- Build the application, share & run in the form of containers 
+(Docker file contains all the pre requesites softwares which are required to run the application)
+
+#Kubernet services 
+Cluster (Set of nodes that run the application using PODS) - Dev (multiple pods) Stage (multiple pods) & Production (multiple pods)
+Node - A node may be a virtual or physical machine
+Pods (Pods contains the one or more applicationa and responsible for execution for those application) - nodes contain the collection of pods 
+
+
+Branch - 
+Take latest master always
+Create new feature master branch & work branch using ticket ID no 
+You will work on work branch only 
+Once done if latest master is updated then merge the latest master again into your branches both work and feature master branches 
+Then push work branch - Execute the newly added automation and make sure it's working and attach report in your PR
+Create PR for work branch to merge in your feature branch 
+Once PR approved then merge the work branch into feature branch - Execute the newly added automation and make sure it's working
+Then create PR to merge the feature branch into the master branch - Execute the newly added automation and make sure it's working & attach the exection report in JIRA ticket
