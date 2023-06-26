@@ -663,3 +663,36 @@ public class Main
 		System.out.println(finalString);
 	}
 }
+
+#Challenges facing while automation - 
+handling dynamic elements - some of the elements took time to load properly so that time we need to handle those respective elements
+as sometime scripts get passed and sometime not becasue of such elements so we need to add fluent waits specifically to such elements 
+ 
+pop up window & alert handling - (pop up comes as a small message box window)
+Alert alert= driver.switchTo().alert();
+alert.getText() //
+alert.accepet();
+alert.dismiss();
+
+for pop up window we need to use windowhandle method - 
+Set<String> windoHandle= driver.getWindowHandles();
+Iterator <String> it= windoHandle.itereator();
+String parentID= it.next();
+String childID= it.next();
+driver.switchTo().window(childID);
+
+frames - in our project there was some iframes so we need to handle those 
+handled using driver.switchTo().frame(index) //index of the frame
+driver.switchTo().frame(nameofthe iframe) 
+
+We can find the no if iframe in the page using Int size = driver.findElements(By.tagName("iframe")).size();
+also can store all the iframes and then by finding there name we can switch to it 
+for returning back from the frame we use driver.switchTo().defaultContent(); // it will return from iframe
+
+
+smoke execution time reduction - intially were take alomost more than 25 minutes to execute so we need to wait till the time to submit release report and find the issue
+if any so reducing smoke execution time was one of the chanllenges we had to clean up our code accordingly then removed the account depandacies between the component 
+and executed all those different component parallery using stages in yaml file 
+so each stage contaion one testNG xml for respective componenet which cover smoke for that componenet 
+&
+then executed those all stages parallerly 
