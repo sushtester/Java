@@ -1,10 +1,10 @@
 #Hard Waits - 
-
+Thread.sleep(1000); 1000 milisecod means 1 second
 
 #Implicitly wait - Tell driver to wait until the mentioned wait to through the error No such element present if present then go ahead quickly for next action element 
 Implicit Wait time is applied to all the elements in the script, so once decalre that it will apply to all the elements in the script
 Default implicit wait is 0 
-driver.manage().tomeouts().implicitlyWait(10, TimeUnits.SECONDS);
+driver.manage().timeouts().implicitlyWait(10, TimeUnits.SECONDS);
 We manily used that after initialising the webdriver  
 
 
