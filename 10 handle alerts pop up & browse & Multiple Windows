@@ -36,13 +36,19 @@ break;
 }
 }
 
+#First of all we will store the main window by usning driver.getWindowHandle() methos which return the current window string 
 
+String mainWindow = driver.getWindowHandle();
+then will perform the driver.getWindowHandles() scenarios and then while returning the main window will just switch to main window 
+driver.switchTo().window(mainwindowid);
 
 #Switch to frame - 
 
 driver.findElemnts(By.tagName("iframe"));
 driver.switchTo().frame(1) //switch to frame by index
 driver.switchTo().frame("name") //name of the frame 
+
+evey iframe is either has index or name 
 
 #Back to default page from frame, 
 driver.switchTo().defaultContent();
