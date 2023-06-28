@@ -1,12 +1,11 @@
 We need to find the UL elemnt of all list showing then go to the div where exaclt text is showing so we can capture that text
 
-then create Arraylist of weblements using - List<WebElement>list= driver.findElements(By.xpath(" "));
+the drop down or auto populate text field - ul tage name under that there are multiple li tags element which contaions the dropdown options
+
+then create Arraylist of weblements using - List<WebElement>list= driver.findElements(By.xpath(" ")); //by.tagName("li")
 list.size(); - Will give you the size of the list 
 
 list.get(i).getText(); - Will give you the text of that elemnts 
-
-
-
 
 
 driver.findElement(By.xpath("//input[@id= 'o_company_name']")).sendKeys("aloha club");
@@ -24,3 +23,22 @@ driver.findElement(By.xpath("//input[@id= 'o_company_name']")).sendKeys("aloha c
 		for(int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i).getText());
 		}
+
+Second the few drop down conatins - selects tags with name or value
+that time we can use Select class 
+Select select = new Select (selectelement);
+select.selectByVisibleText("");
+select.selectByvalue();
+select.selectByIndex();
+
+then for deSelect the dropdown options we can use deSelect method 
+Select select = new Select(element);
+select.deSelectByVisibleText("")
+select.deSlectByValue("")
+select.deSelectByIndex();
+
+if we want to deselect the all 
+then user select.deSelectAll();
+
+
+
