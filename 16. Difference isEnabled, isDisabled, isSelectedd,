@@ -5,3 +5,12 @@ boolean closeIconPresent= driver.findElement(closeIcon).isDisplayed(); // return
 boolean closeIconPresent= driver.findElement(closeIcon).isEnabled(); //if button is enabled then it will return true 
 
 boolean closeIconPresent= driver.findElement(closeIcon).isSelected(); //return wheather checkbox is selected OR not 
+
+element.isSelected() // Wheather a checkbox or radio button is selected or not 
+element.isEnabled() // Whather checkbox or radio button is enabled state or not
+element.isDisplayed // whather the checkbox or radio button is displayed or not 
+
+if you want to deSelect the checkbox or radio button then simply we can check whather it is selected or not if it's selected then click so it will deselect 
+
+if(ele.isSelected())
+ ele.click();
