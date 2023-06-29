@@ -92,12 +92,10 @@ if want to use the groups then can use the groups -
 <run>
 <include name= "Sanity">
 </run>
-
 </groups>
 
 
 Parameters - 
-
 if we want to user the parameters in tesng.xml - 
 <parameter name= "url" value= "www.roofing.com"/>
 <parameter name= "uname" value= "amol@gmail.com"/>
@@ -233,6 +231,7 @@ Softassert.assertAll();
 1. Assert.assertEuquals(Actual result, expected results) //to compare the string results 
 2. Assert.asserTrue()// returns true so if condition under is true then only it pass otherwise get failed 
 3. Assert.assertFalse()// retruns false so condition under is false then it get pass 
+4. Assert.fail (message) // if want to put the failed asert if catch block or in false condition 
 
 
 Screenshot in selenium - 
