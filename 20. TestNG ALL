@@ -211,24 +211,40 @@ If dataprovider is in another class - then - @Test(dataProvider= “data”, dat
 
 ###Soft Assertion VS Hard Assertion - 
 
+import org.testng.asserts.SoftAssert;
+import org.testng.Reporter;
+import org.testng.Assert;
+
 When hard asseration comes then the test cases failed and other code after the assertaion not get excuated 
 
 For soft asseration also test cases get failed BUT other code after the soft assertaion will get excuted (We need to create new assert class for this)
 
-SoftAssert Softassert = new SoftAssert();
+SoftAssert softassert = new SoftAssert();
 
 Synatx- Assert.assertEqual(Actual resut, expected results); //hard assert 
 
-Softassert.Assert.assertEqual(Actual result, expected results); //soft assert
+softassert.assertEqual(Actual result, expected results, failed mesage); //soft assert
 
-Softassert.assertAll();
+softassert.assertAll();
 
 
+#TestNg Reporter - 
+Reporter.log("message");
 
+Import Required: import org.testng.Reporter;
+@Test (priority = 0)
+public void CloseBrowser() {
+	driver.close();
+	Reporter.log("Driver Closed After Testing");
+}
+
+We can see those logs in testNg console itself 
+also can see in the index.html report under Reporter log section 
+also testNg provides emailable-Report.html  on the same test-output folder 
 
 ##Asserts types just for examples - 
 
-1. Assert.assertEuquals(Actual result, expected results) //to compare the string results 
+1. Assert.assertEuquals(Actual result, expected results, failed message) //to compare the string results 
 2. Assert.asserTrue()// returns true so if condition under is true then only it pass otherwise get failed 
 3. Assert.assertFalse()// retruns false so condition under is false then it get pass 
 4. Assert.fail (message) // if want to put the failed asert if catch block or in false condition 
@@ -236,11 +252,11 @@ Softassert.assertAll();
 
 Screenshot in selenium - 
 We can do that using TestNg Listner - 
-Apache common IO dependacy need to add in maven dependacies 
+Apache common IO dependacy need to add in maven dependacies used for the IO file opeartion 
+fileutils.copy()
 
 Three classes need - 
 Base class - (Where we can add a screenshots code)- 
-
 
 Test Class - Where we can write the actual cases 
 
