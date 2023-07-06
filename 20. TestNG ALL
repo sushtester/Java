@@ -428,4 +428,42 @@ in the simple languages
 
 Data Driven Testing - Test Data stored into XLX, sheet and then we can use that using data provider 
 
+#Questions - 
+What if both the test cases having same priority -> Then it will execute alphabetically as per the method name
+What of no any test cases having any priority set -> Then it will execute alphabetically as per the method name
+dependsOnMethods can we add multiple methods 
+-> Yes we can write different method name comma seperated @Test(dependsOnMethods= {"openbrowser", "signin"})
+TestNg groups include name with multiple group -> Yes 
+<groups>
+<define name= "Group1">          //Creating 1 group at a run time and adding existing groups in theam using define
+<include name = "smoke"/>
+<include name = "Sanity"/>
+</define>
+<run>
+<include name = "Group1"/>
+</run>
+<groups>
+
+can we exclude multiple methods using exclude method in testNG - Yes 
+<suite name = "">
+<test name = "">
+<classes>
+  <class name = "pkg.classname">
+  <methods>
+  <include name = ""/>
+  <exclude name = ""/>
+  <exclude name = ""/>
+  </class>
+</classes>
+</test>
+</suite>  
+
+Run one method at same time 4 time - threadPullSize= 4, innvocationCount= 4
+@Test(threadPullSize= 4, invocationCount= 4)
+
+Paraller test, paraller clasees thread-count in testNG - 
+<suite name = "" paraller= "test" thread-count = "2"> //suite level 
+
+<suite name = "">
+<test name = "" paraller = "classes" thread-count ="2"> // test level paraller
 
