@@ -11,6 +11,12 @@ step defunation
 
 
 #Create maven project - Then download cucumber for ecclipse plugin - Help - cucumber for ecclipse plugin
+Dependacies - 
+cucumber -java
+cucumber - reporting 
+cucumber -testNg 
+
+Using cucumber version - 5.0.0 
 
 #Pox.xml - From cucumber java skeleton - add properties, dependencies and build 
 
@@ -25,11 +31,9 @@ step defunation
 Note - We can add multiple scenarios in the same feature file - 
 
 
-
 Gherkins Keywords such as Given, And, When, And, Then 
 
 Create a Feature package add different features files - 
-
 
 Features: name of features
   
@@ -43,23 +47,25 @@ Features: name of features
 #Create stepdefination package
 For each features file there will be a step definition/glue code/backend code -  where we can make coding for methods 
 
-#Runner class - 
+#Runner class Junit runner- 
 @RunWith(Cucumber.class)
 @CucumberOptions(features= "src/test/resources/Features", glue= {"stepsdefinations"}, monochrome = true,
 plugin= {"pretty", "html:target/Htmlreports.html"})
-
-
 public class GoogleRunner {
-	
-	
+		}
+
+#monochrome true - cosnole statements are readable after executing the scripts 
+#dryRun = true - when it's true then before stating execution it will first check for all the steps in the scripts contain the step defination/back end code
+
+#Runner class TestNg Cucumber runner - 
+@CucumberOptions(monochrome=true, dryRun=true, plugins= {"pretty", "html:foldername", "json:folder/reportname.json"}, 
+glue= {"package name"}, feature= {one.feature path, two.feature path, three.feature path}, tags= {"smoke"})
+
+#yes we can add multiple runner files 
+
+public class AimApiRunner extends AbstractTestNGCucumberTests{
 
 }
-
-
-
-
-Parameter for Cucumber -  
-
 
 Feature: To check the Login flow
 
