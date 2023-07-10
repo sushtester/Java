@@ -516,3 +516,8 @@ Created pipeline for the executions of the builds (deployments) so it deploy the
 Cluster (Set of nodes that run the application using PODS) - Dev (multiple pods) Stage (multiple pods) & Production (multiple pods)
 Node - A node may be a virtual or physical machine
 Pods (Pods contains the one or more application and responsible for execution for those application) - nodes contain the collection of pods 
+
+Kubectl need to install in order to run the different commands for kubernet clusters 
+
+kubectl get pods - Which will provide the pods 
+
