@@ -28,16 +28,29 @@ action.KeyDown(keys.ENTER); //To press the enter button
 
 action.moveToElemenet(element) // To move to the elements
 
-action.doubleClick(); // To double clicks 
+action.doubleClick().perform(); // To double clicks 
 
-action.keyDown(Keys.SHIFT).sendKeys("new"); //To enter upper case
+action.keyDown(Keys.SHIFT).sendKeys("new").build().perform(); //To enter upper case
 
 action.contextClick().perform()// for right click
 
 action.clickAndHold(element).moveToElement(element).release().build().perform(); //drag and drop element using action 
 
+action.dragAndDrop(SourceElement, TargetElement).perform(); //to dragdrop element directly 
 
-action.dragAndDrop(SourceElement, TargetElement).build().perform(); //to dragdrop element directly 
+#Drap and drop using scroll offsets 
+Actions action = new Action(driver);
+action.dragAndDropBy(element, xOffset, yOffset).perform();
+
+#Send uper case as Input - 
+action.keyDown(Keys.SHIFT).sendKeys("name").build().perform();
+
+#Copy paste the whole message using keyboard cnt c + cnt v
+
+action.keyDown(Keys.CONTROL).sendKeys("a").build().perform();
+action.keyDown(Keys.CONTROL).sendKeys("c").build().perform();
+action.keyDown(Keys.CONTROL).sendKeys("v").build().perform();
+
 
    
 Multiple Windows - 
