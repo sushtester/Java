@@ -9,3 +9,9 @@ js.executescript("argument[0].setAttribute('style', 'background-color:red; borde
 JavaScriptExecuter js = (JavaScriptExecuter) driver; 
 js.executeScript("argument[0].setAttribute('style', 'background-color:red; border:2px solid red')", element)
 
+#How to scroll down page in Selenium-> 
+JavaScriptExecuter js = (JavaScriptExecuter)driver;
+js.executeScript("window.scrollBy(0, 1000)"); 
+
+#scroll up to the element - 
+js.executeScript("argument[0].scrollIntoView();", element)
