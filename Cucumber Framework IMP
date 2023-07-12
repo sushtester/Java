@@ -1,5 +1,8 @@
 Cucumber Framework
 
+Packages in the cucumber framework - > rest assured, json, io.cucumber (cucumber-java), (cucumber-testng), testNg, Junit, 
+Apache POI (read and write in excel), commons-io (io operations for the files mainly in the scresnshot)
+
 We are using cucumber framework & resr Assured libraries for our API automation 
 in a cucumber framework we are writting the test cases in the feature file using gherkins langauages commonds such as given, when, then, and 
 & written the back end code/glue code for the same 
