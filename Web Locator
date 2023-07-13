@@ -110,4 +110,51 @@ user for loop for both row and column
 
 
  
+Using -
+@id -        //input[@id= '']
+@class -    //div[@class= '']
 
+contains - 
+
+//input[contains(text(), '')]
+
+//div[@class= 'xtXmba' and contains(text(), 'Electronics')] if multiple elements are present for the class 
+
+//div[@class= 'eFQ30H']/a/div[contains(text(), 'Grocery')]
+
+Parent - 
+/parent::*
+
+Child 
+/child::*
+/child::li[3]
+//ul[@class= 'nav navbar-nav col-md-12']/child::li[4]
+
+following-sibling -
+//ul[@class= 'nav navbar-nav col-md-12']/child::li/following-sibling::li
+
+preceding-sibling - 
+//ul[@class= 'nav navbar-nav col-md-12']/child::li[5]/preceding-sibling::li[2]
+
+
+
+CSS selector - faster than xpath, maximu chanses to find the element, most time compataible with other browser as well 
+disadvatages - We can't travel backward using CSS selector only forward we can travel
+.classname - if class name with space then add .
+
+ID - we use the # - HTML tagname and #ID
+   Eg. input#1240
+input#identifierId
+div#identifierNext
+
+Combine ID and class (some elemnets having ID and class name that time we can use below)
+   .classname#ID
+   #ID.classname 
+.FliLIb.FmFZVc#identifierNext
+
+For the Dynamic elements where some elements can change at the start of end 
+   textmatch of any attribute - input[name*= 'sushant']
+   
+   starts with - ^ - input[name^= 'sush']
+   
+   end with - $ - input[name$= 'ant']
