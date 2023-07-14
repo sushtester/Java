@@ -158,3 +158,9 @@ For the Dynamic elements where some elements can change at the start of end
    starts with - ^ - input[name^= 'sush']
    
    end with - $ - input[name$= 'ant']
+
+
+#49. Find element using starts and contains - For dynamic WebElement with same start thing and end thing - 
+//input[starts-with(@name, ‘SU’)] - To all the elements with attribute name and name start with ’SU’
+
+//input[contains(@name, ‘ant’)] - To all the elements with attribute name and name start with ’ant’
