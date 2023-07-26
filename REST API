@@ -3,11 +3,12 @@
 400 Bad Request- The 400 status code, or Bad Request error, means the HTTP request that was sent to the server has invalid syntax.
 401 Unauthorized user - Need credentials to access the site
 402 - Payment required 
-403 - Forbidden
+403 - Forbidden - Server understand the request but refused to authenticate it
 404 Not Found - Page not found 
 500 Internal Server Error
 502 Bad Gateway - gatewayor poxy server not getting valid responce from backend server 
 504 Gateway Timeout - gatewayor poxy server not getting valid responce from backend server within timeline 
+
 
 200 - The request was fulfilled.
 204. - No Response [Empty responce]
@@ -427,15 +428,21 @@ given().header("Accept", "application/json").auth().oAuth2(token).when().get().t
 
 
 #URL - address of the resource 
-#URI - find the resource (where to find that in the address)
+#URI - find the resource (exact location of the resource)
 
 #RestAssured.baseURI - 
 #RestAssured.basePath - 
 
 #Query param - ?param1=value&param2=value2
 -> after when we can add the such query parameter 
-given().header("Accepet", application/json).header("Authorization", apiKey).when().param("param1", value).get().then().extract().response()
+given().header("Accepet", application/json).header("Authorization", apiKey).when().queryParam("param1", value).get().then().extract().response()
 
+multiple query parameters - can write .queryparam("paramname", value) multiple time 
+?asd=asd
+
+.queryParam("paramname", value)  ?paramname=value
+.pathParam("paramname", value) /value
+.Param(""paramname, value) /paramname=value
 
 
 
