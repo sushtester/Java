@@ -31,15 +31,15 @@ git commit -m "commit message".  //to add commit with comit message
 
 git push origin branchname  //to push the code to the branch 
 
-
 git checkout branchname - to switch the branch 
 
 git pull origin branchname ..//to pull the latest changes of the branch 
 
-
-
 git merge branch name -  to merge the branch into our branch 
 
+git merge --abort //to abort the merge in case of any conflicts come
+
+$ git branch <new-branch>  // to create a new branch 
 
 #Jenkins - Maven Plugin and TesNG plugins - Setup POM file and TestNG.XML and 
 
