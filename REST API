@@ -444,6 +444,30 @@ multiple query parameters - can write .queryparam("paramname", value) multiple t
 .pathParam("paramname", value) /value
 .Param(""paramname, value) /paramname=value
 
+#Type of Desereliasation - 
+
+Response response ; 
+response.jsonPath().getString ("user.fistname") simple object and value 
+response.jsonPath().getString(.user[0].fistname)
+Lis<String> names= response.jsonpath().getList(data)
+
+String resopnseString = response.getBody().asString();
+JsonPath js = new JsonPath(resopnseString);
+js.getString("")
+
+or 
+JsonObject jsobj= new JsonObject(resopnseString);
+JsonArray jsArray = jsobj.getJsonArray("data")
+for(int i=0; i<jsArray.length; i++)
+  JsonObject jsObj2 = jsArray.getJsonObject(i)
+  String name = jsObj2.getString(firstname)
+
+
+
+
+
+
+
 
 
 
