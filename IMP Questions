@@ -1306,3 +1306,94 @@ Then push work branch - Execute the newly added automation and make sure it's wo
 Create PR for work branch to merge in your feature branch 
 Once PR approved then merge the work branch into feature branch - Execute the newly added automation and make sure it's working
 Then create PR to merge the feature branch into the master branch - Execute the newly added automation and make sure it's working & attach the exection report in JIRA ticket
+
+
+Collections - 
+
+#Difference between Array and Array list -
+Array is fixed size, we can not modify the size of the array
+
+.set method to replace the element in array list 
+.remove to remove and element from the array list
+.add to add 
+.clear to clear the list 
+
+ArrayList is a dynamic array we can modify the size of the array, it’s only supports wrapper class not the primitive data type
+
+The wrapper classes in Java are used to convert primitive types ( int , char , float , etc) into corresponding objects
+Covert int to string 
+Convert string to int
+
+ArrayList List and other collection supports wrapper class only, as it’s store the data as a objects 
+
+Array supports both primitive data type and wrapper class 
+
+#ArrayList class - implements list interface - list interface extends collection framework interface
+  ArrayList create dynamic array so if any element is removed from array list the other data shifted towards 
+  List is kind of static array it store the element with a index BUT other than no any difference between List and ArrayList
+  So List is faster than the ArrayList so we can use List object for data mainupulation 
+
+
+  
+#StringBuilder is more faster than the StringBuffer as it’s supports the Asynchorize thread, meaning two methods called parallel in one thread
+
+StringBuilder str= new StringBuilder(“Pawar”);
+Str.reverse();
+Str.append (“name”)- to  append the string 
+Str.insert(0, “Sushant”) - To insert the string at the index
+Str.replace(1,2, “sushant”) - to replace the
+Str.delete (1, 3);
+
+#LinkedList - Same as ArrayList just it is use to manipulate the data (well structured data, faster than the ArrayList as in array list 
+If we remove any data then other memory data shifted towards)
+ArrayList - if array size is big it creates new array big array after deleting existing one while in linked list it 
+Create new container and existing get linked with new container
+So we can use getFirst(), getLast() addFirst() addLast() methods in linked list which we can’t use for the ArrayList
+
+ArrayList is better for storing the data and accessing the data 
+LinkedList is better for manipulating the data 
+
+
+#StringBuilder can not be converted into string so we can use .toString() to covert that into string 
+
+
+#Set - 
+
+
+#List
+
+#LinkedList
+
+#HashMap - 
+
+#HashTable
+
+#TreeMap
+
+
+#Program for replace a particular word from the sting - 
+
+
+
+#Difference between contains and equals- 
+
+ String s1= "sushants pawar is a";  
+ String s2= "pawar";
+
+Contains - String s2 having one string world which match with s1 then its true
+
+Where for equals the whole string need to be matched 
+
+
+#Setting.XML - All the repositories are stored in .m2 folder, setting.XML is also there with the repository folder 
+The default setting.xml file is created with the maven project BUT it’s hidden 
+
+We can provide details such as proxy server details to download the dependencies required in projects 
+
+Remote server details with credentials to download the dependencies which are hosted into that remote server required in projects
+
+Three Types where the depanacies can be downloaded or searched by Maven - 
+
+#1. M2 Repositories folder
+#2. Central ie download from the internet 
+#3. Remote 
