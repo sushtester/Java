@@ -1397,3 +1397,11 @@ Three Types where the depanacies can be downloaded or searched by Maven -
 #1. M2 Repositories folder
 #2. Central ie download from the internet 
 #3. Remote 
+
+#Garbage Collector - 
+The main objective of Garbage Collector is to free heap memory by destroying unreachable objects
+So the objects are created into the heap memory and in JAVA garbage collector concept which is a automatically proccess
+where the non used object het destroyed by garbage collector to free up the heap memory 
+objects such as null  
+
+String S1= new String ("name") this will create object in the heap memory and in the string contsant pool 
