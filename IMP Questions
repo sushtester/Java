@@ -1405,3 +1405,13 @@ where the non used object het destroyed by garbage collector to free up the heap
 objects such as null  
 
 String S1= new String ("name") this will create object in the heap memory and in the string contsant pool 
+
+##List is an interface while ArrayList is a class
+
+List is interface which implement under ArrayList and LinkedList class which is collection classes 
+
+so benift is we can use List variable for both ArrayList and Linked List class objects 
+
+List<String> list 
+ list = new ArrayList<>();
+ list= new LinkedList<>();
