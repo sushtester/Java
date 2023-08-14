@@ -7,9 +7,6 @@ for(int i=1; i<=number; i++){
 }
 System.out.println(fact);
  
-
-
-
 2. String Reverse - Char and the whole string statements - 
 
 public void stringRevers() {
@@ -38,8 +35,7 @@ public void stringRevers() {
 		
 		for(int i=reverThisString.length-1; i>=0; i--) {
 			
-		
-			
+					
 			finalResult=finalResult+reverThisString[i];  
 			
 		}
@@ -120,8 +116,6 @@ driver.switchTo().alert().accept();
 } catch (NoSuchAlertException e)
 
 
-
-
 #6. Abstract Class - can't create object of abract class BUT it can access using inteheritance we can extends the absract class, 
 then abstract method can only written in abstract class 
 
@@ -154,7 +148,6 @@ public class Main
 }
 
 
-
 //S1.compareTo(S2) - We use this to comare the String and it returns 
 //Zero if string are same 
 
@@ -172,15 +165,11 @@ public class Main
 	    }
 
 	}
-}
-	    
+}    
 
 char[] ch={'j','a','v','a','t','p','o','i','n','t'};  //covert the char array to string 
 String s=new String(ch); 
 SYSO (s)// javapoints;
-
-
-
 
 #8. What is collections? what collections you have used? -
 Collection of the objects using array, arraylist, hasMap, Set 
@@ -252,7 +241,6 @@ To print the the value -
 For(String I: name.values()){
 SYSO(i)
 }
-
 
 #9. What is interface and abstact class - (Both are used to do data abstractions)
 Data abstraction is the process of hiding certain details and showing only essential information to the user.
@@ -364,10 +352,6 @@ as message after test case get failed or add message for testcase start
 
 Another example of method overding is FluentWait - 
 
-
-
-
-
 #11. How you will type in textfied without using sendkeys - 
 JavascriptExecutor js= (JavascriptExecutor)driver;
 js.executeScript ("document.getElementById('gsc-i-id1').value='Selenium'");
@@ -411,8 +395,6 @@ public class Main
 	}
 }
 
-
-
 Using replace ALL - 
 
 public class Main
@@ -423,8 +405,6 @@ public class Main
 		System.out.println(finalString);
 	}
 }
-
-
 
 
 #13. How many browser you can use for automation -
@@ -492,14 +472,12 @@ double value= 19.99;
 		System.out.println(numverValue); // result will be 19
 
 
-
 Widening - from lover data type to higher datatype - 
 	int num= 10;
 		double numVale= num;
 		System.out.println(numVale); //result will be 10.00
 		
-		
-		
+				
 For convert the String number into the integer 
 String number= "10";
 int num= Integer.parseInt(number)
@@ -509,8 +487,7 @@ Integer num= 10;
 
 String number = num.toString()
 
-		
-		
+			
 #20. Types of Polymorphism - 
 	 Many forms - we can user our super class methods for another user,
 	 we can user superclass methods and write our code in it, 
@@ -532,8 +509,7 @@ String number = num.toString()
 	 }
 	 }
 	 
-	 
-	 
+	 	 
 	 B. Dynamic (Run time polymorphism)- 
 	 We use Upcasting here Create object of super class which refere the sub class 
 	 
@@ -606,9 +582,6 @@ public final class A
 #24. Static block and instance block 
 static blocks executes before instance blocks in java
 Also, static blocks are executed before constructors
-
-
-
 		
 #25. To find the same char of the string and it's count - 
 public void checkChar() {
@@ -660,10 +633,8 @@ JavascriptExecutor js = (JavascriptExecutor) driver;
 
 js.executeScript("window.scrollBy(x-pixels,y-pixels)");
 
-
 #28. JDK 1.8 onwards & JAVA 8 - have a new feature on which we can write body to interface methods using default and static 
 And can call them after implements and then extend the class where it implements 
-
 
 #29. Multiple inheritance - Java dose not support the multiple inheritance such as - 
 Class A
@@ -672,8 +643,6 @@ Class B
 
 
 Class C extends A, B // not allowed multiple inheritance 
-
-
 So overcome this problem using interface & after java 8 and JDK 1.8 we can enter the methods default and static to our interface and can implements multiple time 
 
 Interface A
@@ -685,8 +654,6 @@ Class C implements A, B
 }
 
 Call the methods without 
-
-
 
 
 #28. Singleton class - A Singleton class in Java allows only one instance to be created and provides global access to all other classes through this single object or instance.
@@ -712,7 +679,6 @@ We can merge the branch into master branch by - Team - Merge into Master
 #30. Which things can’t you automate 
 * Automating Captcha is not possible using Selenium WebDriver.
 * We can not read bar code using Selenium WebDriver.
-
 
 #31. Web driver Listner & testNg Listner when to used 
 
@@ -767,8 +733,6 @@ We have 7 dev, 4 QA  - 2 senior level devs from client and 5 dev in our Sid incl
 
 I. QA from there side, 3 QA on our side on which one for do a automation testing 
 
-
-
 #36. Software testing life cycles - 
 Requirement analysing - Read the requirements document, any case of any concern with the requirements - RTM - Requirements  traceability matrix
 
@@ -792,8 +756,6 @@ signup with Apple ID, so once good go for further testing
 
 #39. Regression testing when ruby version changes -  Full application testing 
 
-
-
 #40. Roofing Southwest - 
 This is web based application for employees of the one of the big roofing contractor and construction company of the US , the employee/worker of this company using the app when then go to the working site, so they need to create the inspections before start the work, after the end of the day, safety inspections, in progress inspections by adding the locations projects, photosets, live locations, safety equipments details 
 
@@ -802,7 +764,6 @@ So once inspection created by those workers the team leader, or contractor or pr
 Also in web we managers the daily projects works, inspection records, adding different workers, graphical representation of the status using cron jobs 
 
 It’s both android and iOS build using JIRA 
-
 
 #41. Defect life cycle - 
 New 
@@ -821,12 +782,10 @@ Testing
 Deployment 
 Maintenance 
 
-
 #43. Agile model - 
 Develop the project in few modules and release those modules so if change request comes it can be easily tackle 
 Scrum master - Take meeting - review sprint - start and end sprint 
 Project owner - adding the tickets in backlogs 
-
 
 #44. Things on the test plan - 
 Analysing the products
@@ -889,7 +848,6 @@ Abstraction
 //input[contains(@name, ‘ant’)] - To all the elements with attribute name and name start with ’ant’
 
 
-
 #50. How remove white spaces from the string - 
 1. Using String replaceAll(“\\s”, “”)
 2. String str = "India Is My Country";  
@@ -906,9 +864,6 @@ Abstraction
 13. 	 }
 14. 	 
 15. 	 System.out.println(strBuild);
-
-
-
 
 
 #51. Why we use static keyword before main method - This is because complier (JVM) started his execution from main class so no need to create an object of the static main method 
@@ -929,8 +884,6 @@ String str = "India Is My Country";
 	 
 	 System.out.println(strBuild);
 
-
-
 #56. Check URL for where we use what 
 https://www.softwaretestinghelp.com/essentials-of-java-in-selenium/
 
@@ -950,7 +903,6 @@ WebElement linkBtn= wait.until(new Function<WebDriver, WebElement>(){
      Driver.findEleent(By.xpath(“//”)); 
       }       
 });
-
 
 #59. #Difference between int and Integer - 
 Int - stores numeric value into memory as binary - Primitive data type
@@ -992,7 +944,6 @@ cappability.setPlatform(Platform.XP);
 WebDriver driver;
 driver= new RemoteWebDriver(new URL(“URL of nodet”), capability);
 
-
 #61. Adhoc Testing? Unstructred testing, no any plan for the testing, 
 random take an module and do testing, no document, no test cases needed here to do ad hoc testing, error guessing 
 
@@ -1019,9 +970,7 @@ length++
 }
 Return length;
 
-
 #65. Current JAVA version is 20 
-
 
 #66. Current selenium version is 4
 
@@ -1031,7 +980,6 @@ WebElement element = driver.findElement(By.cssSelector(".btn"));
         File dstFile = new File("./loginbutton.png");
         FileUtils.copyFile(scrFile, dstFile);
 	
-
 #67. #Private constructer 
 
 Note that if a constructor is declared private, we are not able to create an object of the class. Instead, 
@@ -1082,8 +1030,6 @@ class Main
    }    
 }
 
-
-
 #68. Stress Testing - Stress testing is to test the system behaviour under extremely heavy load conditions and ensuring that software doesn’t crash under 
 crunch situations - Endurance Testing. - 
 
@@ -1097,12 +1043,10 @@ Online shopping on the festivals seasons - When lots of users come to site, so t
 specific expected load.
 
 
-
 #70. Java platform indépendant 
 
 Complies the code convert into byte code and byte code is platform independent so can run on any system , it just need a JRE - java run time environment	
 which provided by JDK
-
 
 #71. 
 #Example of functional and non functional testing - 
@@ -1114,7 +1058,6 @@ Regression
 
 B. Non Functional Testing - such as performance testing, stress testing, load testing which is not a customiser 
 requirements but just to make sure application works on such high critical conditions 
-
 
 #72. Exceptions example of java - 
 
@@ -1157,15 +1100,10 @@ Repository
       Version 
          Jars 
 
-
 Setting.XML -  it’s basically use for to add repository folder the proxy server, credential details it’s kind of pom.xml on where 
 The user can add the details so the dependancies get downloaded for the proxy server as we need to configure that in the setting.xml file
 
-
 Maven Clean Build - it’s cleans the complied java code 
-
-
-
 
 #Web Services & API difference - 
 
@@ -1240,7 +1178,6 @@ public class Main {
 }
 
 
-
 Can we create the instance of Enum by new keyword?
 No, because it contains private constructors only.
 
@@ -1273,8 +1210,6 @@ authorization - Determines the user access rights after enter into the system, w
 So we are using Oauth toekn which need Client ID and Client secrect audince & grant type in body so autho creates that Oauth token for us 
 
 
-
-
 #Azure Services Used - 
 VM
 Kubernets clusters
@@ -1282,7 +1217,6 @@ SQL Data base - Microsoft SQL server
 Valuts 
 ADO 
 Storage Account - Blob servers 
-
 
 #App Deployment details - 
 #Azure Devops - 
@@ -1334,7 +1268,6 @@ Array supports both primitive data type and wrapper class
   So List is faster than the ArrayList so we can use List object for data mainupulation 
 
 
-  
 #StringBuilder is more faster than the StringBuffer as it’s supports the Asynchorize thread, meaning two methods called parallel in one thread
 
 StringBuilder str= new StringBuilder(“Pawar”);
@@ -1353,12 +1286,9 @@ So we can use getFirst(), getLast() addFirst() addLast() methods in linked list 
 ArrayList is better for storing the data and accessing the data 
 LinkedList is better for manipulating the data 
 
-
 #StringBuilder can not be converted into string so we can use .toString() to covert that into string 
 
-
 #Set - 
-
 
 #List
 
@@ -1370,10 +1300,7 @@ LinkedList is better for manipulating the data
 
 #TreeMap
 
-
 #Program for replace a particular word from the sting - 
-
-
 
 #Difference between contains and equals- 
 
@@ -1415,3 +1342,38 @@ so benift is we can use List variable for both ArrayList and Linked List class o
 List<String> list 
  list = new ArrayList<>();
  list= new LinkedList<>();
+
+#Important thing we tested while testing any API - 
+status code 
+Security - Authetication API key 
+Performance if any 
+error codes 
+Intergration testing wheather data is added into db or not 
+
+#What is schema in API - data types of the records help to understand the data types of the records in the API 
+
+#Why string are immutable - String is immuatble becasue it we modify/updated a string then it will create a new object (new memory address)
+so String, interger, double are immutable .contact("")
+mutable - StringBuilder, array - which are muttable StringBuilder.apnned ()
+
+
+#How selenium works internaly protocol - JSON Wire protocol
+
+Selenium libraries(Java) -JSON wire Protocol -Browser drivers - real browser
+
+so it selenium libraries and broswer drivers comumnicate with each other using API in JSON format 
+
+JSON wire protocol is a bridge between theam, browser drivers responsible for the browsers actions
+
+#Different components of the selenium - 
+1. Selenium ide (integrated development environment)
+2. Selenium RC (Remote Control)
+3. Selenium Grid 
+4. Selenium WebDriver
+
+#What is API gateway - API gateway is nothing but a application in between the client and the microservices 
+so API gate way is in between the client and the microservices
+API gateways receives the reuests from the client and sends to to respective microservices 
+mainly API gateway is used in microservice and usefull for authetication and authrization of the request 
+rather requesting directly to the microservice, the request first sends to the API gateway (entry point for the client requests)
+which decrease the risk of security 
