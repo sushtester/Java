@@ -1225,6 +1225,16 @@ Created pipeline for the executions of the builds (deployments) so it deploy the
 #Docker software platform that allows you to build, test, and deploy applications quickly- Build the application, share & run in the form of containers 
 (Docker file contains all the pre requesites softwares which are required to run the application)
 
+CI CD difference - Continues integration - build the project and run the unit test create releases 
+CD - deploy the release on the particulat server and do the smoke testing/acceptance testing 
+
+Note - We are using Azure pipeline for CI/CD process where dev team push the change then it will build that project did unit test and create a release 
+then using respctive componenet pipeline we deploy the project on respective server and further we doing the testing using automation pipelines
+
+Conatiner - virtual opertaing system which kind of a software package which contain the application code, libraries, dependencies that required to run that application 
+
+Vm- Vertual machine replica of physical machine
+
 #Kubernet services 
 Cluster (Set of nodes that run the application using PODS) - Dev (multiple pods) Stage (multiple pods) & Production (multiple pods)
 Node - A node may be a virtual or physical machine
