@@ -1343,7 +1343,7 @@ objects such as null
 
 String S1= new String ("name") this will create object in the heap memory and in the string contsant pool 
 
-##List is an interface while ArrayList is a class
+#List is an interface while ArrayList is a class
 
 List is interface which implement under ArrayList and LinkedList class which is collection classes 
 
@@ -1367,9 +1367,9 @@ so String, interger, double are immutable .contact("")
 mutable - StringBuilder, array - which are muttable StringBuilder.apnned ()
 
 
-#How selenium works internaly protocol - JSON Wire protocol
+#How selenium works internaly protocol - JSON Wire protocol upto selenium 3 as in selenium 4 it's using W3C protocol 
 
-Selenium libraries(Java) -JSON wire Protocol -Browser drivers - real browser
+Selenium libraries(Java) -JSON wire Protocol over HTTP -Browser drivers - real browser
 
 so it selenium libraries and broswer drivers comumnicate with each other using API in JSON format 
 
@@ -1387,3 +1387,10 @@ API gateways receives the reuests from the client and sends to to respective mic
 mainly API gateway is used in microservice and usefull for authetication and authrization of the request 
 rather requesting directly to the microservice, the request first sends to the API gateway (entry point for the client requests)
 which decrease the risk of security 
+
+#Differnce in Selenium 3 & 4 -
+Latest version of Selenium - 4 
+#1. Selenium 3 using JSON (Java Script object notification) wire protocol over HTTP while selenium 4 is using W3C (World wide web) protocol to comunninaction between 
+client (Selenium libraries) and server (browsers drivers)
+#2. Selenium 3 chrome driver class is extendes with Remote Driver class & in Selenium 4 Chrome driver class is extended with chromium driver 
+#3. Few methods which are newaly added to the Actions class such as .contextClick(element).perform(); .doubleClick(element).perform(), .clickAndHold(element).perform()
