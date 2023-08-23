@@ -28,11 +28,11 @@ action.KeyDown(keys.ENTER); //To press the enter button
 
 action.moveToElemenet(element) // To move to the elements
 
-action.doubleClick().perform(); // To double clicks 
+action.doubleClick(element).perform(); // To double clicks 
 
 action.keyDown(Keys.SHIFT).sendKeys("new").build().perform(); //To enter upper case
 
-action.contextClick().perform()// for right click
+action.contextClick(element).perform()// for right click
 
 action.clickAndHold(element).moveToElement(element).release().build().perform(); //drag and drop element using action 
 
