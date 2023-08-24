@@ -1,0 +1,10 @@
+#1. If want to wait till for a particular codition be saticfied, here hitting API till current time and some value in response matches closer
+Awaitility.await().atMost(300, TimeUnit.SECONDS).pollInterval(1, TimeUnit.SECONDS).until(() -> {
+                getRespose = request.when().get().then().contentType(ContentType.JSON).extract().response();
+                Long timestamp =
+                    Long.parseLong(getRespose.jsonPath().getString("notifications[0].timestamp"));
+                long current_time = Instant.now().getEpochSecond();
+                return (current_time - timestamp) <= 2;
+            });
+
+#2. 
