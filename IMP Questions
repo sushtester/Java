@@ -783,9 +783,17 @@ Deployment
 Maintenance 
 
 #43. Agile model - 
-Develop the project in few modules and release those modules so if change request comes it can be easily tackle 
-Scrum master - Take meeting - review sprint - start and end sprint 
-Project owner - adding the tickets in backlogs 
+
+Develop the project in few modules and release those modules on production so if change request comes it can be easily tackle 
+
+Scrum master - Take/drive daily stand up meeting - review sprint - start and end sprint 
+Product owner - adding the tickets in backlogs set the priorities of the ticket if any requirement concern for the story then we can ask 
+
+Sprint grooming - It occurs 2 times in a week to grome the backlog tickets, here we can analys the backlog stories and added pointers to those stories
+Sprint planning - Occures on the sprint start day, we took a backlog tickets into sprint, discuss which can be comleted in current sprint and which not & plan accordingly
+Sprint retrospective - Occurs last day of sprint - what could have been better, what went well 
+Sprint review - Last day of sprint where all the skteholders comes and we demos the things that we completed into sprint 
+Daily stand up call 
 
 #44. Things on the test plan - 
 Analysing the products
