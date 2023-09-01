@@ -1,10 +1,18 @@
-INNER JOIN - Only commpon things from both the table will display 
+select * from tablename 
 
-Select * FROM table1 INNER JOIN table2 ON table.ID= table1.ID
+select * from tablename where coulumnname = 'asd'  for string 
+
+select * from tablename where coulumnname= ; for int
+
+select * from tablename where colunmae in ('name1', 'name2', 'name3')  //When multiple data with exact match
+
+select * from tablename where couluname like '%match%'
+
+delete from tablename where coulumnname in ('name1', 'name2', name3)
+
 
 
 LEFT JOIN - All the records from LEFT table will display even they are not common with the another table records 
-
 
 RIGHT JOIN - All the records from RIGHT table will display even they are not common with the another table records 
 
@@ -120,9 +128,6 @@ WHERE Country='Germany' AND (City='Berlin' OR City='München');
 SELECT * FROM Customers
 WHERE NOT Country='Germany';
 
-
-
-#Having - 
 
 
 
