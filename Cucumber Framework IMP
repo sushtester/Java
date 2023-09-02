@@ -1,82 +1,15 @@
 Cucumber Framework
 
-Packages in the cucumber framework - > rest assured, json, Gson, io.cucumber (cucumber-java), (cucumber-testng), testNg, Junit, 
-Apache POI (read and write in excel), commons-io (io operations for the files mainly in the scresnshot)
-
-We are using cucumber framework & rest Assured libraries for our API automation 
-in a cucumber framework we are writting the test cases in the feature file using gherkins langauages commonds such as given, when, then, and 
-& written the back end code/glue code for the same 
-
-For feature file In the srs/main/resources we have created one package for feature 
-then under the feature package we have multiple folder as per the componenet in our application 
-and we  written the feature file under those compoenent folder so each component folder contains multiple feature files which covers all the scenarios
-for that componenet 
-
-In the test/java - We have created one step difination package, and created multiple folders under that as per the componenet, 
-which contains the back end code/glue code as per the features 
-
-also we have created one dto packages under that created different folder as per the component which contains both the request dto and response dto 
-in order to save the test data for request and response
-
-also we have one common package which contains the base class (Which is extendes by all our steps defination class which contains the request specification methods) 
-Scenario Context class 
  
-Scenario Context class - store values between the steps (store the responses from one step so it can be used into next steps)
-
-runner class - TestNG Runner which contains the cucumber options such as plugins, feature file path glue code path, tags 
-
-constants class - url storegard as per the componenet which stores in the property file, so written some methods to get those urls from property file
-
-The feature file contaions multiple postive & negative scenarios in the format of Scenario Outline with multiple set of test data using Example 
-
-Feature - Create feature file using gherkin commands which is in plane english, different feature file created for each component 
- Feature file contain feature name 
- Feature: Test 
- 
- Scenario Outline: Postive Test 
- Given: Precondition with param if required // Paramters in key value format in a pipeline
- |username|password|
- |<uname>|<pwd>|
- When:  
- |id|text|
- |<id>|<text>
- And:
- Then:
- 
- Example:
- |uname|pwd|id|text|
- |sushant.pawar|password1|1105|QA text user|
- |pawar.suyash|password2|1106|QA text user 2|
- |qa.test|password3|1106|QA text user 3|
-
-We are passing test data using scenario outline example using example keyword- which contaions the set of test data which works like a data provider
-
-we have added the tags directly to those example test data so regression tag where we need to test the API using all the example 
-then that example which conation that regression data will have a tag @regression 
-
-for example - If we are checking add user API- 
-
-add user using first name capital 
-add user using last name capital
-add user using upper case first name
-
-so this will be your regression scenarions so we can add those in one example data table with the tag of @regression 
-
-& another example table will be for smoke where we only check 
-add user using valid details 
-
-so for this example data will add tag as Smoke 
-
-and for feature we add tag as feature name where all the feature will add 
 
 
-Steps - Where we  written the actual JAVA code to map with the feature file & those steps written in steps packages under the respective component 
 
 
-steps in FF such as Given When Then converted into methods in the steps defination class 
-Each feature file has two DTO, request dto and response dto so we used to take the data from the feature file and stored accordingly under the dtos
-RequestDTO - To store the input data coming from the feature file 
-ResponseDTO - To store the response data coming from the API response 
+
+
+
+
+
 
 
 we declared the RestAssured.baseuri & RestAssured.basePath at the step class contructer so it will be common for the rest of the enpoints in the class 
@@ -108,21 +41,7 @@ personal{
 response.jsonPath().getString("personal.name.id")
 
 
-#How we take the data from feature file 
-so as I mention we are using scenario outline example keyword in feature file to send the test data using key value list of map 
-In steps defination class we are taking those steps data in the from of List<map<String, String>>dmap 
-Adding those map data in a request dto one by one and storing those request dto object as a list 
-so the first object of request dto in the list contains the first set of data 
-so in the first set of data we are sending firstname, lname, email, id - it will store as first requestDto obj in list of requestDto obj 
-then in second set of data firstname, lname, email, id - it will store as second requestDto obj in list of requestDto obj 
-List<RequestDTO> reqList= new ArrayList<>();
-for(Map<String, String>:dmap)
-  reqList.add(RequestDTO.convertMapDto(map))   //convertMapDto - which set value in the DTO params and return the object of that DTO 
-  //so reqList list will contain the list of object which having multiple set of data 
-  endpoint= if we want to append any param to the endpoint //enpoint string+dto.get(searchCriteria)
-  //DTO has all the request data using getter setter 
-  request = 
- 
+
 #How we construct the request -  
  //Create method for custruct the request which return the requestSpecification in the form of request of Rest Assured and passing dto there 
  request = RestAssured.given();
