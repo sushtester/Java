@@ -1,109 +1,217 @@
 Cucumber Framework
 
+Packages in the cucumber framework - > rest assured, json, Gson, io.cucumber (cucumber-java), (cucumber-testng), testNg, java version 7
+
+We are using cucumber using rest Assured for our API automation (Using Rest Assured libraries)
+in a cucumber framework we are writting the test cases in the feature file using gherkins language commonds such as given, when, then,and 
+& written the back end code/glue code for the same 
+
+so mainly we have 
+#Feature package - Where we have written different features files for different application componenet using Gherkin langauge
+#Step defination package - Where we have written different step defination java class to map the features, which we called as glue code/ backend code 
+#runner package - which contain the different runner java class with cucumber options which is also as per the componenet 
+#suite package - where written testNG xml files as per the component contains the runner class in order to execute a automation for respective componenet 
+#Common utility package - 
+API BASE class - conations some common method such as verifyResponsecode, createToken(client id, client secrets, audience, grant type) & which is extended by 
+all the step defination class also it contains the request specification method as per the authetication method such as API key, Oauth toekn, basic auth, 
+as a parameter to to thet method which return the request 
+Constant class - Java class which contains static methods to read the properties file contstants such as baseURL, base path, cleint id, client secret, apikey 
+so we have created properties files as per the environment dev, stage, prod which contaions all the constants 
+#Dto package - which contains the request dto POJO classes as per the different componenet 
+
+
+In the feature file we are sending the test data in the form of data table (using pipilelin) using scenario outline 
+e.g 
+Scenario Outline: Check the user login functionality
+Given user is on login page 
+When user eneter below login details 
+|usrname|password|
+|<username>|<password>|
+Then user should able to login successfully 
+
+Expmaple:
+|username|password|
+|usenrname1|password1|
+|usenrname2|password2|
+|usenrname3|password3|
+
+we have added the tags directly to those examples test data as we are adding multiple example to one scenario outlineso regression tag where we need to test the API using all the example 
+then that example which conation that regression data will have a tag @regression 
+
+for example - If we are checking add user API- 
+
+add user using first name capital 
+add user using last name capital
+add user using upper case first name
+
+so this will be your regression scenarions so we can add those in one example data table with the tag of @regression 
+
+& another example table will be for smoke where we only check 
+add user using valid details 
+
+so for this example data will add tag as Smoke 
+
+and for feature we add tag as feature name where all the feature will add 
+
+
+
+#How we take the data from feature file - 
+as we are sending the test data from feature file using data table using scenario outline, in the step definatin class 
+we are getting those data in Datatable class of cucumber DataTable table 
+as we are sending the data in the form of key value pair we taken that using datatable.asMaps method 
+List<map<String, String>> list = table.asMaps(String.class, String.class)
+then we add those data into request dto pojo class where we have written variables using getter setter 
+so we are simply adding the input data to that pojo class using set method which retruns the pojo class object 
+
+#How we contruct the request - 
+We created contsraucter of the same step defination class where we are declaring the baseURI and basePath using RestAussred method
+RestAssured.baseURI
+RestAssured.basePath
+which we are getting from the properties file 
+
+Then we are calling cuntsrauctrequest method which written into base class and passing the paramter as per the request such as 
+authetication, token which return the request of restassured 
+
+then appending method post/get, paramter if any to the request and storing the response in Response class object of RestAssured 
+
+
+#How you are hitting post method using dto serialisation - 
+in the post method we sends the request dto pojo class object into request body before that we usaualy convert the dto into Json file 
+using Gsonbuilder 
+String payload = new Gsonbuilder().create().toJson(dtoclassobject)
+then we pass the payload to body
+
+
+#How you are validating the response deserialsation - 
+a. Using RestAssured response.jsonPath().getString() or getList() method where we need to pass the path till the element as we are stroing the response into
+RestAssured Response class object response & then assert that value with request dto variable 
+
+b. Using JSON libraries as well we can find the element 
+JsonObject jsobj= new JsonObject (res.asString()); res.asString() is a method of RestAssured 
+JsonArray jsarry= jsobj.getJasonArray("data");
+
+for(int i=0; i<jsarry.length; j++)
+ JsonObject jsobj2 = jsarry.getJsonObject(i)
+ jsobj2.getString();
+
+
+#How to add parameters - 
+.queryParam("paramname", value)  ?paramname=value
+.pathParam("paramname", value) /value
+.Param(""paramname, value) /paramname=value
+
+also if we want to set a multiple param then we can use map 
+Map <String, String> map = new HashMap<String, String>;
+map.put("username", "sushant");
+map.put("password", "pawar");
+.param(map)
+
+
+#How construct token method in API base class - 
+In the step defination class we are creating a counntructer of the same class and declaring the baseURI and basePath using
+RestAssured.baseURI- 
+RestAssured.basePath - 
  
+then in the step method we are calling contsraucrrequest method with param such as auth type, token, accep type
+RestAssured.given().header("accept", "").header("Authorization", token) or auth().Oauth(token)
+so it returns the RequestSpcification request object and then we are apeending other details such as .param.contentType 
+then in step request.param().when().post(payload).then().extract().response();
 
 
+#How you execute the on locally - 
 
-
-
-
-
-
-
-
+#How you execute using ADO - 
+ 
 
 we declared the RestAssured.baseuri & RestAssured.basePath at the step class contructer so it will be common for the rest of the enpoints in the class 
 
         RestAssured.baseURI = getProperty(Constants.AIM_API_BASEURL);
         RestAssured.basePath = getProperty(Constants.SERVICE_EP);
 		
-then we construct the request using request specification method which is written in the base class & which returns the RequestSpecification class object request
-we have written couple of methods under base class for the requestspecification as per the authetication such as basic auth, Oauth, apikey 
-we are simply calling those methods using respective parameters and it will return the request with those header details and authentication
-
-after that we write the method .post(body) or get() and extact the respose using .extract().respose() then response in  List<Response> to take 
-the response for the each scenario
-
-then we add those responses in scenario context class using hashMap <key value> key is enpoint name and value is response, so we can use those for validation later
-
-then in another steps where we are taking all exected test data as a requestdto and then check those data in the response one by one using 
-
-we extract those response usig response.jsonPath().getString("object path") 
-					String firstName = response.jsonPath().getString("[0].firstName");
-					Assert.assertEquals(firstName, dto.getUserFirstName(), "Incorrect FirstName");
-if the attirbute in json under the two json object 
-personal{
-  name{
-      id=10;   
-  }
-}					
-
-response.jsonPath().getString("personal.name.id")
-
-
-
-#How we construct the request -  
- //Create method for custruct the request which return the requestSpecification in the form of request of Rest Assured and passing dto there 
- request = RestAssured.given();
- then adding header such as Accepet, contentType 
- request.header("Accept", dto.getAccept().trim());
- request.header("Content-Type", "application/json");
- request.header("Accept", "application/vnd.nuance.powershare.study.job.v1+json");
-
-
-
-List<Responses>response= new ArrayList<>(); 
-then hit the request coming from request specification 
-Response response= request.when().log().all().get(endpoint);;
-response.add(response);
-
-for(int i = 0; i < responses.size(); i++)
- responses.get(i).statusCode()  //first response
- Assert- dto.getStatusCode.responses.get(i).statusCode()
-  //we get the element from Json either using
-  JSONObject jobj= new JSONObject (res.getBody().asString())
-  JSONArray jArry= jobj.getJSONArray("data");
-  for(i=0; i<jArry.length; i++)
-   JSONObject name = jArry.getJSONObject(i)
-   String firstName = name.getString(); 
-                 OR
-	response.jsonpath().getString(.data[0].firstname)		         
-
-For validate step - take the data from the feature file and add that in Response DTO in same way 
-
-#Paramters - 
-if the request needs a query parameter then we add that using request.queryparam(attribute, value) ? 
-pathParam - request.queryparam(attribute, value) /
-param - request.param (attribute, value) =
-
-
 #Execution - 
-
 
 Runner TestNg Runner - 
 CucumberOption - plugig (json report, cucumber report, html report), glue(step defination package path), feature (feature file pckg path) tags(), dryRun, 
 
 
-#How to add Query parameter - 
- request.queryParam("cars")
+###JSON Paseser Deserialsation - 
+{
+ data:[{}
+ ]
+ [{}]
+ [{}]
+ name:"suahant"
+
+}
+
+JsonObject jsobj= new JsonObject(res.asString());
+JsonArray jsArry = jsobj.getJsonArray("data");
+for(int i=0; i<jsArry.length; i++)
+ JsonObject jsobj2= jsArry.getJsonObject(i)
  
-#How to add Post method with Body  - 
- -When simple body is there with some object - 
- JSONObject updateJobStatusRequest = new JSONObject();
- updateJobStatusRequest.put("jobStatus", "Ready");
- request.body(updateJobStatusRequest.toString());
  
-- When want to send the Json file then we can use the String which can generate by converting the Json file into String 
-  payLoad = JsonUtility.jsonFileReader(fileName);  // We are converting the Joson File into the string to accpet in the body 
-  request.body(payLoad);
-  Response response = request.when().log().all().post(endpoint);
- 
- JSON Parser example - 
-{data[{}, {}, {}], count[{}, {}, {}]}
-JSONObject jobj= new JSONObject (res.getBody().asString())
-JSONArray jArry= jobj.getJSONArray("data");
-for(i=0; i<jArry.length; i++)
- JSONObject name = jArry.getJSONObject(i)
- String firstName = name.getString();
- 
-response.jsonpath().getString(".data[0].firstname") 
+res.JsonPath().getString("data[0].name");
+
+#1. Array contains mupltiple objects as a records 
+[ {name: rahul, id=1}
+  {name: ketan, id=2}
+  {name: sushant, id=3}
+  {name: kishor, id=4}
+] 
+
+List<String> str= res.jsonPath().getList("name");
+str.get(0); 
+
+#2. { items: [{name: sushant, id:1} ]
+  [{name: ketan, id:2}]
+  [{name: kishor, id:3}]
+  [{name: rahul, id:4}]
+}
+String str= res.jsonPath().getSrting(item[0].name);
+
+#3. { data: [{name: ketan, id:2}, 
+{name: ketan, id:2}, 
+{name: ketan, id:2}]
+}
+List<String> str = res.jsonPath().getList(data[0].name);
+str.get(0);
+
+# size of the array 
+int size= res.jsonPath().getInt("data.size()");
+
+
+res.jsonPath().getList(address.street); //if multiple objects of address
+
+
+
+Last read items - 
+
+
+For feature file In the srs/main/resources we have created one package for feature 
+then under the feature package we have multiple folder as per the componenet in our application 
+and we  written the feature file under those compoenent folder so each component folder contains multiple feature files which covers all the scenarios
+for that componenet 
+EG. fetuare pckage/ user component - all the featuere files such as add user, delete user, update user which covers the testing of user coponenet 
+
+In the test/java - We have created one step difination package, and created multiple folders under that as per the componenet, 
+which contains the back end code/glue code as per the features 
+
+also we have created one dto packages under that created different folder as per the component which contains both the request dto and response dto 
+in order to save the test data for request and response
+
+also we have one common package which contains the base class (Which is extendes by all our steps defination class which contains the request specification methods) 
+
+runner package which contain the different runner java class as per the component -  TestNG Runner which contains the cucumber options such as plugins, feature file path glue code path, tags 
+
+
+The feature file contaions multiple postive & negative scenarios in the format of Scenario Outline with multiple set of test data using Example 
+
+Feature - Create feature file using gherkin commands which is in plane english, different feature file created for each component 
+ Feature file contain feature name 
+ Feature: Test 
+
+#under common hooks - scenario class of cucumber which take the scenario name 
+@before (order=0)
+syso("starting the scenarion execution " scenario.getname())
+@after (order=0)
+syso("End the scenarion execution for" scenario.getname())
