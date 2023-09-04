@@ -1402,3 +1402,11 @@ Latest version of Selenium - 4
 client (Selenium libraries) and server (browsers drivers)
 #2. Selenium 3 chrome driver class is extendes with Remote Driver class & in Selenium 4 Chrome driver class is extended with chromium driver 
 #3. Few methods which are newaly added to the Actions class such as .contextClick(element).perform(); .doubleClick(element).perform(), .clickAndHold(element).perform()
+
+Maven build Plugins - 
+We norammly use maven plugins such as - 
+a. maven compiler plugin - where we add maven compiler plugin along with java version 
+b. maven surefire plugin - where we add system varible value env param on which we want to execute the scripts & 
+it also contains suitexmlfile name 
+maven surefire plugin use - when test case is failed then it failed the build 
+mvn clean install -P envname -Dsurefire suiteXmlFiles = "" --tags @
