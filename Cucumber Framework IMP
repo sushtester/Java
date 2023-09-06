@@ -1,6 +1,7 @@
 Cucumber Framework
 
-Packages in the cucumber framework - > rest assured, json, Gson, io.cucumber (cucumber-java), (cucumber-testng), testNg, java version 7
+Packages in the cucumber framework - > rest assured, json, Gson, io.cucumber (cucumber-java), (cucumber-testng), testNg, java version 7, 
+log4j (display the logs we used Logger method of log4j) - Logger.info, logger.error
 
 We are using cucumber using rest Assured for our API automation (Using Rest Assured libraries)
 in a cucumber framework we are writting the test cases in the feature file using gherkins language commonds such as given, when, then,and 
@@ -118,21 +119,32 @@ so it returns the RequestSpcification request object and then we are apeending o
 then in step request.param().when().post(payload).then().extract().response();
 
 
+
 #How you execute the on locally - 
+using cmd - mvn clean install -Penvname -DSureFire.suiteXmlFile= "" --tags@
 
 #How you execute using ADO - 
- 
 
-we declared the RestAssured.baseuri & RestAssured.basePath at the step class contructer so it will be common for the rest of the enpoints in the class 
-
-        RestAssured.baseURI = getProperty(Constants.AIM_API_BASEURL);
-        RestAssured.basePath = getProperty(Constants.SERVICE_EP);
-		
-#Execution - 
 
 Runner TestNg Runner - 
-CucumberOption - plugig (json report, cucumber report, html report), glue(step defination package path), feature (feature file pckg path) tags(), dryRun, 
+CucumberOption - plugig= (json report for cucumber, html report), glue=(step defination package path), feature =(feature file pckg path) tags(), dryRun, monochrome = true, 
+strict= true (strict is true then while execution if one of the step is missing then it will add that as a build failure)
 
+json report cucumber - We are using masterthought plugin  
+
+@CucumberOptions(monochrome = true, strict = true,
+    plugin = { "pretty", "html:target/report", "json:target/apitxnmgr-cucumber-report.json" }, dryRun = false,
+    glue = { "com.nuance.aim.api.automation.tests.stepdefs.servicemanager",
+        "com.nuance.aim.api.automation.tests.stepdefs.transactionmanager",
+        "com.nuance.aim.api.automation.tests.stepdefs.dispatcher" },
+    tags = { "@regression , @smoke" },
+    features = { "src/main/automation/features/aimapi/transaction/transactionapi.feature",
+        "src/main/automation/features/aimapi/transaction/resultapi.feature",
+
+TestNgRunner class extends with AbtsractTestNgCucumberTest class 
+
+We have created multiple runner class as per the componenet and adding resptive features path into feature option 
+also created multiple xml file which calling the runner class of componenent 
 
 ###JSON Paseser Deserialsation - 
 {
