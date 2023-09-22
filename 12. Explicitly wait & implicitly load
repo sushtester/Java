@@ -21,6 +21,7 @@ wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body/div[1]
 wait.until(ExpectedConditions.elementToBeClickable(By.Xapth("")));
 wait.until(ExpectedConditions.alertIsPresent())
 
+Note - Default polling time for explicit wait is 500 mileseconds ie 0.5 seconds
 
 # Fluent Wait - It also tells web driver to wait for a maximum time before throwing execpetion just need to provide frequency to check the element visibility time interval
 Lets consider we provide max timeout of 30 seconds, then if we provide frequency time or we can say pollingevery time as 5 seconds
