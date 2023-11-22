@@ -27,7 +27,7 @@ browser class where we are intialising the browser, created method as per the br
 also wedriver initalistion in browser class also some method such as find element, fluentwaits method such as wait for element till presense, till clickable
 till selecteble
 
-Page utility package -  
+Page utility package which is a abtsract class which contaions some common menthods on all the pages -  
 Written some common method of the page such as clicking on sign out link which is common for all the page 
 footer link click methods 
 navigate from one page to another page 
@@ -59,6 +59,8 @@ and then @test method get executes where we are testing the functionality after 
 
 we are using multilevel inheritance 
 Test class extends suite set up class (@beforetest) & suitesetup class extends base class (@before suite method)
+
+Page class (web element) is extended by page utility abtsract class (common methods for the pages) which extend by browser class (findByElement, click) 
 
 Questions - 
 #1. How you storing the web elements in the page class - 
