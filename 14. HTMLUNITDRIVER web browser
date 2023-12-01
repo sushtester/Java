@@ -1,11 +1,11 @@
-No browser using 
-Headless browsern or we can called Ghost browser
-HTML unit driver did in background, there is no browser 
+Headless browser - the actual browser UI is not get loaded here, so normally in browser GUI thing such as html, css, javsscript 
+get time to render and because of this scripts takes time to execution
 
-WebDriver driver= new HtmlUnitBrowser();
+but for headless browser such GUI thing not comes into picture so time for execution get reduced 
 
-We need to download the htmlunit browser.jar file and need to add that in the project 
-Project - Build path - download the jar 
-
-
-html unit brower is not suitable such as mouse movenets, or double click or drag and drop, this can't do with htm unit drowser
+Chrome - 
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless");
+or 
+options.setHeadless(true);
+WebDriver driver = new ChromeDriver();
