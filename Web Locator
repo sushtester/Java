@@ -98,8 +98,8 @@ It’s compatible to the most of the browser
 #Dynamic Web Locator - 
 
 For grid - we have td and tr 
-td- row
-tr- column 
+tr- row
+td- column 
 
 <tr>
   <td>
