@@ -1409,4 +1409,17 @@ a. maven compiler plugin - where we add maven compiler plugin along with java ve
 b. maven surefire plugin - where we add system varible value env param on which we want to execute the scripts & 
 it also contains suitexmlfile name 
 maven surefire plugin use - when test case is failed then it failed the build 
-mvn clean install -P envname -Dsurefire suiteXmlFiles = "" --tags @
+mvn clean install -P envname -Dsurefire suiteXmlFiles = "" -Doptions tags @
+
+mvn clean - clean the project, remove all the file generated in previous build 
+
+mvn clean install - install the packages/jar files to the local repository 
+
+mvn test - Run the test files -Dtest - test file name 
+
+ 
+We are using maven surefire plugin where we are passing the testNG.xml file 
+mvn clean install -p envname -Dsurefire suiteXmlfile = “” 
+
+
+Cucumber version - 7.14 
