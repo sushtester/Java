@@ -1423,3 +1423,26 @@ mvn clean install -p envname -Dsurefire suiteXmlfile = “”
 
 
 Cucumber version - 7.14 
+
+
+#driver.close - This close the current window 
+
+#driver.quite - This is to quite the driver, closes all the windows open 
+
+#String and StringBuffer difference -
+String is immutable - If we update the string, it’s created new memory address 
+String buffer is mutable - When update it’s append the string, same memory address 
+String stored into String constant pool 
+String buffer object stored into the heap memory 
+
+#Multiple Exception using pipeline - We can handle the multiple exception using the pipeline structure in single catch block 
+
+catch(NullPointerException | ArrayIndexOutOfBondException | TimeOutException | e)
+
+#Iterator  and ListIterator -
+Iterator can go in forward direction - it.hasNext(); it.next();
+ListIterator can go backward direction - it.hasPrevious(); it.previous();
+
+#How to convert the array into list - 
+List<String> list = Arrays.asList(array) - 
+
