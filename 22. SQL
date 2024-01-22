@@ -128,18 +128,40 @@ WHERE Country='Germany' AND (City='Berlin' OR City='München');
 SELECT * FROM Customers
 WHERE NOT Country='Germany';
 
+#Primary Key and Foreign Key - 
+A primary key is a unique identifier for all the records in the table 
+One table contains only one primary key and which is not duplicate and not null 
+A primary key of table can be a foreign key for another table 
+A foreign key can be null 
+Primary key and foreign key is used to show the relation between the two tables 
+
+E.g. Student table - I[/d is a primary key 
+Course table - id is a foreign key 
+
+So we can get the details using inner joins like - 
+Select Student.name, Course.name from Student INNER JOIN Courses ON Student.Id= Courses.Id; 
+
+#Truncate - truncate to delete all records from the table, a table will be as it - Truncate table tablename
+
+#Drop - Drop table table name - to delete the whole table 
+
+#Delete - To delete the particular records from the table, Delete column from table where id=2;
+
+#Find the duplicate countries of the countries in the countries table - So for duplicate, we always use group by having 
+
+Select country from countries group by country having count (country)>1
 
 
 
-#Mongo DB is a collections - 
+#Mongo DB is a collection - 
 //User.find_by(tracking_id: '')
 
 //User.where(email: 'alohaqa1105@gmail.com').first 
 
 Shipment.find_by(tracking_id: '')
 
-User.where(emaild: '').first
-user.delete
+User. where(emaild: '').first
+user. delete
 
 
 
