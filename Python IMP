@@ -95,3 +95,208 @@ class ArrayLearn:
     del array[1]
     print(array)
 
+pop()- 
+class ArrayLearn:
+    array=[10, 30, 40, 20, 50]
+    print(len (array))
+    array=array+[70, 80, 90, 90]
+    print(array)
+    
+    array.pop(0)
+    
+    print(array)
+
+array[-1] means the last element of the array, we can replace that - 
+array[-1]= 40  // it will replace the last element 
+
+#File methods in the python - 
+
+close - 
+
+detach - 
+
+fileno - 
+
+flush - 
+
+isatty - 
+
+read(n)- 
+
+readable - 
+
+
+#For loop in Python - 
+in range for numbers- 
+class ArrayLearn:
+    def nameForLoopExample(self):
+        for i in range (1, 10):
+            if(i==8):
+                print(i)
+                break
+            
+obj= ArrayLearn()
+obj.nameForLoopExample()
+
+in string name or in array can use for string for loop - 
+
+class ArrayLearn:
+    
+    def nameForLoopExample(self):
+        name="sushant"
+        for i in name:
+            if(i=="h"):
+                print(i)
+                break
+            
+obj= ArrayLearn()
+obj.nameForLoopExample()
+
+class ArrayLearn:
+    
+    def nameForLoopExample(self):
+        nameArray= ["sushant", "pawar", "tambave", "karad"]
+        for i in nameArray:
+            print(i)
+            for n in i:
+                print(n)
+            
+                
+obj= ArrayLearn()
+obj.nameForLoopExample()
+
+#Python keywords and identifiers - 
+keywords are case-sensitive in the python 
+
+True and false - 
+
+None - kind of null 
+
+assert 
+
+break 
+
+continue 
+
+if, elif, else
+
+try, raise, catch, finally
+
+global variable - using keyword global - 
+
+in - used for the condition 
+
+lambda - 
+
+nonlocal 
+
+pass 
+
+return 
+
+while 
+
+with 
+
+with open - 
+
+yield - 
+
+
+#Deleting the variable from the computer memory - 
+a=10
+del a
+print(a)  // error 
+
+
+#Python Touples - 
+Tuple - Touples elements immutable - can not be updated 
+
+List - List elements are mutable
+
+Tuple are immutable so iterating  on Tuple is faster so we can say Tuple is faster than the list 
+
+Touples we can use the multiple data type elements mixed - mixed datatype (heterogeneous) list are homogeneous 
+
+Touples - we can not change the elements under Tuple 
+
+print tuple - 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    print(tupleArray)
+
+contact tuple - 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    tupleAyyar2=tupleArray+(30, "Kishor", 40, "Patil")
+    print(tupleAyyar2)
+
+Tuple unpacking - Assigning value to the tuple 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    id, name, password, address= tupleArray
+    print(name)
+
+Accecing elements in tuple - 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    print(tupleArray[0])
+
+slicing tuple - We can do that for the array as well in Python 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    print(tupleArray[0:3])
+
+tuple count - to find the count of the element in tuple
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar", 10)
+    print(tupleArray.count(10))
+
+tuple index -
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar", 10)
+    print(tupleArray.index("sushant"))
+
+len - find the length of the tuple 
+class MyTest:
+    tupleMy=(10, "sushant", "pawar", "sushantp@gmail.com", 9503967719)
+    print(len(tupleMy))
+
+in 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar", 10)
+    print("sushant" in tupleArray)  // it will return True
+
+not in 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar", 10) // It will return false
+    print("sushant" not in tupleArray)
+
+max 
+class MyTest:
+    tupleMy=(10, 20, 50, 5)
+    print(max(tupleMy))
+
+min 
+class MyTest:
+    tupleMy=(10, 20, 50, 5)
+    print(min(tupleMy))
+
+sorted 
+class MyTest:
+    tupleMy=(10, 20, 50, 5)
+    print(sorted(tupleMy))
+
+delete - 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    del tupleArray
+
+len 
+class MyTest:
+    tupleArray=(10, "sushant", 20, "pawar")
+    print(len(tupleArray))
+
+nested tuple - 
+
+
