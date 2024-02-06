@@ -1,0 +1,97 @@
+print("Hello world")
+a=100
+b=300
+print("sum of two numbers")
+
+.py is a extension for python source file 
+
+##Create an object of the class to call the varibale of the class - 
+
+class myname:
+    a=100
+    b="sushant"
+
+        
+obj=myname()
+print(obj.b)
+
+
+
+#Class and function call using object and paramters - 
+
+class myname:
+    a=100
+    b="sushant"
+    def firstMethod(self):
+      print("This is the output", self.b, "My name is sushant")
+        
+obj=myname()
+obj.b="pravin"
+obj.firstMethod()
+
+obj1=myname()
+obj1.firstMethod()
+
+
+#Constructer in the Python - __init__
+class Person:
+    def __init__(self,a,b):
+        #self.a=a;
+        #self.b=b;
+        print("This is my first constructer", a, b)
+        
+obj=Person(1,2)
+obj1=Person(5,9)
+
+class Person:
+    def __init__(self,a,b):
+        self.a=a;
+        self.b=b;
+        #c=a+b
+        print("This is my first constructer", a, b)
+    
+    def myMethod(self):
+        print("First number is", self.a, "Second is", self.b)
+        
+obj=Person(1,2)
+obj.myMethod()
+
+
+
+#Array in the Python - 
+
+Declaring an array - 
+arr=[10, 20, 70, 40, 50]
+
+print(arr[0])
+
+find the length of the array - 
+class ArrayLearn:
+    array=[10, 30, 40, 20, 50]
+    print(len (array))
+
+Adding element into array - 
+append - 
+class ArrayLearn:
+    array=[10, 30, 40, 20, 50]
+    print(len (array))
+    array.append(70)
+    print(array)
+
+concat - 
+class ArrayLearn:
+    array=[10, 30, 40, 20, 50]
+    print(len (array))
+    array=array+[70, 80, 90, 90]
+    print(array)
+
+Removing element from array - 
+class ArrayLearn:
+    array=[10, 30, 40, 20, 50]
+    print(array)
+    print(array[0])
+    array.remove(40);
+    print(array)
+    del array[1]
+    print(array)
+
