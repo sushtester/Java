@@ -567,10 +567,37 @@ so we can update the global varibale value in local method by intialsing it as a
 #Python iterator - 
 iter()
 
+class FirstClass:
+    iterator={1,2,3,4,5}
+    it = iter(iterator)
+    print(next(it))
+    print(next(it))
+
 
 #Python Inheritance - 
 class child(superclass name)
 python supports the multiple inheritance 
+
+class FirstProgram:
+    def __init__(self, name):
+        self.name=name
+        print(f"This is first program name {self.name}")
+    def normalMyMethod(self):
+        print(f"This is first program name {self.name}")
+        
+class SecondProgram(FirstProgram):
+    def normalMethod(self, name, id):
+        self.name=name
+        self.id=id
+        print(f"This is first program id {self.id}")
+        
+e= SecondProgram("Pawar") 
+e.normalMyMethod()
+e.normalMethod("sushant", 1105)
+e.normalMyMethod()
+
+Note - Once assinged the value to the self from child it will apply for the parent as well 
+In case of multiple inheritance it will always call the method of first class which inherits in terms of same methods 
 
 
 #Pythong arguments - 
@@ -610,4 +637,45 @@ class MyTest:
 obj=MyTest()
 print("The sum is", obj.function_with_arg(1,2,3,4))
 
+#Python continue statment for loop - 
+if we want to display the value only on a specific condition that time we can use the continue 
+so once we use the continue in the for loop it will not execute further code in for loop it will go and increate the value of i and again check the condition 
 
+e.g to display even number from 1 to 20 
+class FirstClass:
+    for i in range(1, 20):
+        if(i%2!=0):
+            continue
+        print(i)
+
+
+#Python errors and Exceptions - 
+class FirstClass:
+    try:
+        a=10
+        b=0
+        c=a/b
+
+    except ZeroDivisionError:
+        print("error")
+            
+    except TypeError:
+        print("Typeerror")
+
+    except:
+        print("Default Exceptions")
+
+raise is used to throgh an exception if condition not maches 
+
+class FirstClass:
+    try:
+      raise ZeroDivisionError
+
+    except ZeroDivisionError:
+        print("error")
+            
+    except TypeError:
+        print("Typeerror")
+    
+    finally:
+        print("Default message even after the exceptions")
