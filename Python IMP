@@ -297,6 +297,257 @@ class MyTest:
     tupleArray=(10, "sushant", 20, "pawar")
     print(len(tupleArray))
 
-nested tuple - 
+nested tuple - We can declare the tuple inside the tuple elements and get the elements 
+class MyTest:
+    tupleMy=(10, (20, 30, 40), ("sushant", "pawar"), 5)
+    print(tupleMy[2][0])   // it will display the sushant 
+
+
+#Python Sets - 
+set are mutable so we can remove and add element into set under python, it's unordered and non duplicate element 
+set can't be access using index set[0] //not allowed 
+
+set declaration - set declared in the {} bracket 
+class MyTest:
+    set1={10, 20, 20, 60, 30, 80, 60, 40}
+    print(set1)
+
+set add value - .add()
+class MyTest:
+    set1={10, 20, 20, 60, 30, 80, 60, 40}
+    print(set1)
+    set1.add(100)
+    print(set1)
+
+set add multiple values - set1.update([100, 200])
+class MyTest:
+    set1={10, 20, 20, 60, 30, 80, 60, 40}
+    print(set1)
+    set1.update([100, 200])
+    print(set1)
+
+set remove - if we want to remove an element, need to pass the element  - set.remove(element) 
+
+set discard - if we want to remove an element, need to pass the element set.discard(element)
+
+Note: remove and discard is same only difference is using discard even if we entered the wrong element it will not through any error
+
+set.clear () // to clear the set 
+
+set union - 
+class MyTest:
+    set1={10, 20, 30, 40, 50}
+    set2={40, 50, 60, 70, 80}
+    
+    print(set1 | set2) # all nonduplicate from both the sets 
+    print(set1.union(set2)) # all nonduplicate from both the sets 
+
+set intersection - 
+class MyTest:
+    set1={10, 20, 30, 40, 50}
+    set2={40, 50, 60, 70, 80}
+    
+    print(set1 & set2) # common nonduplicate from both the sets 
+    print(set1.intersection(set2)) # common nonduplicate from both the sets 
+
+Set difference - 
+class MyTest:
+    set1={20, 30, 50, 50, 40}
+    set2= {40, 50, 60, 70, 80}
+    print(set1-set2) #The element which are in set1 and not in set2
+    print(set1.difference(set2))
+
+Set symetric_difference - 
+class MyTest:
+    set1={20, 30, 50, 50, 40}
+    set2= {40, 50, 60, 70, 80}
+    print(set1.symmetric_difference(set2)) # Non common element in set1 and set2
+
+Convert the list to set - 
+class MyTest:
+    array=[20, 30, 50, 50, 40]
+    set1=set(array)
+    print(set1)
+
+Convert the set to a list - 
+class MyTest:
+    set={20, 30, 50, 50, 40}
+    array1=list(set)
+    print(array1)
+
+min, max, sorted operations will be as it is 
+class MyTest:
+    set={20, 30, 50, 50, 40}
+    print(max(set))
+    print(min(set))
+    print(sorted(set))
+
+
+#Python directory for file management - 
+import os   //This is to play with the folder structure, change dir, create dir
+
+os.mkdir('Test')  // to create Test folder 
+
+print(os.getcwd) // to get the current working dir name 
+
+print(os.listdir) // to get the list of dir in the cwd 
+
+os.chdir('C/data/sushant') // to change the dir
+
+os.rename('Test', 'new data')  // to update the name of the directory 
+
+os.remove('new data.text') // to remove the file 
+
+os.rmdir // to remove the dir 
+
+
+#Python dictionary (Same as a HashMap in Java) key-value pair elements are stored in the dictionary - 
+Declaration - using {} bracket we can declare the dictionary 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    print(oneDict)
+
+print the elements - 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    print(oneDict)
+    print(oneDict["MH50"])
+
+We can get the element using get as well 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    print(oneDict.get("MH18"))
+
+Adding new value - 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    print(oneDict)
+    oneDict["MH13"]= "Solapur"  // It will add a new key value pair of Solapur
+    print(oneDict)
+
+Updating value - 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    oneDict["MH01"]= "Dadar"
+    print(oneDict)
+
+removing value - 
+class LearnDictioanry:
+    Using del
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    del oneDict["MH11"]
+    print(oneDict)
+
+Using pop - 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    oneDict.pop("MH11")
+    print(oneDict)
+
+Print(key in dic)   
+print (key not in dic)   // This will return the True and False it will check for the key present or not 
+
+## Iterating through the directory - 
+Using for loop display all the key value of the dictionary - 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    print(oneDict)
+  
+    for i in oneDict:
+        print(i)    // Print all the keys
+
+Using for loop displays all the values in the dictionary - 
+class LearnDictioanry:
+    oneDict={"MH11":"Satara","MH50":"Karad","MH12":"Pune","MH01":"Mumbai"}
+    print(oneDict)
+  
+    for i in oneDict:
+        print(oneDict[i])   // Print all the values 
+
+Len - 
+print(len(oneDict))  // To find the length of the dict
+
+Sorted - 
+print(sorted(oneDict)   // To sort the dict it sorts only the keys
+
+##Python Strings - 
+String is immutable 
+String indexing - 
+class LearnDictioanry:
+    myName="sushant"
+    print(myName[0])  // It will print the s 
+    print(myName[0:3]) // It will print the sus
+    
+String concatenation - // Using + operator 
+class LearnDictioanry:
+    myName="sushant"
+    myName2= "Pawar"
+    print(myName+" "+myName2)
+
+Using * operator we can multiply the string 
+class LearnDictioanry:
+    myName="sushant"
+    print(myName * 3)  // 3 times Sushant it will print 
+
+We can use in, non in to verify the character/String in the given string, it will return the True or False - 
+class LearnDictioanry:
+    myName="sushant@gmail.com"
+    print("@gmail" in myName) // It will return the True 
+
+Index of the character/String in the String - 
+name= "sushant@gmail.com"
+print(name.index('@'))  // It will return the index of @
+
+Iterating on String using for loop - 
+class LearnDictioanry:
+    myName="sushant@gmail.com"
+    
+    for i in myName:
+        if(i=='@'):
+            print("Gmail is there in name", myName.index('@'))
+            break
+
+
+.format in the String - 
+class LearnDictioanry:
+    print("{} {} {}".format('Today is', 'My', "Birthday"))  // We can pass the value in bracket using .format 
+
+
+String methods - 
+name.replace() // print(name.replace("pawar", "Shinde"))
+name.upper() //print(name.upper())
+name.lower() //print(name.lower())
+name.find() // print(name.find("pawar")) // It will find the indexing of pawar like .index
+
+We can convert the string into int - 
+Type casting - 
+class LearnDictioanry:
+    name="432"
+    no=123
+    noConvert=int (name)  // Converting the string into number
+    print(noConvert+no)
+
+type function used to check the data type of the varibale 
+class LearnDictioanry:
+    name="432"
+    no=123
+    print(type(name)) //<class 'str'>
+    print(type(no))  //<class 'str'>
+
+
+#Complex class in python - 
+no= 50+6j
+
+isinstance 
+
+name= "sushant"
+print(isinstance(name, string)) // It will return the True 
+print(isinstance(name, int)) // It will return the False
+
+Note - There is some methods to create random numbers string in the python using random method just need to import the random libraries 
+
+
+
+
 
 
