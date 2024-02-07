@@ -547,7 +547,67 @@ print(isinstance(name, int)) // It will return the False
 Note - There is some methods to create random numbers string in the python using random method just need to import the random libraries 
 
 
+#Global, local & nonlocal variable - 
+
+class LearnDictioanry:
+ x=5
+    
+def myFunc():
+    global x
+    x=10
+    print(x)
+    
+        
+myFunc()
+print(x)   // It will print the 10 as we decare the varibale as global in local method 
+
+so we can update the global varibale value in local method by intialsing it as a global in the local method 
 
 
+#Python iterator - 
+iter()
+
+
+#Python Inheritance - 
+class child(superclass name)
+python supports the multiple inheritance 
+
+
+#Pythong arguments - 
+Note - When calling the method by create object then method need a self attribute as well 
+
+class MyTest:
+    
+    def function_with_arg(self, a, b):
+        if a > b:
+            return a
+
+obj= MyTest()
+print(obj.function_with_arg(50, 30))
+
+We can direct decare the paramater to the function like below - 
+class MyTest:
+    
+    def function_with_arg(self, a=60, b=20):
+        if a > b:
+            return a
+
+obj= MyTest()
+result= obj.function_with_arg()   //No need to pass the arg here as we directly passed those into method 
+print(result)
+
+
+Multiple arguments - Addition of multiple numbers using *args in the parameter 
+
+class MyTest:
+    
+    def function_with_arg(self, *args):
+        sum=0;
+        for i in args:
+            sum = sum+i
+        return sum    
+
+obj=MyTest()
+print("The sum is", obj.function_with_arg(1,2,3,4))
 
 
