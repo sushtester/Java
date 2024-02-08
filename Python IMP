@@ -57,6 +57,9 @@ obj=Person(1,2)
 obj.myMethod()
 
 
+##Python without self param - 
+we can use a static method for which we don't need to add self-arguments and it can be accessed using the class name as well 
+
 
 #Array in the Python - 
 
