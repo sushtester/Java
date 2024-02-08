@@ -820,4 +820,33 @@ class FirstClass:
     
     print(nameFinal)
 
-4. 
+
+## List comprehension - 
+list = []
+ for i in "sushant":
+list.append(i)
+
+
+#Python recursion - 
+
+#Python file read and write operations - 
+
+Open file 
+
+Read and write file 
+
+close file 
+
+#Python create a new list from existing list - 
+if we do using = 
+list1=[1, 2, 3]
+list2=list1  
+
+and if we add a new element in list1 it will automatically get added into the list2 as well 
+
+so to avid it we can import the copy library import copy 
+
+list2= copy.deepcopy(list1)
+
+
+
