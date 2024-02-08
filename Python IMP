@@ -679,3 +679,145 @@ class FirstClass:
     
     finally:
         print("Default message even after the exceptions")
+
+##Python oops concepts - 
+Inheritance 
+Encapsulation 
+Polymorphism 
+
+
+##Nested dictinory - 
+
+1. for dictionary we can use the items() method to display the keys and values 
+items is a list of all the keys and values in the dictonary 
+dict.items()
+normalDic= {1: "sushant", 2: "sudhir", 3: "pawar"}
+
+ for i, j in normalDic.items():
+        print (j)   // it will print all the values 
+        print (i)  // it will print all the keys 
+
+2. For nested dic if we want to take the first keys first values - 
+
+nestedDic= {1:{"name":"sushant", "ID": "1105", "Address":"Pune"}, 2:{"name":"kishor", "ID": "110", "Address":"Karad"}} 
+    print("Items from nested disc: ", nestedDic.items())
+    
+    for i in nestedDic:
+        print(nestedDic[i]["name"]) #When want to print the all names in nested dictnory 
+
+3.  nestedDic= {1:{"name":"sushant", "ID": "1105", "Address":"Pune"}, 2:{"name":"kishor", "ID": "110", "Address":"Karad"}} 
+    print("Items from nested disc: ", nestedDic.items())
+    
+    for i, j in nestedDic.items():  // i is a key, j is a value which is again a dic
+        print(i)                    // print the keys
+        for k in j:                 // inner for loop on values which is dic 
+            print(j[k])             // Printing values in nested dic 
+
+
+## Multilines comments in Python - 
+''' this is comments in python for comments ''' or """ this is comments in python for comments  """
+
+#Doc string - 
+doc for Python used to add describe methods like a Java doc
+
+
+
+##Python Generator - simplicity than an iterator, we can use the generator instead of an iterator 
+it returns the iterator objects 
+A generator is kind of a return type it stores the value 
+and using for loop we can access those values - 
+
+class FirstClass:
+    
+    def myFunGenerator():
+        n=1
+        yield n
+        
+        n=n+1
+        yield n
+        
+        n=n+1
+        yield n
+    
+    for items in myFunGenerator():  //Method names whos returns multiple yield 
+        print(items)
+
+Note - Whatever yield returns it prints when we use the for loop for that generator method 
+
+
+##While loop in Python - 
+class FirstClass:
+    i=0
+    while i<5:
+        print(i)
+        i=i+1
+
+## if - elif in the Python - 
+class FirstClass:
+    i=0
+    if i>0:
+        print("OK")
+    elif i<=0 and i==0:
+        print("OK with zero")
+
+    else:
+        print ("Not Ok no any value is there")
+
+
+#Two dimensional Array - 
+class DemomClass:
+    a = [0] * 4   // [0, 0, 0, 0]
+    
+    a[0] = [1] * 5   // [[1, 1, 1, 1, 1], 0, 0, 0]
+    
+    print(a)
+
+class FirstClass:
+    i=4
+    n=3
+    a= [0] * i
+    for k in range (i):
+        a[k]= [1] * n
+    print(a)                // [[1, 1, 1], [1, 1, 1], [1, 1, 1], [1, 1, 1]]
+
+
+### Regular expression in Python - 
+Usages - 
+1. Search a specific string out of large amount of data 
+2. Search any format of a string for eg phone no, email such type 
+
+import re  // to import the regesx ie regular expression 
+
+1. re.search 
+import re
+class FirstClass:
+    
+    if re.search("Pawar", "My name is sushant"):
+        print("sushant is in word")
+    else:
+        print("sushant is not in a word")
+
+2. re.findall
+
+import re
+class FirstClass:
+    allStrings= re.findall("pawar", "My pawar ispawar pawar")
+    count=0
+    for i in  allStrings:
+        count=count+1
+        print(i)
+        
+    print(count)
+
+3. re.sub   // replace the world in the string 
+import re
+class FirstClass:
+    name= "sushant pawar was in pune"
+    
+    regex = re.compile("was") #Find the was letter using compiler and sttored
+    
+    nameFinal= regex.sub("is", name2) # Replace the stored regex with is in a string
+    
+    print(nameFinal)
+
+4. 
