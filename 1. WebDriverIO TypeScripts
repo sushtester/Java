@@ -4,6 +4,45 @@ Downloads -
 Visual Studio  - Download from Google 
 NodeJs - Download from Google        // Verify command: node -v   Also check npm -v which gives npm version that comes along with nodejs
 
+Created project - Or go to the folder 
+
+Open VS - Click file - Click open folder - Select the path of folder project - click select 
+
+for new project - 
+npm init 
+
+it will ask some questions just go ahead with that, it will ask to git repository - Ask team what to add here, 
+
+install @wdio/cli - it will download all the required packages 
+
+npx wdio config     //Here we can select the framework like cucumber, pom, language
+
+once you are done with the above for typescript it may ask to save the configuration and it will provide those configurations 
+
+so we just need to  create json file to store the typescript configurations 
+
+tsconfig.json -> copy all the configurations suggested on the cmd 
+
+
+# All the dependencies will be listed under the package.json folder 
+
+#It wil automatically create a demo feature to test 
+
+#Run test commond - 
+npx wdio wdio.config.ts 
+
+
+
+#To Generate the step definition automatically we can use the chrome extension tiny gherkin 
+
+
+
+
+
+
+
+
+
 
 
 
