@@ -55,6 +55,8 @@ we just need to add a target under tsconfig.json
 "target" "ES5"
 
 
+#if function returning something then we don't need t add async before function 
+if we are not returning normal function we can provide the asyn before the function 
 
 
 
