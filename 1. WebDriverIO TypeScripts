@@ -50,6 +50,10 @@ variable we can use in TypeScripts are - var, len, const
 
 
 
+#If we get an error regarding EPCS targetting such as then 
+we just need to add a target under tsconfig.json 
+"target" "ES5"
+
 
 
 
