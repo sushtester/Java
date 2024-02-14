@@ -19,7 +19,7 @@ npx wdio config     //Here we can select the framework like cucumber, pom, langu
 
 once you are done with the above for typescript it may ask to save the configuration and it will provide those configurations 
 
-so we just need to  create json file to store the typescript configurations 
+so we just need to  create json file to store the typescript configurations -> This will auto-suggest the code of typescript very usefull 
 
 tsconfig.json -> copy all the configurations suggested on the cmd 
 
@@ -34,6 +34,20 @@ npx wdio wdio.config.ts
 
 
 #To Generate the step definition automatically we can use the chrome extension tiny gherkin 
+copy and paste the feature it will generate the steps for you 
+
+
+#browser.url()
+
+element -> $(' .heading') 
+
+
+variable we can use in TypeScripts are - var, len, const 
+
+#For function we write async 
+
+#For elements and other part we use await 
+
 
 
 
