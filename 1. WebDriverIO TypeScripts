@@ -60,7 +60,13 @@ if we are not returning normal function we can provide the asyn before the funct
 
 
 
+#Manage multiple URL - We have video for that as well 
 
+Change the URL run time - Pass environment variable 
+
+process.env.ENV = to get the param from the cmd in node
+
+process.exit() to terminate the program so we can add a condition and terminate the program 
 
 
 
