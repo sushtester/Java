@@ -69,7 +69,57 @@ process.env.ENV = to get the param from the cmd in node
 process.exit() to terminate the program so we can add a condition and terminate the program 
 
 
+###Right click to steps to open the step definition for the statements - 
 
+Create new folder .VSCODE -> settings.json 
+under it add below - 
+{
+    "cucumberautocomplete.steps": ["test/steps/*.ts"],
+    "cucumberautocomplete.strictGherkinCompletion": true
+}
+
+
+###Import issue fixed - 
+add new thing under tsconfig,ts json file
+basepath= {./}  or somthing 
+then direct we can import - import from "src/path"
+
+also need to install one dependacies from cmd 
+
+nps install tsconfig-paths    // after that only above will work 
+
+after that in under wdio config.ts -> under cucumberOpt -> requireModule: ["tsconfig-paths/register"]
+
+
+#For upgrade the packages version which under packages.json 
+
+check video part 14 
+https://www.youtube.com/watch?v=vh2jcmgwuUk&list=PLGk7ftfMz7jbZcArQU894rAfo6B1PbXbG&index=15
+
+####Send the data from json file - import JSON file for test data
+
+create a jsonfile .json form data 
+enter the data into json file - 
+
+{
+"firstname": "sushant"
+"lastname": "lastname"
+"mobile": "9503967719"
+}
+
+then import the json file in step definition file where you want to use the json file 
+
+before this you need to go to tsconfig.ts and there need to add below 
+resolveJsonModule: true 
+
+after above it will show/auto-populate the json file into import 
+
+
+then in step file - user filename.data 
+
+eg, filename.firstname
+lastname.firstname
+mobile.firstname
 
 
 
