@@ -122,6 +122,8 @@ lastname.firstname
 mobile.firstname
 
 
+### Now we send the path of the json file where we have stored the data and send that path as a parameter from feature file to step definition - 
+
 
 
 
